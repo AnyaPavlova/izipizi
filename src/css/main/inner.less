@@ -1,0 +1,42 @@
+.inner {
+  position: relative;
+  max-width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 30px;  
+
+  @media screen and (max-width: 670px) {
+    padding: 0 15px;
+  }
+}
+.inner:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.inner--normal {
+  max-width: 1262px;
+  padding: 0 30px;
+
+  @media screen and (max-width: 670px) {
+    padding: 0 15px;
+  }
+}
+.inner--all-container {
+  @media screen and (max-width: 1262px) {
+    padding: 0;
+    overflow: hidden;
+  }
+  @media screen and (max-width: 670px)  {
+    padding: 0;
+  }
+}
+.inner--allmob {
+  @media screen and (max-width: 960px) {
+    padding: 0;
+    overflow: hidden;
+  }
+  @media screen and (max-width: 670px) {
+    padding: 0;
+  }
+}

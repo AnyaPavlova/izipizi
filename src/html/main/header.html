@@ -1,0 +1,163 @@
+<header class="header">
+
+  <div class="top-line">
+    <div class="inner inner--normal top-line__inner">
+      <div class="row top-line__row">
+        <div class="col col-4 top-line__col-city">
+          <span class="top-line__venue">Mocква</span>
+        </div>
+        <div class="col col-4 top-line__col-contacts">
+          <a href="tel:88005003226" class="top-line__link">8 800 500 32 26</a>
+          <span class="top-line__delimiter">|</span>
+          <a href="mailto:mail@konik.ru" class="top-line__link">mail@konik.ru</a>
+        </div>
+        <div class="col col-4 top-line__col-account">
+          <a href="#authorization-popup" class="top-line__link authorization-link">Войти</a>
+          <span class="top-line__delimiter top-line__delimiter--small">|</span>
+          <a href="#" class="top-line__link">Регистрация</a>
+        </div>
+      </div>
+
+      <div id="authorization-popup" class="authorization-popup">
+        <span class="authorization-popup__close"></span>
+        <div class="authorization-popup__container">
+          <form action="" method="post" class="authorization-form">
+            <div class="authorization-form__for-input">
+              <label class="authorization-form__label">Логин (адрес электронной почты)</label>
+              <input type="text" name="login" class="authorization-form__input" required>
+            </div>
+            <div class="authorization-form__for-input">
+              <label class="authorization-form__label">Пароль</label>
+              <input type="text" name="password" class="authorization-form__input" required>
+            </div>
+            <div class="authorization-form__for-checkbox">
+              <input class="authorization-form__checkbox" id="agree" type="checkbox" name="agree" value="yes">
+              <label for="agree"><span></span> <i class="authorization-form__text-checkbox"> запомнить меня</i></label>
+            </div>
+            <div class="authorization-form__for-submit">
+              <button class="authorization-form__submit submit-btn" type="submit">войти</button>
+            </div>
+          </form>
+          <div class="authorization-popup__another">
+            <p class="authorization-popup__text"><a href="#">Забыли пароль?</a></p>
+            <p class="authorization-popup__text">Еще не зарегистрированы? <br> <a href="#">Создать акаунт</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="top-menu">
+    <div class="inner inner--normal top-menu__inner">
+      <div class="row top-menu__row">
+        <div class="top-menu__for-burger"><span id="burger" class="burger"></span></div>
+        <div class="col col-4 top-menu__menu" id="top-menu">
+
+          <div class="mob-search">
+            <form class="mob-search__form" role="search" method="get" action="">
+              <input class="mob-search__input" type="search" placeholder="" value="" name="search">
+              <button class="mob-search__search-btn" type="submit"></button>
+            </form>
+          </div>
+
+          <div class="menu">
+            <nav class="menu__nav">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="categories.html" class="menu__link">КАталог</a>
+                  <div class="submenu">
+                    <div class="inner inner--normal submenu__inner">
+                      <div class="submenu__row row">
+                        <div class="col submenu__col">
+                          <a href="#for-monitor" class="submenu__main"><span>для экрана</span><i></i></a>
+                          <ul class="submenu__list">
+                            <li><a href="#" class="submenu__link">Для подростков </a></li>
+                            <li><a href="#" class="submenu__link">Взрослые </a></li>
+                            <li><a href="#" class="submenu__link">Новая коллекция</a></li>
+                          </ul>
+                        </div>
+                        <div class="col submenu__col">
+                          <a href="#sun" class="submenu__main"><span>Солнцезащитные очки</span><i></i></a>
+                          <ul class="submenu__list">
+                            <li><a href="#" class="submenu__link">Для взрослых</a></li>
+                            <li><a href="#" class="submenu__link">Nautic </a></li>
+                            <li><a href="#" class="submenu__link">Для детей</a></li>
+                            <li><a href="#" class="submenu__link">Glacier</a></li>
+                            <li><a href="#" class="submenu__link">Бестселлеры </a></li>
+                          </ul>
+                        </div>
+                        <div class="col submenu__col">
+                          <a href="#children" class="submenu__main"><span>для детей</span><i></i></a>
+                          <ul class="submenu__list">
+                            <li><a href="#" class="submenu__link">Солнцезащитные 0-12 мес </a></li>
+                            <li><a href="#" class="submenu__link">Солнцезащитные 12-36 мес </a></li>
+                            <li><a href="#" class="submenu__link">Солнцезащитные 3- 10 лет</a></li>
+                            <li><a href="#" class="submenu__link">Очки для экрана для детей</a></li>
+                            <li><a href="#" class="submenu__link">Горнолыжные маски для детей</a></li>
+                            <li><a href="#" class="submenu__link">Бестселлеры </a></li>
+                          </ul>
+                        </div>
+                        <div class="col submenu__col">
+                          <a href="#sport" class="submenu__main"><span>для активного отдыха</span><i></i></a>
+                          <ul class="submenu__list">
+                            <li><a href="#" class="submenu__link">Солнцезащитные горнолыжные Glacier</a></li>
+                            <li><a href="#" class="submenu__link">Солнцезащитные горнолыжные маски</a></li>
+                            <li><a href="#" class="submenu__link">Солнцезащитные горнолыжные маски Junior</a></li>
+                            <li><a href="#" class="submenu__link">Солнцезащитные Nautic</a></li>
+                          </ul>
+                        </div>
+                        <div class="col submenu__col">
+                          <a href="#" class="submenu__img">
+                            <img src="images/submenu-all-new.jpg" alt="All New"">
+                            <span class=" submenu__img-name">Все <br>
+                            НОВинки</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="menu__item"><a href="#" class="menu__link">Где купить</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">о бренде</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="mob-top-info">
+            <div class="mob-top-info__city">
+              <span class="mob-top-info__venue">Mocква</span>
+            </div>
+            <div class="mob-top-info__account">
+              <a href="#authorization-popup" class="mob-top-info__link authorization-link">Войти</a>
+              <span class="mob-top-info__delimiter">|</span>
+              <a href="#" class="mob-top-info__link">Регистрация</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="col col-4 top-menu__logo">
+          <a href="index.html"><img src="images/izipizi-logo.png" alt="IZIPIZI logo"></a>
+        </div>
+        <div class="col col-4 top-menu__icons">
+
+          <div class="search">
+            <span class="search__btn-for-search" id="btn-open-search"></span>
+            <form class="search__form" id="search-form" role="search" method="get" action="">
+              <input class="search__input" type="search" placeholder="Поиск по сайту" value="" name="search">
+              <button class="search__search-btn" type="submit"></button>
+            </form>
+          </div>
+
+          <div class="basket">
+            <a href="#" class="basket__link"><span class="basket__num">0</span></a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<main class="main">

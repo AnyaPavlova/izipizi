@@ -1,0 +1,110 @@
+* {	
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+	outline: none;
+}
+main,
+article,
+section,
+footer,
+header,
+aside,
+canvas {
+    display: block;
+}
+section,
+header,
+footer {
+    position: relative;
+}
+html {
+	height: 100%;
+}
+body {
+	min-width: 320px;
+	min-height: 100%;
+  background-color: #ffffff;
+
+  font-family: 'Montserrat', sans-serif;
+
+	font-weight: 400;
+	line-height: 1.4;
+	letter-spacing: 0em;	
+	color: #343e48;
+
+	position: relative;
+  font-size: 16px;
+
+
+	@media screen and (max-width: 1920px) { position: relative; } 
+  @media screen and (max-width: 1600px) { position: relative; } 
+  @media screen and (max-width: 1500px) { position: relative; } /*1440 + 30px*2*/
+  @media screen and (max-width: 1440px) { position: relative; }  
+  @media screen and (max-width: 1280px) { position: relative; }  
+  @media screen and (max-width: 1262px) { position: relative; } /*inner 1202 + 30px*2 */
+	@media screen and (max-width: 960px) { position: relative; }
+	@media screen and (max-width: 670px) { position: relative; }
+
+  @media screen and (min-width: 961px) { position: relative; }
+  
+  @media screen and (min-width: 671px) and (max-width: 960px) { position: relative; }
+
+  &.on-popup {
+    overflow: hidden;
+  }
+}
+/* + inner*/
+section:after {
+	content: '';
+  display: block;
+  clear: both;
+}
+button, input, select {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+button {
+  cursor: pointer;
+  line-height: 1.4;
+}
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #343e48;
+  line-height: 1.3;
+}
+h1 {	
+  font-size: 36px;
+  text-align: center;
+
+  @media screen and (max-width: 670px) {
+    font-size: 27px;
+  }
+}
+h2 {
+  font-size: 36px;
+
+  @media screen and (max-width: 670px) {
+    font-size: 27px;
+  }
+}
+h3 {	
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  @media screen and (max-width: 670px) {
+    font-size: 12px;
+  }
+}
+strong {
+	font-weight: 600;
+}
+img {
+	max-width: 100%;
+}
+a {
+    color: #343e48;
+}

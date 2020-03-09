@@ -1,0 +1,48 @@
+.footer-social {
+    display        : flex;
+    align-content  : center;
+    align-items    : center;
+    justify-content: flex-start;
+
+    @media screen and (max-width: 960px) {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    &__link {
+        width          : 23px;
+        height         : 23px;
+        background     : #ffffff;
+        border-radius  : 50%;
+        display        : flex;
+        align-content  : center;
+        align-items    : center;
+        justify-content: center;
+        margin-left    : 2px;
+        margin-right   : 2px;
+        overflow       : hidden;
+
+        svg {
+            fill  : #343e48;
+            width : 12px;
+            height: 12px;
+            display: block;
+        }
+
+        &:hover {
+            background: #343e48;
+
+            svg {
+                fill: #ffffff;
+            }
+        }
+
+        &--big {
+            svg {
+                width : 14px;
+                height: 14px;
+            }
+        }
+
+    }
+}

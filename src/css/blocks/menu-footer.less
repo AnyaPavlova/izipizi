@@ -1,0 +1,90 @@
+.menu-footer {
+
+    @media screen and (max-width: 960px) {
+        text-align: center;
+    }
+
+    &__name {
+        font-weight    : 500;
+        font-size      : 24px;
+        margin-bottom  : 20px;
+        color          : #ffffff;
+        text-decoration: none;
+        display        : inline-block;
+        position: relative;
+
+        @media screen and (min-width: 961px) {
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+        @media screen and (max-width: 960px) {
+            padding-right: 25px;         
+            line-height: 1;   
+
+            &:before {
+                content: '';
+                display: block;
+                width: 17px;
+                height: 11px;
+                background: url(../images/icons/arrow-down.png);
+                background-size: 17px 11px;
+                position: absolute;
+                right: 0;
+                top: 0; bottom: 0;
+                margin: auto;
+                transition: all 0.5s;
+            }
+
+            &--open {
+                &:before {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+        @media screen and (max-width: 960px) {
+            text-align: center;
+            padding-right: 23px;
+            font-size: 18px;
+
+            &:before {
+                width: 14px;
+                height: 9px;
+                background-size: 14px 9px;
+            }
+        }
+    }
+
+    &__list {
+        list-style: none;
+
+        @media screen and (max-width: 960px) {
+            display: none;
+            margin-bottom: 20px;
+
+            &--open {
+                display: block;
+            }
+        }
+    }
+
+    &__link {
+        font-weight    : 500;
+        font-size      : 16px;
+        display        : inline-block;
+        margin-bottom  : 15px;
+        color          : #ffffff;
+        text-decoration: none;
+
+        @media screen and (min-width: 961px) {
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+
+        @media screen and (max-width: 960px) {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+    }
+}

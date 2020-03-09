@@ -1,0 +1,163 @@
+.brand {
+
+    @media screen and (max-width: 670px) {
+        background: url(../images/brand-bg-mob.jpg) no-repeat right top;
+    }
+    
+    &__text-block {
+        padding-top   : 50px;
+        padding-bottom: 20px;
+        background    : linear-gradient(to right, #e9eef6 0%, #e9eef6 70%, #c8d6df 70%, #c8d6df 100%);
+        min-height    : 233px;
+
+        @media screen and (max-width: 1500px) {
+            background: linear-gradient(to right, #e9eef6 0%, #e9eef6 80%, #c8d6df 80%, #c8d6df 100%);
+        }
+        @media screen and (max-width: 670px) {
+            background: transparent;
+            min-height: auto;
+        }
+    }
+
+    &__links {
+        min-height   : 89px;
+        display      : flex;
+        flex-wrap    : wrap;
+        align-content: center;
+        align-items  : center;
+
+        background: linear-gradient(to right, #f8fcff 0%, #f8fcff 70%, #edf5fb 70%, #edf5fb 100%);
+
+        @media screen and (max-width: 1500px) {
+            background: linear-gradient(to right, #f8fcff 0%, #f8fcff 80%, #edf5fb 80%, #edf5fb 100%);
+        }
+        @media screen and (max-width: 670px) {
+            background: transparent;
+            min-height: auto;
+            padding-bottom: 18px;
+        }
+    }
+
+    &__inner {
+        width: 100%;
+    }
+    
+
+    &__text {
+        text-align: center;
+        max-width : 600px;
+        margin    : auto;
+
+        @media screen and (max-width: 670px) {
+            text-align: left;
+        }
+    }
+    &__title {
+        @media screen and (max-width: 670px) {
+            max-width: 50%;    
+            padding-top: 5px;
+            padding-bottom: 80px;        
+        }
+    }
+    &__description {
+        font-weight: 600;
+        padding-top: 25px;
+        line-height: 1.8;
+
+        @media screen and (max-width: 960px) {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        @media screen and (max-width: 670px) {
+            font-size: 12px;
+            line-height: 1.6;
+        }
+    }
+
+    &__col-img {
+        position: relative;
+
+        @media screen and (max-width: 670px) {
+            display: none;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        z-index : 2;
+        top     : -50px;
+        left    : 0;
+        right   : 0;
+        margin  : auto;
+    }
+
+    &__links-inner {
+        max-width: 490px;
+        margin   : auto;
+    }
+
+    &__links-item {
+        text-align: right;
+
+        @media screen and (max-width: 670px) {
+            text-align: left;
+        }
+    }
+
+    &__link {
+        padding-right  : 38px;
+        font-weight    : 500;
+        position       : relative;
+        text-decoration: none;
+
+        @media screen and (max-width: 670px) {
+            font-size: 12px;
+            padding-right: 20px;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &:after {
+            content : '';
+            display : block;
+            position: absolute;
+        }
+
+        &--download {
+
+            &:after {
+                right     : 11px;
+                top       : 0;
+                background: url(../images/icons/download.png);
+                width     : 15px;
+                height    : 20px;
+
+                @media screen and (max-width: 670px) {
+                    right: 0;
+                    width: 11px;
+                    height: 14px;
+                    background-size: contain;
+                }
+            }
+        }
+        &--video {
+
+            &:after {
+                right     : 9px;
+                top       : 0;
+                background: url(../images/icons/music-and-multimedia.png);
+                width     : 20px;
+                height    : 20px;
+
+                @media screen and (max-width: 670px) {
+                    right: 0;
+                    width: 14px;
+                    height: 14px;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+}

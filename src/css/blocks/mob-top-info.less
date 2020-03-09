@@ -1,0 +1,49 @@
+.mob-top-info {
+    display: none;
+
+    @media screen and (max-width: 670px) {
+        padding-top: 50px;
+        display    : block;
+        text-align : center;
+
+        &__venue {
+            padding-left: 16px;
+            position    : relative;
+            display     : inline-block;
+            font-weight : 500;
+            font-size   : 12px;
+            color       : #343e48;
+
+
+
+            &:before {
+                content   : '';
+                display   : block;
+                width     : 9px;
+                height    : 15px;
+                background: url(../images/icons/location2.png) no-repeat center;
+                position  : absolute;
+                left      : 0;
+                top       : 0px;
+            }
+        }
+
+        &__account {
+            text-align: center;
+            font-size: 12px;
+            font-weight: 700;
+            padding-top: 30px;
+            padding-bottom: 25px;
+            letter-spacing: 0.05em;
+            color: #343e48;
+        }
+        &__link {
+            color: #343e48;
+            text-decoration: none;            
+        }
+        &__delimiter {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.burger {
+    display: none;
+  
+    @media screen and (max-width: 960px) {
+      width: 25px;
+      height: 25px;
+      display: block;
+      background: url(../images/icons/burger.png) no-repeat center;
+      background-size: 25px 17px;
+  
+      &--open {
+        background: url(../images/icons/burger-close.png) no-repeat center;
+        background-size: 19px 19px;
+      }
+    }
+  }

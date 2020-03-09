@@ -1,0 +1,68 @@
+.top-line {
+  background-color: #343e48;
+  padding: 6px 0;
+
+  &__inner {
+    @media screen and (max-width: 670px)  {
+      position: static;
+    }
+  }
+
+  &__col-city {
+    @media screen and (max-width: 670px) {
+      display: none;
+    }
+  }
+  &__col-contacts {
+    text-align: center;
+  }
+  &__col-account {
+    text-align: right;
+    @media screen and (max-width: 670px) {
+      display: none;
+    }
+  }
+
+  &__venue {
+    padding-left: 16px;
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 12px;
+    color: #ffffff;    
+
+
+
+    &:before {
+      content: '';
+      display: block;
+      width: 9px;
+      height: 15px;
+      background: url(../images/icons/location.png) no-repeat center;
+      position: absolute;
+      left: 0;
+      top: 0px;
+    }
+  }
+  &__link {
+    font-size: 12px;
+    color: #aeb2b6;
+    position: relative;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+  &__delimiter {
+    font-size: 12px;
+    color: #aeb2b6;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  &__delimiter--small {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

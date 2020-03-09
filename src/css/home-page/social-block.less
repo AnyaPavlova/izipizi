@@ -1,0 +1,53 @@
+.social-block {
+    padding-bottom: 70px;
+    text-align: center;
+
+    @media screen and (max-width: 670px) {
+        padding-bottom: 30px;
+    }
+
+    &__title {
+        padding-bottom: 10px;
+    }
+
+    &__links {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    &__link {
+        width: 23px;
+        height: 23px;
+        background: #343e48;
+        border-radius: 50%;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        margin-left: 2px;
+        margin-right: 2px;
+        overflow: hidden;
+
+        svg {
+            fill: #ffffff;
+            width: 12px;
+            height: 12px;
+        }
+
+        &:hover {
+            background: #ecedef;
+            svg {
+                fill: #343e48;
+            }
+        }
+
+        &--big {
+            svg {
+                width: 14px;
+                height: 14px;
+            }
+        }
+        
+    }
+}

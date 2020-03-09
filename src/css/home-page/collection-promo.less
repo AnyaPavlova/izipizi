@@ -1,0 +1,67 @@
+.collection-promo {
+    background: #f2ab8b;
+    padding   : 15px 0;
+
+    @media screen and (max-width: 670px) {
+        padding-bottom: 30px;
+    }
+
+    &__img {
+        @media screen and (max-width: 670px) {
+            overflow     : hidden;
+            margin-bottom: 35px;
+
+            img {
+                width    : 170%;
+                max-width: 170%;
+                transform: translateX(70px);
+            }
+        }
+    }
+
+    &__img,
+    &__text {
+        display        : flex;
+        align-content  : center;
+        align-items    : center;
+        justify-content: center;
+    }
+
+    &__info {
+        text-align: center;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size  : 24px;
+        color      : #ffffff;
+
+        @media screen and (max-width: 670px) {
+            font-size: 18px;
+        }
+
+        span {
+            font-weight   : 700;
+            font-size     : 36px;
+            text-transform: uppercase;
+            display       : block;
+
+            @media screen and (max-width: 670px) {
+                font-size: 27px;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size     : 16px;
+        color         : #ffffff;
+        padding-top   : 10px;
+        padding-bottom: 20px;
+
+        @media screen and (max-width: 670px) {
+            font-size     : 12px;
+            padding-top   : 5px;
+            padding-bottom: 15px;
+        }
+    }
+}

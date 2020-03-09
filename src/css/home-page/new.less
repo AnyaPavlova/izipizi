@@ -1,0 +1,41 @@
+.new {
+    display: block;
+    text-decoration: none;
+
+    &__img {
+        img {
+            width: 100%;
+        }
+    }
+    &__text {
+        padding: 23px 7px 5px;
+        text-align: center;
+
+        @media screen and (max-width: 670px) {
+            padding-top: 15px;
+        }
+    }
+    &__date {
+        font-weight: 600;
+        font-size: 12px;
+        padding-bottom: 10px;
+
+        @media screen and (max-width: 670px) {
+            padding-bottom: 7px;
+            font-size: 10px;
+        }
+    }
+    &__descrtiption {
+        font-weight: 600;
+        font-size: 12px;
+
+        span {
+            font-size: 16px;
+            display: block;
+
+            @media screen and (max-width: 670px) {
+                font-size: 12px;
+            }
+        }
+    }
+}

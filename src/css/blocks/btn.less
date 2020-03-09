@@ -1,0 +1,46 @@
+.btn--fill {
+    display        : inline-block;
+    background     : #343e48;
+    border         : 2px solid #343e48;
+    border-radius  : 30px;
+    font-weight    : 500;
+    font-size      : 16px;
+    color          : #fefefe;
+    padding        : 13px 33px;
+    text-decoration: none;
+    transition     : all 0.5s;
+
+    @media screen and (max-width: 670px) {
+        padding  : 10px 24px;
+        font-size: 12px;
+    }
+
+    &:hover {
+        background: transparent;
+        color     : #343e48;
+    }
+}
+
+.btn--white {
+    font-weight    : 500;
+    color          : #ffffff;
+    font-size      : 16px;
+    display        : inline-block;
+    padding        : 14px 20px;
+    border         : 1px solid #ffffff;
+    border-radius  : 30px;
+    text-decoration: none;
+    transition     : all 0.3s ease-in-out;
+
+    @media screen and (max-width: 670px) {
+        min-height: 33px;
+        padding   : 11px 15px;
+        font-size : 12px;
+    }
+
+    &:hover {
+        background-color: #ffffff;
+        color           : #343e48;
+        transform       : scale(1.1);
+    }
+}
