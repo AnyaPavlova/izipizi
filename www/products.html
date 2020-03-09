@@ -7,7 +7,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">	
+    <link rel="stylesheet" href="css/select2.css">	
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/uncompressed.css">	
     
     <link rel="shortcut icon" type="image/x-icon" href="./favicons/favicon.ico">
 
@@ -199,6 +201,25 @@
     <div class="inner inner--normal">
         <form action="" method="post">
 
+            <div class="products-filters__mob">
+                <div class="row">
+                    <div class="col">
+                        <div class="products-select products-select--categories">
+                            <select name="product-categories">
+                                <option value="Для взрослых">Для взрослых</option>
+                                <option value="Nautic">Nautic</option>
+                                <option value="Для детей">Для детей</option>
+                                <option value="Glacier">Glacier</option>
+                                <option value="Бестселлеры">Бестселлеры</option>
+                            </select>
+                        </div>                      
+                    </div>
+                    <div class="col">
+                        <div class="products-filters__toggle-filters"><strong>Фильтры</strong> <div class="products-filters__sum-choice">2</div></div>
+                    </div>
+                </div>
+            </div>
+
             <div class="products-filters__categories">
                 <div class="categories-fiter">
                     <div class="categories-fiter__radio-block">
@@ -227,127 +248,231 @@
                 </div>
             </div>
 
-            <div class="products-filters__checkboxes">
-                <div class="products-check">
-                    <div class="row">
-                        <div class="col">
-                            <div class="products-check__row">
-                                <div class="products-check__col">
-                                    <p class="products-check__title">для кого</p>
-                                </div>
-                                <div class="products-check__col">
-                                    <div class="products-check__checkbox">
-                                        <input type="checkbox" id="forMan" name="sex[]" value="Мужчины">
-                                        <label for="forMan"><img src="./images/filters/man.jpg" alt="Мужчины"></label>
-                                    </div>
-                                </div>
-                                <div class="products-check__col">
-                                    <div class="products-check__checkbox">
-                                        <input type="checkbox" id="forWoman" name="sex[]" value="Женщины">
-                                        <label for="forWoman"><img src="./images/filters/woman.jpg"
-                                                alt="Женщины"></label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="products-check__row">
-                                <div class="products-check__col products-check__form-col">
-                                    <p class="products-check__title">Форма</p>
-                                </div>
-                                <div class="products-check__col products-check__form-col">
-                                    <div class="products-check__checkbox products-check__checkbox-form">
-                                        <input type="checkbox" id="formRetro" name="form[]" value="Retro">
-                                        <label for="formRetro">
-                                            <span>The Retro</span>
-                                            <img src="./images/filters/retro.png" alt="Retro">
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="products-check__col products-check__form-col">
-                                    <div class="products-check__checkbox products-check__checkbox-form">
-                                        <input type="checkbox" id="formIconic" name="form[]" value="Iconic">
-                                        <label for="formIconic">
-                                            <span>The Iconic</span>
-                                            <img src="./images/filters/Iconic.jpg" alt="Iconic">
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="products-check__col products-check__form-col">
-                                    <div class="products-check__checkbox products-check__checkbox-form">
-                                        <input type="checkbox" id="formTrapeze" name="form[]" value="Trapeze">
-                                        <label for="formTrapeze">
-                                            <span>The Trapeze</span>
-                                            <img src="./images/filters/Trapeze.jpg" alt="Trapeze">
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="products-check__col products-check__form-col">
-                                    <div class="products-check__checkbox products-check__checkbox-form">
-                                        <input type="checkbox" id="formFoldable" name="form[]" value="Foldable">
-                                        <label for="formFoldable">
-                                            <span>The Foldable</span>
-                                            <img src="./images/filters/Foldable.jpg" alt="Foldable">
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="products-check__col products-check__form-col">
-                                    <div class="products-check__checkbox products-check__checkbox-form">
-                                        <input type="checkbox" id="formRound" name="form[]" value="Round">
-                                        <label for="formRound">
-                                            <span>The Round</span>
-                                            <img src="./images/filters/Round.jpg" alt="Round">
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="products-check__col products-check__form-col">
-                                    <div class="products-check__checkbox products-check__checkbox-form">
-                                        <input type="checkbox" id="formSmallFace" name="form[]" value="SmallFace">
-                                        <label for="formSmallFace">
-                                            <span>The Small Face</span>
-                                            <img src="./images/filters/SmallFace.jpg" alt="Small Face">
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="products-check__col products-check__form-col">
-                                    <div class="products-check__checkbox products-check__checkbox-form">
-                                        <input type="checkbox" id="formAviator" name="form[]" value="Aviator">
-                                        <label for="formAviator">
-                                            <span>The Aviator</span>
-                                            <img src="./images/filters/Aviator.jpg" alt="Aviator">
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="products-filters__filter-block">
 
-            <div class="products-filters__filter">
-                <div class="row">
-                    <div class="col col-9">
-                        <div class="products-check__row">
-                            <div class="products-check__col products-check__form-col">
-                                <p class="products-check__title">Фильтр</p>
+                <div class="products-filters__checkboxes">
+                    <div class="products-check">
+                        <div class="row">
+                            <div class="col">
+                                <div class="products-check__row">
+                                    <div class="products-check__col">
+                                        <p class="products-check__title">для кого</p>
+                                    </div>
+                                    <div class="products-check__col">
+                                        <div class="products-check__checkbox">
+                                            <input type="checkbox" id="forMan" name="sex[]" value="Мужчины">
+                                            <label for="forMan"><img src="./images/filters/man.jpg"
+                                                    alt="Мужчины"></label>
+                                        </div>
+                                    </div>
+                                    <div class="products-check__col">
+                                        <div class="products-check__checkbox">
+                                            <input type="checkbox" id="forWoman" name="sex[]" value="Женщины">
+                                            <label for="forWoman"><img src="./images/filters/woman.jpg"
+                                                    alt="Женщины"></label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="products-check__col products-check__selects-col">Lorem.</div>
-                            <div class="products-check__col products-check__selects-col">Molestiae.</div>
-                            <div class="products-check__col products-check__selects-col">Ullam.</div>
-                            <div class="products-check__col products-check__selects-col">Repellat.</div>
-                            <div class="products-check__col products-check__selects-col">Iste.</div>
-                            <div class="products-check__col products-check__selects-col">Hic.</div>
-                        </div>
-                    </div>
-                    <div class="col col-3">
-                        <div class="products-check__row products-check__row--sort">
-                            <div class="products-check__col products-check__form-col">
-                                <p class="products-check__title">Сортировать по  </p>
+                            <div class="col">
+                                <div class="products-check__row">
+                                    <div class="products-check__col products-check__form-col">
+                                        <p class="products-check__title">Форма</p>
+                                    </div>
+                                    <div class="products-check__col products-check__form-col">
+                                        <div class="products-check__checkbox products-check__checkbox-form">
+                                            <input type="checkbox" id="formRetro" name="form[]" value="Retro">
+                                            <label for="formRetro">
+                                                <span>The Retro</span>
+                                                <img src="./images/filters/retro.png" alt="Retro">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="products-check__col products-check__form-col">
+                                        <div class="products-check__checkbox products-check__checkbox-form">
+                                            <input type="checkbox" id="formIconic" name="form[]" value="Iconic">
+                                            <label for="formIconic">
+                                                <span>The Iconic</span>
+                                                <img src="./images/filters/Iconic.jpg" alt="Iconic">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="products-check__col products-check__form-col">
+                                        <div class="products-check__checkbox products-check__checkbox-form">
+                                            <input type="checkbox" id="formTrapeze" name="form[]" value="Trapeze">
+                                            <label for="formTrapeze">
+                                                <span>The Trapeze</span>
+                                                <img src="./images/filters/Trapeze.jpg" alt="Trapeze">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="products-check__col products-check__form-col">
+                                        <div class="products-check__checkbox products-check__checkbox-form">
+                                            <input type="checkbox" id="formFoldable" name="form[]" value="Foldable">
+                                            <label for="formFoldable">
+                                                <span>The Foldable</span>
+                                                <img src="./images/filters/Foldable.jpg" alt="Foldable">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="products-check__col products-check__form-col">
+                                        <div class="products-check__checkbox products-check__checkbox-form">
+                                            <input type="checkbox" id="formRound" name="form[]" value="Round">
+                                            <label for="formRound">
+                                                <span>The Round</span>
+                                                <img src="./images/filters/Round.jpg" alt="Round">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="products-check__col products-check__form-col">
+                                        <div class="products-check__checkbox products-check__checkbox-form">
+                                            <input type="checkbox" id="formSmallFace" name="form[]" value="SmallFace">
+                                            <label for="formSmallFace">
+                                                <span>The Small Face</span>
+                                                <img src="./images/filters/SmallFace.jpg" alt="Small Face">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="products-check__col products-check__form-col">
+                                        <div class="products-check__checkbox products-check__checkbox-form">
+                                            <input type="checkbox" id="formAviator" name="form[]" value="Aviator">
+                                            <label for="formAviator">
+                                                <span>The Aviator</span>
+                                                <img src="./images/filters/Aviator.jpg" alt="Aviator">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="products-check__col products-check__selects-col">Lorem.</div>                         
                         </div>
                     </div>
                 </div>
+
+                <div class="products-filters__filter">
+                    <div class="row">
+                        <div class="col col-9 col-md-12">
+                            <div class="products-check__row">
+                                <div class="products-check__col products-check__form-col">
+                                    <p class="products-check__title">Фильтр</p>
+                                </div>
+                                <div class="products-check__col products-check__selects-col">
+                                    <div class="products-select products-select--color">
+                                        <select name="color" data-placeholder="Цвет">
+                                            <option value="Любой цвет">Цвет</option>
+                                            <option value="Красный">Красный</option>
+                                            <option value="Зеленый">Зеленый</option>
+                                            <option value="Оранжевый">Оранжевый</option>
+                                            <option value="Желтый">Желтый</option>
+                                            <option value="Голубой">Голубой</option>
+                                            <option value="Синий">Синий</option>
+                                            <option value="Фиолетовый">Фиолетовый</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="products-check__col products-check__selects-col">
+                                    <div class="products-select products-select--diopters">
+                                        <select name="diopters" data-placeholder="Диоптрии">
+                                            <option value="Диоптрии">Диоптрии</option>
+                                            <option value="+1">+1</option>
+                                            <option value="0">0</option>
+                                            <option value="-1">-1</option>
+                                            <option value="-2">-2</option>
+                                            <option value="-3">-3</option>
+                                            <option value="-4">-4</option>
+                                            <option value="-5">-5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="products-check__col products-check__selects-col">
+                                    <div class="products-select products-select--collection">
+                                        <select name="collection" data-placeholder="Коллекция">
+                                            <option value="Коллекция">Коллекция</option>
+                                            <option value="lorem2">Lorem, ipsum.</option>
+                                            <option value="lorem2">Lorem, ipsum.</option>
+                                            <option value="lorem5">Lorem ipsum dolor sit amet.</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="products-check__col products-check__selects-col">
+                                    <div class="products-select products-select--price">
+                                        <select name="price" data-placeholder="Цена">
+                                            <option value="Цена">Цена</option>
+                                            <option value="до 1000 ₽">до 1000 ₽</option>
+                                            <option value="от 2000 ₽ до 5000 ₽">от 2000 ₽ до 5000 ₽</option>
+                                            <option value="выше 5000 ₽">выше 5000 ₽</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="products-check__col products-check__selects-col">
+                                    <div class="products-select products-select--article">
+                                        <select name="article" data-placeholder="Артикул">
+                                            <option value="Артикул">Артикул</option>
+                                            <option value="000001">000001</option>
+                                            <option value="000002">000002</option>
+                                            <option value="552158">552158</option>
+                                            <option value="336584">336584</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="products-check__col products-check__selects-col">
+                                    <div class="products-select products-select--availability">
+                                        <select name="availability" data-placeholder="Наличие">
+                                            <option value="Наличие">Наличие</option>
+                                            <option value="В наличии">В наличии</option>
+                                            <option value="Под заказ">Под заказ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-3 col-md-12">
+                            <div class="products-check__row products-check__row--sort">
+                                <div class="products-check__col products-check__form-col">
+                                    <p class="products-check__title">Сортировать по </p>
+                                </div>
+                                <div class="products-check__col products-check__selects-col">
+                                    <span class="products-sorting">
+                                        Популярности
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products-filters__choise-filters products-filters__choise-filters--active">
+                    <div class="products-choise">
+                        <div class="products-choise__item">
+                            <div class="products-choise__item-inner">
+                                <span class="products-choise__text">Красный</span>
+                                <span class="products-choise__del">
+                                    <img src="./images/icons/delete.png" alt="Удалить">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="products-choise__item">
+                            <div class="products-choise__item-inner">
+                                <span class="products-choise__text">Беж</span>
+                                <span class="products-choise__del">
+                                    <img src="./images/icons/delete.png" alt="Удалить">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="products-choise__item">
+                            <div class="products-choise__item-inner">
+                                <span class="products-choise__text">CoolHead NEW</span>
+                                <span class="product__sticker product__sticker--new">NEW</span>
+                                <span class="products-choise__del">
+                                    <img src="./images/icons/delete.png" alt="Удалить">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="products-choise__item">
+                            <button class="products-choise__clear">Очистить фильтры</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </form>
@@ -887,6 +1012,7 @@
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/jquery.fancybox.js"></script>
+<script src="js/select2.js"></script>
 <script src="js/script.js"></script>
 
 </body>

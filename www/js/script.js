@@ -194,11 +194,18 @@ $(document).ready(function () {
       var subMenu = $(this).parent().find('.menu-footer__list');
       $(this).toggleClass('menu-footer__name--open');
       subMenu.toggleClass('menu-footer__list--open');
+    }; //Открытие фильтров на моб. версии
+
+
+    var toggleFiltersProducts = function toggleFiltersProducts(event) {
+      event.preventDefault();
+      $('.products-filters__filter-block').slideToggle(300);
     };
 
     // Открытие подменюшек для моб.версии
     $(".submenu__main").on("click", submenuClick);
     $(".menu-footer__name").on("click", submenuFooterOpen);
+    $('.products-filters__toggle-filters').on('click', toggleFiltersProducts);
   } //promo-slider
 
 
@@ -300,13 +307,31 @@ $(document).ready(function () {
     maxWidth: '90%',
     maxHeight: '90%',
     wrapCSS: 'fansybox-photo-modal'
-  });
+  }); //Scroll Top
+
   $('#scroll-top').on("click", function (e) {
     e.preventDefault();
     $('html, body').animate({
       scrollTop: 0
     }, 1100);
-  });
+  }); //Select2
+
+  var haveSelect = $(".products-select");
+
+  if (haveSelect.length != 0) {
+    $('.products-select select').select2({
+      theme: 'theme-products-select'
+    });
+  }
+
+  ; //sorting
+
+  $(".products-sorting").on("click", sortingOpen);
+
+  function sortingOpen(event) {
+    event.preventDefault();
+    $(this).toggleClass('products-sorting--active');
+  }
 });
 /*Полифилы для ie*/
 

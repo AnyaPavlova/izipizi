@@ -1,0 +1,39 @@
+.products-sorting {
+    display: inline-block;
+    font-size  : 14px;
+    font-weight: 500;
+    color      : #343e48;
+    padding-right: 20px;
+    position: relative;
+    cursor: pointer;
+
+    @media screen and (max-width: 960px) {
+        padding-left: 20px;
+    }
+
+    &:after {
+        position           : absolute;
+        border             : none;
+        width              : 12px;
+        height             : 6px;
+        margin             : auto;
+        content            : '';
+        pointer-events     : none;
+        background-image   : url(../images/icons/arrow-down-select.png);
+        background-position: right center;
+        background-repeat  : no-repeat;
+        transition         : transform .5s ease-in-out;
+        top                : 5px;
+        right              : 0px;
+    }
+
+    &--active {
+
+        &:after {
+            transform  : rotateX(180deg);
+            font-size  : 14px;
+            font-weight: 500;
+            color      : #343e48;
+        }
+    }
+}

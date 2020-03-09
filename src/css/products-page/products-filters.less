@@ -3,6 +3,16 @@
 
     &__categories {
         padding-bottom: 20px;
+
+        @media screen and (max-width: 960px) {
+            display: none;
+        }
+    }
+
+    &__filter-block {
+        @media screen and (max-width: 960px) {
+            display: none;
+        }
     }
 
     &__checkboxes {
@@ -11,5 +21,44 @@
     &__filter {
         padding-top: 20px;
         padding-bottom: 20px;
+    }
+    &__choise-filters {
+        display: none;
+        margin-left: 94px;
+
+        @media screen and (max-width: 960px) {
+            margin-left: 0;
+        }
+
+        &--active {
+            display: block;
+        }
+    }
+
+    &__mob {
+        display: none;
+
+        @media screen and (max-width: 960px) {
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+    &__toggle-filters {
+        font-size: 14px;
+        font-weight: 700;
+        padding-right: 27px;
+        position: relative;
+    }
+    &__sum-choice {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 1px solid #343e48;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 12px;
     }
 }

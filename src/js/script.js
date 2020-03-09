@@ -172,6 +172,13 @@ $(document).ready(function () {
       subMenu.toggleClass('menu-footer__list--open');
     }
 
+    //Открытие фильтров на моб. версии
+    $('.products-filters__toggle-filters').on('click', toggleFiltersProducts);
+    function toggleFiltersProducts(event) {
+      event.preventDefault();
+      $('.products-filters__filter-block').slideToggle(300);
+    }
+
   }
 
   //promo-slider
@@ -297,10 +304,25 @@ $(document).ready(function () {
     wrapCSS: 'fansybox-photo-modal'
   });
 
+    //Scroll Top
    $('#scroll-top').on("click", function (e) {
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, 1100);
   });
+
+  //Select2
+  var haveSelect = $(".products-select");
+   if(haveSelect.length != 0 ) {
+      $('.products-select select').select2({
+        theme: 'theme-products-select'
+      });
+   }; 
+   //sorting
+   $(".products-sorting").on("click", sortingOpen);
+    function sortingOpen(event) {
+      event.preventDefault();
+      $(this).toggleClass('products-sorting--active');
+    }
 
 });
 
