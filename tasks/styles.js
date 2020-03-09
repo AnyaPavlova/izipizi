@@ -23,7 +23,7 @@ function styles() {
         )
         .pipe(postcss([
             mqpacker({
-                sort: true
+                sort: false
             })
         ]))
         .pipe(sourcemaps.write())
