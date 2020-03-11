@@ -51,8 +51,8 @@
               <input type="text" name="password" class="authorization-form__input" required>
             </div>
             <div class="authorization-form__for-checkbox">
-              <input class="authorization-form__checkbox" id="agree" type="checkbox" name="agree" value="yes">
-              <label for="agree"><span></span> <i class="authorization-form__text-checkbox"> запомнить меня</i></label>
+              <input class="authorization-form__checkbox" id="remember" type="checkbox" name="remember" value="yes">
+              <label for="remember"><span></span> <i class="authorization-form__text-checkbox"> запомнить меня</i></label>
             </div>
             <div class="authorization-form__for-submit">
               <button class="authorization-form__submit submit-btn" type="submit">войти</button>
@@ -98,7 +98,7 @@
                           </ul>
                         </div>
                         <div class="col submenu__col">
-                          <a href="#sun" class="submenu__main"><span>Солнцезащитные очки</span><i></i></a>
+                          <a href="products.html" class="submenu__main"><span>Солнцезащитные очки</span><i></i></a>
                           <ul class="submenu__list">
                             <li><a href="#" class="submenu__link">Для взрослых</a></li>
                             <li><a href="#" class="submenu__link">Nautic </a></li>
@@ -933,11 +933,11 @@
       <div class="row footer__row">
         <div class="col col-3 col-md-12 footer__col">
           <div class="menu-footer">
-            <a href="#" class="menu-footer__name">Каталог</a>
+            <a href="categories.html" class="menu-footer__name">Каталог</a>
             <ul class="menu-footer__list">
               <li class="menu-footer__item"><a href="#" class="menu-footer__link">Очки для чтения</a></li>
               <li class="menu-footer__item"><a href="#" class="menu-footer__link">Очки для экранов</a></li>
-              <li class="menu-footer__item"><a href="#" class="menu-footer__link">Очки солнцезащитные</a></li>
+              <li class="menu-footer__item"><a href="products.html" class="menu-footer__link">Очки солнцезащитные</a></li>
               <li class="menu-footer__item"><a href="#" class="menu-footer__link">Очки детские </a></li>
               <li class="menu-footer__item"><a href="#" class="menu-footer__link">Спортивные очки</a></li>
             </ul>
@@ -1009,10 +1009,65 @@
   </div>
 
 </footer>
+<div id="BuyIn1Click" class="popup popupOneClick" style="display: none;">
+    <div class="popup__container popup__container--bookin">
+        <span class="popup__close"></span>
+        <div class="popup__inner">
+            <p class="popup__title">Заказ в 1 клик</p>
+            <div class="row popupOneClick__info">
+                <div class="col col-6">
+                    <div class="popupOneClick__img"><img src="./images/goods/01.jpg" alt="Photo"></div>
+                </div>
+                <div class="col col-6">
+                    <div class="popupOneClick__info-block">
+                        <p class="popupOneClick__series">SUN & SUN READING</p>
+                        <p class="popupOneClick__name">#C Blue Tortoise</p>
+                        <table class="popupOneClick__tab">
+                            <tr>
+                                <td class="popupOneClick__tab-name">Количество:</td>
+                                <td>
+                                    <span class="form-num__block">
+                                        <button class="form-num__btn form-num__btn-minus" type="button">-</button>
+                                        <input class="form-num__input" type="number" value="1" step="1" min="1" max="10" />
+                                        <button class="form-num__btn form-num__btn-plus" type="button">+</button>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="popupOneClick__tab-name">Цена:</td>
+                                <td><span class="popupOneClick__price">3 590 ₽</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <form action="" method="post" class="form">
+                <div class="form__for-input">
+                    <label class="form__label">* Ваше Имя</label>
+                    <input type="text" name="name" class="form__input" required>
+                </div>
+                <div class="form__for-input">
+                    <label class="form__label">* Телефон</label>
+                    <input class="form__input phone-mask" type="tel" name="phone" placeholder="+7 (___) ___-____" required>
+                </div>
+                <div class="form__for-checkbox">
+                    <input class="form__checkbox" id="agree" type="checkbox" name="agree" required>
+                    <label for="agree"><span></span> <i class="form__text-checkbox">Я подтверждаю свое согласие на обработку персональных данных</i></label>
+                </div>
+                <div class="form__for-submit">
+                    <button class="form__submit submit-btn btn--fill" type="submit">Оформить заказ</button>
+                </div>
+                <p class="form__message form__message--ok">Ваш заказ был отправлено успешно. Мы свяжемся с вами в ближайшее время</p>
+				<p class="form__message form__message--error">Ошибки заполнения. Пожалуйста, проверьте все поля и отправьте снова.</p>
+            </form>
+        </div>
+    </div>
+</div>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/jquery.fancybox.js"></script>
 <script src="js/select2.js"></script>
+<script src="js/jquery.mask.min.js"></script>
 <script src="js/script.js"></script>
 
 </body>

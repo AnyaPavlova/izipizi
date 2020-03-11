@@ -1,0 +1,137 @@
+.popup {
+    position        : fixed;
+    z-index         : 1000;
+    top             : 0;
+    right           : 0;
+    bottom          : 0;
+    left            : 0;
+    display         : none;
+    height          : 100vh;
+    margin          : auto;
+    padding         : 0;
+    background-color: rgba(0, 0, 0, .5);
+
+    @media screen and (max-width: 960px) {
+        background: #f0f0f0;
+    }
+
+    &__container {
+        position         : absolute;
+        top              : 50%;
+        left             : 50%;
+        overflow-y       : auto;
+        width            : calc(100% - 80px);
+        max-width        : 1202px;
+        max-height       : calc(100vh - 150px);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform    : translate(-50%, -50%);
+        transform        : translate(-50%, -50%);
+        background       : #ffffff;
+        padding          : 45px 0 50px 0;
+
+        @media screen and (max-width: 1280px) {
+            padding   : 20px 40px 20px 40px;
+            max-height: calc(100vh - 80px);
+        }
+
+        @media screen and (max-width: 960px) {
+            padding      : 20px 40px 50px 40px;
+            width        : 100%;
+            max-height   : 100vh;
+            background   : #f0f0f0;
+            border-radius: 0;
+        }
+
+        @media screen and (max-width: 670px) {
+            padding-top: 0;
+        }
+
+        &--bookin {
+            max-width: 680px;
+        }
+    }
+
+    &__inner {
+        height   : 100%;
+        position : relative;
+        max-width: 100%;
+        margin   : 0 auto;
+        padding  : 0 50px;
+    }
+
+    &__close {
+        width          : 13px;
+        height         : 13px;
+        position       : absolute;
+        top            : 25px;
+        right          : 25px;
+        background     : url(../images/close-modal-photo-black.svg) no-repeat;
+        background-size: contain;
+        cursor         : pointer;
+        z-index        : 5;
+        opacity        : 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        @media screen and (max-width: 670px) {
+            width : 20px;
+            height: 20px;
+        }
+    }
+
+    &__title {
+        font-size : 36px;
+        text-align: center;
+        font-weight: 600;
+        padding-bottom: 40px;
+
+        @media screen and (max-width: 670px) {
+            font-size: 27px;
+        }
+    }
+}
+
+.popupOneClick {
+
+    &__info {
+        padding-bottom: 35px;
+    }
+
+    &__img {
+        padding-right: 20px;
+    }
+
+    &__series {
+        font-weight: 500;
+        font-size  : 12px;
+    }
+
+    &__name {
+        font-size    : 16px;
+        font-weight  : 700;
+        margin-bottom: 20px;
+    }
+    &__tab {
+        width: 100%;
+
+        td {
+            vertical-align: middle;
+            padding: 10px 0;
+
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+
+    &__tab-name {
+        font-weight: 500;
+        font-size  : 12px;
+    }
+    &__price {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}

@@ -1,6 +1,12 @@
 // Стили для выпадаек forSelectCar + &--theme-products-select
 .products-select {
     position: relative;
+
+    @media screen and (min-width: 961px) {
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 }
 
 .products-select:before {
@@ -8,13 +14,13 @@
 }
 
 .products-select .select2-container {
-    background : transparent;
+    background: transparent;
 }
 
 
 .products-select .select2-container--theme-products-select .select2-selection--single {
-    background : transparent;
-    height: auto;
+    background: transparent;
+    height    : auto;
 }
 
 .products-select .select2-container--theme-products-select .select2-selection--single .select2-selection__arrow {
@@ -71,7 +77,7 @@
 }
 
 .products-select .select2-container--theme-products-select .select2-selection__placeholder {
-    color      : #343e48;
+    color: #343e48;
 }
 
 .select2-container--theme-products-select.select2-container--open .select2-dropdown--below {
@@ -80,17 +86,17 @@
 }
 
 .select2-container--theme-products-select .select2-results {
-    min-width: 150px;
+    min-width       : 150px;
     background-color: #ffffff;
 }
 
 .select2-container--theme-products-select .select2-results__option[aria-selected=true] {
-    color: #343e48;
+    color      : #343e48;
     font-weight: 500;
 }
 
 .select2-container--theme-products-select .select2-results__option--highlighted:hover {
-    color: #343e48;
+    color      : #343e48;
     font-weight: 500;
 }
 
@@ -106,8 +112,8 @@
 
 .select2-container--theme-products-select .select2-results__option {
 
-    font-size     : 12px;
-    padding: 5px 0;
+    font-size : 12px;
+    padding   : 5px 0;
     text-align: center;
 }
 
@@ -119,37 +125,45 @@
 .products-select .select2.select2-container {
     width: 100% !important;
 }
+
 .products-select--color .select2.select2-container {
     width: 60px !important;
 }
+
 .products-select--diopters .select2.select2-container {
     width: 96px !important;
 }
+
 .products-select--collection .select2.select2-container {
     width: 102px !important;
 }
+
 .products-select--price .select2.select2-container {
     width: 59px !important;
 }
+
 .products-select--article .select2.select2-container {
     width: 82px !important;
 }
+
 .products-select--availability .select2.select2-container {
     width: 86px !important;
 }
+
 .products-select--categories .select2.select2-container {
-    width: auto !important;
+    width   : auto !important;
     position: relative;
 
     &:after {
-        content: '';
-        display: block;
-        width: calc(100% - 20px);
-        height: 4px;
+        content   : '';
+        display   : block;
+        width     : calc(100% - 20px);
+        height    : 4px;
         background: #fff67f;
-        position: absolute;
-        bottom: -4px;
-        left: 0;
+        position  : absolute;
+        bottom    : -4px;
+        left      : 0;
     }
+
     // border-bottom: 4px solid #fff67f;
 }

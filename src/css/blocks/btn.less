@@ -20,7 +20,29 @@
         color     : #343e48;
     }
 }
+.btn--blue-fill {
+    display        : inline-block;
+    background     : transparent;
+    border         : 2px solid #343e48;
+    border-radius  : 30px;
+    font-weight    : 500;
+    font-size      : 16px;
+    color          : #343e48;
+    padding        : 13px 33px;
+    text-decoration: none;
+    transition     : all 0.5s;
 
+    @media screen and (max-width: 670px) {
+        padding  : 10px 24px;
+        font-size: 12px;
+    }
+
+    &:hover {
+        background: transparent;
+        color     : #ffffff;
+        background-color: #343e48;   
+    }
+}
 .btn--white {
     font-weight    : 500;
     color          : #ffffff;

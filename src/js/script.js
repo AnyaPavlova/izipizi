@@ -28,7 +28,12 @@ function validateForm(event) {
   var requredItems = form.querySelectorAll('input[required]');
 
   for (var item = 0; item < requredItems.length; item++) {
-    if (requredItems[item].value === "") {
+    if (requredItems[item].type === "checkbox") {
+      if (!requredItems[item].checked) {
+        requredItems[item].classList.add('form__input--error');
+        error = true;
+      }
+    } else if (requredItems[item].value === "") {
       requredItems[item].classList.add('form__input--error');
       error = true;
     }
@@ -64,6 +69,48 @@ function sendAjaxForm(dataForm) {
       $(dataForm)[0].reset();
     }
   });
+}
+
+//Изменение кол-ва единиц в input по клику на +/-
+var fieldsNum = document.querySelectorAll('.form-num__block');
+if (fieldsNum) {
+  for (var item = 0; item < fieldsNum.length; item++) {
+    fieldsNum[item].addEventListener('click', changeValueInputByButton);
+    fieldsNum[item].addEventListener('change', changeValueInput);
+  }
+}
+function changeValueInputByButton(event) {
+  let eventTarget = event.target;
+  let parent = eventTarget.closest('.form-num__block');
+  let fieldNum = parent.querySelector('.form-num__input');
+  let change = 0; //изменение
+  let step = +fieldNum.step || 1; //шаг
+  if (eventTarget.classList.contains('form-num__btn-minus')) {
+    change = -step;
+  } else if (eventTarget.classList.contains('form-num__btn-plus')) {
+    change = +step;
+  }
+  let newCount = +fieldNum.value + change;
+  fieldNum.value = newCount;
+
+  //создаем событие изменения значения form-num__input - чтобы не дублировать условия изменения input
+  var numInputChange = new Event('change', { bubbles: true, cancelable: true });
+  fieldNum.dispatchEvent(numInputChange); //вызываем событие
+}
+//Изменение кол-ва единиц в input по заполнению
+function changeValueInput(event) {
+  let eventTarget = event.target
+  let minNum = +eventTarget.min || 1; //минимальное значение
+  let maxNum = +eventTarget.max || Infinity; //максимальное значение
+  let valueInput = +(eventTarget.value);
+  if (valueInput < minNum) {
+    eventTarget.value = minNum;
+    alert(`Количество не может быть меньше ${minNum}`);
+  }
+  else if (valueInput > maxNum) {
+    eventTarget.value = maxNum;
+    alert(`Количество не может быть больше ${maxNum}`);
+  }
 }
 
 $(document).ready(function () {
@@ -119,13 +166,20 @@ $(document).ready(function () {
 
   // Проверка версии
   var isMobile;
+  var isIpad;
   function DeviceFunction() {
     // проверка на размер экрана
     if ($(window).width() <= 960) {
       isMobile = true;
+      if ($(window).width() > 670) {
+        isIpad = true;
+      } else {
+        isIpad = false;
+      }
     }
     else {
       isMobile = false;
+      isIpad = false;
     }
   }
   DeviceFunction();
@@ -304,25 +358,139 @@ $(document).ready(function () {
     wrapCSS: 'fansybox-photo-modal'
   });
 
-    //Scroll Top
-   $('#scroll-top').on("click", function (e) {
+  //Модальное окошко фото товара
+  $(".photoGoods-modal").fancybox({
+    autoDimensions: false,
+    fitToView: false,
+    autoSize: false,
+    closeClick: false,
+    openEffect: 'none',
+    closeEffect: 'none',
+    padding: '0',
+    scrolling: 'no',
+    maxWidth: '90%',
+    maxHeight: '90%',
+    wrapCSS: 'fansybox-photoGoods-modal'
+  });
+
+  //Scroll Top
+  $('#scroll-top').on("click", function (e) {
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, 1100);
   });
 
   //Select2
   var haveSelect = $(".products-select");
-   if(haveSelect.length != 0 ) {
-      $('.products-select select').select2({
-        theme: 'theme-products-select'
-      });
-   }; 
-   //sorting
-   $(".products-sorting").on("click", sortingOpen);
-    function sortingOpen(event) {
-      event.preventDefault();
-      $(this).toggleClass('products-sorting--active');
+  if (haveSelect.length != 0) {
+    $('.products-select select').select2({
+      theme: 'theme-products-select'
+    });
+  };
+  //sorting
+  $(".products-sorting").on("click", sortingOpen);
+  function sortingOpen(event) {
+    event.preventDefault();
+    $(this).toggleClass('products-sorting--active');
+  }
+
+  //Слайдер фотогалереи в карточке товара
+  $('#goods-photo-slider').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    arrows: true,
+    vertical: true,
+    infinite: false,
+
+    responsive: [
+      {
+        breakpoint: 1260,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 680,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          vertical: false,
+          infinite: true,
+          dots: true
+        }
+      }
+    ]
+  });
+  function GoodsGalleryClick(e) {
+    e.preventDefault();
+    var mylink = $(this).attr('href');
+    $("#goods-photo-main-photo").attr('src', mylink);
+    $('#goods-photo-main-link').attr('href', mylink);
+  };
+  if ((isMobile === true) && (isIpad === false)) {
+    $(".goods-photo__link").fancybox({
+      autoDimensions: false,
+      fitToView: false,
+      autoSize: false,
+      closeClick: false,
+      openEffect: 'none',
+      closeEffect: 'none',
+      padding: '0',
+      scrolling: 'no',
+      maxWidth: '90%',
+      maxHeight: '90%',
+      wrapCSS: 'fansybox-photoGoods-modal'
+    });
+  } else {
+    $(".goods-photo__link").on("click", GoodsGalleryClick);
+  }
+
+  $(".goods-description__more-info").on("click", goodsDescriptionOpen);
+  function goodsDescriptionOpen(event) {
+    event.preventDefault();
+    console.log("sdfsf");
+    $(this).parent().find('.goods-description__text').toggleClass('goods-description__text--open');
+    $(this).toggleClass('goods-description__more-info--open');
+  }
+
+  // Popup
+  function PopUpShow(e) {
+    e.preventDefault();
+    if ($('.body').hasClass('on-popup')) { PopUpHide(); }; //если вызов popup из другого popup
+    var linkpopup = $(this).attr('href'); //значение ссылки
+    $(linkpopup).fadeIn(300);
+    $('.body').addClass('on-popup');
+
+    var container = $('.popup__container');
+    $('.popup').mouseup(function (element) {
+      if (!container.is(element.target) // если клик был не по нашему блоку
+        && (container.has(element.target).length === 0)) { // и не по его дочерним элементам
+        PopUpHide(); // скрываем его
+      };
+    });
+  };
+  function PopUpHide() {
+    $(".popup").fadeOut(300);
+    $('.body').removeClass('on-popup');
+  };
+  PopUpHide();
+  $(document).keydown(function (eventObject) {
+    if (eventObject.which == 27) {
+      PopUpHide();
     }
+  });
+  $(".call-popup").on("click", PopUpShow);
+  $('.popup__close').on("click", PopUpHide);
+
+  //Маска на телефон
+  $(function () {
+    $(".phone-mask").mask("+7 (999) 999-99-99");
+  });
 
 });
 
