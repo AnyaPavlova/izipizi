@@ -111,6 +111,57 @@ function changeValueInput(event) {
     eventTarget.value = maxNum;
     alert(`Количество не может быть больше ${maxNum}`);
   }
+
+  var inputNumberChangeEvent = new Event('input-number-change', { bubbles: true, cancelable: true }); //создаем событие 'input-number-change'
+  eventTarget.dispatchEvent(inputNumberChangeEvent); //вызываем срабатывание события
+}
+
+//Сумма заказа
+if (document.querySelector('.basket-block')) {
+
+  //price - цена
+  //amount - количество
+  //cost - стоимость
+  //orderPrice - сумма заказа
+
+  function costItem(card) {
+    var price = card.querySelector('.price').innerText;
+    price = parseFloat(price.replace(",", ".").replace(/[^0-9.]/gim, ""));
+    var amout = +card.querySelector('.amount').value;
+    var cost = (price * amout).toLocaleString();
+    card.querySelector('.cost').innerHTML = cost + ' ₽';
+  }
+  function costAllItems() {
+    var cardItem = document.querySelectorAll('.card');
+    for (var i = 0; i < cardItem.length; i++) {
+      costItem(cardItem[i]);
+    }
+  }
+  costAllItems();  
+  
+  function orderPrice() {    
+    var cardItem = document.querySelectorAll('.card');
+    var summ = 0;
+    for (var i = 0; i < cardItem.length; i++) {
+      var cost = cardItem[i].querySelector('.cost').innerText;      
+      cost = parseFloat(cost.replace(",", ".").replace(/[^0-9.]/gim, ""));
+      summ = summ + cost;
+    }
+    var orderPriceArr = document.querySelectorAll('.orderPrice');
+    for (var j = 0; j < orderPriceArr.length; j++) {
+      orderPriceArr[j].innerHTML = summ.toLocaleString() + ' ₽';
+    }
+  }
+  orderPrice();
+
+  document.addEventListener('input-number-change', changeCost);
+  function changeCost(event) {
+    var eventTarget = event.target;
+    var card = eventTarget.closest('.card');
+    costItem(card);
+    orderPrice();
+  }
+
 }
 
 $(document).ready(function () {

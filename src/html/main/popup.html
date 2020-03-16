@@ -17,7 +17,8 @@
                                 <td>
                                     <span class="form-num__block">
                                         <button class="form-num__btn form-num__btn-minus" type="button">-</button>
-                                        <input class="form-num__input" type="number" value="1" step="1" min="1" max="10" />
+                                        <input class="form-num__input" type="number" value="1" step="1" min="1"
+                                            max="10" />
                                         <button class="form-num__btn form-num__btn-plus" type="button">+</button>
                                     </span>
                                 </td>
@@ -37,18 +38,66 @@
                 </div>
                 <div class="form__for-input">
                     <label class="form__label">* Телефон</label>
-                    <input class="form__input phone-mask" type="tel" name="phone" placeholder="+7 (___) ___-____" required>
+                    <input class="form__input phone-mask" type="tel" name="phone" required>
                 </div>
                 <div class="form__for-checkbox">
                     <input class="form__checkbox" id="agree" type="checkbox" name="agree" required>
-                    <label for="agree"><span></span> <i class="form__text-checkbox">Я подтверждаю свое согласие на обработку персональных данных</i></label>
+                    <label for="agree"><span></span> <i class="form__text-checkbox">Я подтверждаю свое согласие на
+                            обработку персональных данных</i></label>
                 </div>
                 <div class="form__for-submit">
                     <button class="form__submit submit-btn btn--fill" type="submit">Оформить заказ</button>
                 </div>
-                <p class="form__message form__message--ok">Ваш заказ был отправлено успешно. Мы свяжемся с вами в ближайшее время</p>
-				<p class="form__message form__message--error">Ошибки заполнения. Пожалуйста, проверьте все поля и отправьте снова.</p>
+                <p class="form__message form__message--ok">Ваш заказ был отправлено успешно. Мы свяжемся с вами в
+                    ближайшее время</p>
+                <p class="form__message form__message--error">Ошибки заполнения. Пожалуйста, проверьте все поля и
+                    отправьте снова.</p>
             </form>
         </div>
+    </div>
+</div>
+
+<div id="AddInBasket" class="popup popupAddInBasket" style="display: none;">
+    <div class="popup__container popup__container--bookin">
+        <span class="popup__close"></span>
+        <div class="popup__inner">
+            <p class="popup__title">Товар добавлен в корзину</p>
+        </div>
+        <div class="popupAddInBasket__info">
+            <div class="popup__inner">
+                <div class="popupAddInBasket__info-block">
+                    <div class="row row--big">
+                        <div class="col col-7">
+                            <div class="popupAddInBasket__img"><img src="./images/goods/d-sun-merci-10-years.png" alt="Photo"></div>
+                        </div>
+                        <div class="col col-5">
+                            <p class="popupOneClick__series">SUN & SUN READING</p>
+                            <p class="popupOneClick__name">#C Blue Tortoise</p>
+                            <p class="popupAddInBasket__p">
+                                <span class="popupOneClick__tab-name">Цена:</span> 
+                                <span class="popupOneClick__price">3 590 ₽</span></p>
+                            <p class="popupAddInBasket__p">
+                                <span class="popupOneClick__tab-name">Количество: </span> 
+                                <span class="popupOneClick__price">1</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup__inner">
+            <div class="popupAddInBasket__btns">
+                <div class="row row--big">
+                    <div class="col col-6">
+                        <a href="#" class="popupAddInBasket__btn btn--blue-fill">Вернуться к покупкам</a>
+                    </div>
+                    <div class="col col-6">
+                        <a href="basket.html" class="popupAddInBasket__btn btn--fill">Перейти в корзину</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>

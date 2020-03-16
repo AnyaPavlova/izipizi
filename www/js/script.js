@@ -144,6 +144,64 @@ function changeValueInput(event) {
     eventTarget.value = maxNum;
     alert("\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u043D\u0435 \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C \u0431\u043E\u043B\u044C\u0448\u0435 ".concat(maxNum));
   }
+
+  var inputNumberChangeEvent = new Event('input-number-change', {
+    bubbles: true,
+    cancelable: true
+  }); //создаем событие 'input-number-change'
+
+  eventTarget.dispatchEvent(inputNumberChangeEvent); //вызываем срабатывание события
+} //Сумма заказа
+
+
+if (document.querySelector('.basket-block')) {
+  //price - цена
+  //amount - количество
+  //cost - стоимость
+  //orderPrice - сумма заказа
+  var costItem = function costItem(card) {
+    var price = card.querySelector('.price').innerText;
+    price = parseFloat(price.replace(",", ".").replace(/[^0-9.]/gim, ""));
+    var amout = +card.querySelector('.amount').value;
+    var cost = (price * amout).toLocaleString();
+    card.querySelector('.cost').innerHTML = cost + ' ₽';
+  };
+
+  var costAllItems = function costAllItems() {
+    var cardItem = document.querySelectorAll('.card');
+
+    for (var i = 0; i < cardItem.length; i++) {
+      costItem(cardItem[i]);
+    }
+  };
+
+  var orderPrice = function orderPrice() {
+    var cardItem = document.querySelectorAll('.card');
+    var summ = 0;
+
+    for (var i = 0; i < cardItem.length; i++) {
+      var cost = cardItem[i].querySelector('.cost').innerText;
+      cost = parseFloat(cost.replace(",", ".").replace(/[^0-9.]/gim, ""));
+      summ = summ + cost;
+    }
+
+    var orderPriceArr = document.querySelectorAll('.orderPrice');
+
+    for (var j = 0; j < orderPriceArr.length; j++) {
+      orderPriceArr[j].innerHTML = summ.toLocaleString() + ' ₽';
+    }
+  };
+
+  var changeCost = function changeCost(event) {
+    var eventTarget = event.target;
+    var card = eventTarget.closest('.card');
+    costItem(card);
+    orderPrice();
+  };
+
+  costAllItems();
+  orderPrice();
+  document.addEventListener('input-number-change', changeCost);
 }
 
 $(document).ready(function () {
