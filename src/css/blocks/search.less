@@ -1,68 +1,85 @@
 .search {
 
-    position: relative;
+  position: relative;
 
-    @media screen and (max-width: 670px) {
-        display: none;
+  @media screen and (max-width: 670px) {
+    display: none;
+  }
+
+  &__form {
+    display        : flex;
+    justify-content: flex-start;
+    align-items    : center;
+    align-content  : center;
+    position       : relative;
+    z-index        : 2;
+    transition     : all 0.5s;
+    max-width: 260px;
+    border-bottom: 1px solid #929799;
+    padding-bottom: 5px;
+  }
+
+  &__input {
+    font-family     : 'GothamPro', sans-serif;
+    font-weight     : 400;
+    font-size       : 14px;
+    color           : #343e48;
+    width           : 200px;
+    background-color: transparent;
+    padding-left: 10px;
+    height: 23px;
+
+    &::-webkit-input-placeholder {
+      color  : #343e48;
+      opacity: 0.6;
     }
 
-    &__btn-for-search {
-        display: block;
-        width: 23px;
-        height: 23px;
-        background: url(../images/icons/search.png) no-repeat center;
-        background-size: contain;
-        cursor: pointer;
-        position: absolute;
-        right: 0;
-      }
-    
-      &__form {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        align-content: center;
-        position: relative;
-        z-index: 2;
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.5s;
-    
-        &--open {
-          opacity: 1;
-          pointer-events: auto;
-        }
-      }
-    
-      &__input {
-        font-family : 'GothamPro', sans-serif;
-        font-weight: 400;
-        font-size: 14px;
-        color: #343e48;
-        width: 200px;
-        background-color: transparent;
-    
-        &::-webkit-input-placeholder {color:#343e48; opacity: 0.6;}
-        &::-moz-placeholder          {color:#343e48; opacity: 0.6;}/* Firefox 19+ */
-        &:-moz-placeholder           {color:#343e48; opacity: 0.6;}/* Firefox 18- */
-        &:-ms-input-placeholder      {color:#343e48; opacity: 0.6;}
-    
-        &::-ms-clear {  display: none; width : 0; height: 0; }
-        &::-ms-reveal {  display: none; width : 0; height: 0; }
-        &::-webkit-search-decoration,
-        &::-webkit-search-cancel-button,
-        &::-webkit-search-results-button,
-        &::-webkit-search-results-decoration { display: none; }
+    &::-moz-placeholder {
+      color  : #343e48;
+      opacity: 0.6;
+    }
 
-        @media screen and (max-width: 960px) {
-            width: 100px;
-            font-size: 10px;
-        }
-      }
-      &__search-btn {
-        width: 23px;
-        height: 23px;
-        background: url(../images/icons/search.png) no-repeat center;
-        background-size: contain;
-      }
+    /* Firefox 19+ */
+    &:-moz-placeholder {
+      color  : #343e48;
+      opacity: 0.6;
+    }
+
+    /* Firefox 18- */
+    &:-ms-input-placeholder {
+      color  : #343e48;
+      opacity: 0.6;
+    }
+
+    &::-ms-clear {
+      display: none;
+      width  : 0;
+      height : 0;
+    }
+
+    &::-ms-reveal {
+      display: none;
+      width  : 0;
+      height : 0;
+    }
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      display: none;
+    }
+
+    @media screen and (max-width: 960px) {
+      width    : 100px;
+      font-size: 10px;
+    }
+  }
+
+  &__search-btn {
+    width          : 19px;
+    height         : 21px;
+    background     : url(../images/icons/search.png) no-repeat center;
+    background-size: contain;
+  }
 }

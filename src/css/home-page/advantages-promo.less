@@ -1,0 +1,64 @@
+.advantages-promo {
+    padding: 40px 0;
+
+    @media screen and (max-width: 1100px)  {
+        padding: 25px 0;
+    }
+
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1100px) {
+            justify-content: center;
+        }
+    }
+    &__item {
+        padding: 0 15px;
+
+        @media screen and (max-width: 1100px) {
+            padding: 15px 15px;
+        }
+        @media screen and (max-width: 960px) {
+            padding: 10px 15px;
+        }
+        @media screen and (max-width: 670px) {
+            padding: 7px 0;
+        }
+    }
+    &__info {
+        padding-left: 45px;
+        position: relative;
+        font-weight: 500;
+        font-size: 14px;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0; bottom: 0;
+            margin: auto;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        &--design:before {
+            width: 34px;
+            height: 14px;
+            background-image: url(../images/icons/sunglasses.png);
+        }
+        &--official:before {
+            width: 26px;
+            height: 26px;
+            background-image: url(../images/icons/warranty.png);
+        }
+        &--available:before {
+            width: 26px;
+            height: 24px;
+            background-image: url(../images/icons/purse.png);
+        }
+    }
+}

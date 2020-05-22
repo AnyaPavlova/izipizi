@@ -1,12 +1,5 @@
-.goods-description {
-    padding-top: 41px;
-    padding-bottom: 41px;
-    background-color: #ecedef;
-
-    @media screen and (max-width: 670px) {
-        padding-top: 20px;
-        padding-bottom: 25px;
-    }
+.goods-description {  
+    padding-top: 15px;  
 
     &__title {
         font-size: 16px;
@@ -39,18 +32,18 @@
             position: absolute;
             bottom: 0;
             left: 0; right: 0;
-            background: rgba(236,237,239,0.5);
+            background: rgba(255,255,255,0.5);
         }
         &--open {
-            max-height: 500px;
-            transition: all 2s;
+            max-height: 1000px;
+            transition: all 0.5s;
 
             @media screen and (max-width: 670px) {
                 max-height: 1000px;
             }
 
             &:before {
-                background: rgba(235,237,239,0);
+                background: rgba(255,255,255,0);
             }
         }
 
@@ -89,10 +82,15 @@
         
         &--open {
             &:before {
-                content: 'Свернуть';
+                content: 'Закрыть';
             }
         }
         
         
+    }
+
+    &__img {
+        margin: auto;
+        display: block;
     }
 }

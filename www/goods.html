@@ -72,7 +72,26 @@
     <div class="inner inner--normal top-menu__inner">
       <div class="row top-menu__row">
         <div class="top-menu__for-burger"><span id="burger" class="burger"></span></div>
-        <div class="col col-4 top-menu__menu" id="top-menu">
+
+        <div class="col col-4 top-menu__for-search-desc">
+          <div class="search">
+            <form class="search__form" id="search-form" role="search" method="get" action="">
+              <button class="search__search-btn" type="submit"></button>
+              <input class="search__input" type="search" placeholder="Поиск по сайту" value="" name="search">              
+            </form>
+          </div>
+        </div>
+        
+        <div class="col col-4 top-menu__logo">
+          <a href="index.html"><img src="images/SunnyStyle.png" alt="IZIPIZI logo"></a>
+        </div>
+        <div class="col col-4 top-menu__icons">    
+          <div class="basket">
+            <a href="#" class="basket__link"><span class="basket__num">0</span></a>
+          </div>
+        </div>
+
+        <div class="col col-12 top-menu__menu" id="top-menu">
 
           <div class="mob-search">
             <form class="mob-search__form" role="search" method="get" action="">
@@ -84,6 +103,7 @@
           <div class="menu">
             <nav class="menu__nav">
               <ul class="menu__list">
+                <li class="menu__item"><a href="#" class="menu__link">IZIPIZI</a></li>
                 <li class="menu__item">
                   <a href="categories.html" class="menu__link">КАталог</a>
                   <div class="submenu">
@@ -138,6 +158,7 @@
                     </div>
                   </div>
                 </li>
+                <li class="menu__item"><a href="#" class="menu__link">новинки</a></li>                
                 <li class="menu__item"><a href="#" class="menu__link">Где купить</a></li>
                 <li class="menu__item"><a href="#" class="menu__link">о бренде</a></li>
               </ul>
@@ -156,24 +177,7 @@
           </div>
 
         </div>
-        <div class="col col-4 top-menu__logo">
-          <a href="index.html"><img src="images/izipizi-logo.png" alt="IZIPIZI logo"></a>
-        </div>
-        <div class="col col-4 top-menu__icons">
 
-          <div class="search">
-            <span class="search__btn-for-search" id="btn-open-search"></span>
-            <form class="search__form" id="search-form" role="search" method="get" action="">
-              <input class="search__input" type="search" placeholder="Поиск по сайту" value="" name="search">
-              <button class="search__search-btn" type="submit"></button>
-            </form>
-          </div>
-
-          <div class="basket">
-            <a href="#" class="basket__link"><span class="basket__num">0</span></a>
-          </div>
-
-        </div>
       </div>
     </div>
   </div>
@@ -198,20 +202,48 @@
                 <div class="goods-photo">
     <div class="row row--small">
         <div class="col col-2">
-            <div class="goods-photo__slider" id="goods-photo-slider">
-                <a href="./images/goods/01.jpg" class="goods-photo__link"><img src="./images/goods/01.jpg" alt="Photo"></a>
-                <a href="./images/goods/02.jpg" class="goods-photo__link"><img src="./images/goods/02.jpg" alt="Photo"></a>
-                <a href="./images/goods/03.jpg" class="goods-photo__link"><img src="./images/goods/03.jpg" alt="Photo"></a>
-                <a href="./images/goods/04.jpg" class="goods-photo__link"><img src="./images/goods/04.jpg" alt="Photo"></a>
-                <a href="./images/goods/05.jpg" class="goods-photo__link"><img src="./images/goods/05.jpg" alt="Photo"></a>
-                <a href="./images/goods/06.jpg" class="goods-photo__link"><img src="./images/goods/06.jpg" alt="Photo"></a>
+            <div class="goods-photo__slider" id="goods-photo-thumbs">
+                <div class="goods-photo__thumb-item"><div class="goods-photo__link"><img src="./images/goods/01.jpg" alt="Photo"></div></div>
+                <div class="goods-photo__thumb-item"><div class="goods-photo__link"><img src="./images/goods/02.jpg" alt="Photo"></div></div>
+                <div class="goods-photo__thumb-item"><div class="goods-photo__link"><img src="./images/goods/03.jpg" alt="Photo"></div></div>
+                <div class="goods-photo__thumb-item"><div class="goods-photo__link"><img src="./images/goods/04.jpg" alt="Photo"></div></div>
+                <div class="goods-photo__thumb-item"><div class="goods-photo__link"><img src="./images/goods/05.jpg" alt="Photo"></div></div>
+                <div class="goods-photo__thumb-item"><div class="goods-photo__link"><img src="./images/goods/06.jpg" alt="Photo"></div></div>
             </div>
         </div>
         <div class="col col-10 goods-photo__col-photo">
-            <div class="goods-photo__main-photo">
-                <img src="./images/goods/01.jpg" alt="Фото" id="goods-photo-main-photo">
+            <div class="goods-photo__photo-slider" id="goods-photo-slider">
+                <div class="goods-photo__item">
+                    <div class="goods-photo__main-photo">
+                        <img class="goods-photo__main-photo-img" src="./images/goods/01_big.jpg" alt="Фото больше чем ~573x518px, чтобы срабатывал zoom, соотвеношение сторон 1к1" id="goods-photo-main-photo">
+                    </div>                    
+                </div>
+                <div class="goods-photo__item">
+                    <div class="goods-photo__main-photo">
+                        <img class="goods-photo__main-photo-img" src="./images/goods/d-sun-merci-10-ans.jpg" alt="Фото больше чем ~573x518px, чтобы срабатывал zoom, соотвеношение сторон 1к1" id="goods-photo-main-photo">
+                    </div>                    
+                </div>
+                <div class="goods-photo__item">
+                    <div class="goods-photo__main-photo">
+                        <img class="goods-photo__main-photo-img" src="./images/goods/d-sun-merci-10-ans_2.jpg" alt="Фото больше чем ~573x518px, чтобы срабатывал zoom, соотвеношение сторон 1к1" id="goods-photo-main-photo">
+                    </div>                    
+                </div>
+                <div class="goods-photo__item">
+                    <div class="goods-photo__main-photo">
+                        <img class="goods-photo__main-photo-img" src="./images/goods/d-sun-merci-10-ans_3.jpg" alt="Фото больше чем ~573x518px, чтобы срабатывал zoom, соотвеношение сторон 1к1" id="goods-photo-main-photo">
+                    </div>                    
+                </div>
+                <div class="goods-photo__item">
+                    <div class="goods-photo__main-photo">
+                        <img class="goods-photo__main-photo-img" src="./images/goods/d-sun-merci-10-ans_4.jpg" alt="Фото больше чем ~573x518px, чтобы срабатывал zoom, соотвеношение сторон 1к1" id="goods-photo-main-photo">
+                    </div>                    
+                </div>
+                <div class="goods-photo__item">
+                    <div class="goods-photo__main-photo">
+                        <img class="goods-photo__main-photo-img" src="./images/goods/d-sun-merci-10-ans_5.jpg" alt="Фото больше чем ~573x518px, чтобы срабатывал zoom, соотвеношение сторон 1к1" id="goods-photo-main-photo">
+                    </div>                    
+                </div>
             </div>
-            <a href="./images/goods/01.jpg" class="goods-photo__increase photoGoods-modal" id="goods-photo-main-link"></a>
         </div>
     </div>
 </div>
@@ -219,15 +251,38 @@
             <div class="col col-md-12 col-5">
                 <div class="goods-info">
     <div class="goods-info__name">
-        <h2 class="goods-info__subtitle">Очки #С Cолнцезащитные</h2>
-        <h1 class="goods-info__title">Белые/White +0 <br>Tortoise Mirror</h1>
-        <p class="goods-info__code">Артикул: SKGLAC07BLU_00</p>
+        <h2 class="goods-info__subtitle">Cолнцезащитныеочки IZIPIZI</h2>
+        <h1 class="goods-info__title">Белые/White +0 Tortoise Mirror</h1>
+        
     </div>
-    <div class="goods-info__price">
-        3 590 ₽
+    <div class="row">
+        <div class="col col-6 col-sm-6">
+            <div class="goods-info__price">
+                3 590 ₽
+            </div>
+        </div>
+        <div class="col col-6 col-sm-6">
+            <p class="goods-info__code">Артикул: SKGLAC07BLU_00</p>
+        </div>
     </div>
+
+    <div class="goods-info__delivery">
+        <div class="row">
+            <div class="col col-6">
+                <div class="goods-info__deliveryItem goods-info__deliveryItem--courier">
+                    Доставка курьером, <br>Регионы 5-15 дней
+                </div>
+            </div>
+            <div class="col col-6 goods-info__delivery-col-right">
+                <div class="goods-info__deliveryItem goods-info__deliveryItem--pickup">
+                    Самовывоз сегодня <br><strong>бесплатно</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <div class="goods-info__btns">
-        <div class="row row--big">
+        <div class="row">
             <div class="col col-6">
                 <a href="#BuyIn1Click" class="goods-info__btn btn--fill call-popup">Купить в 1 клик</a>
             </div>
@@ -236,177 +291,111 @@
             </div>
         </div>
     </div>
-    <div class="goods-info__delivery">
-        <div class="row">
-            <div class="col col-6">
-                <div class="goods-info__deliveryItem goods-info__deliveryItem--courier">
-                    Доставка курьером, <br>Регионы 5-15 дней
-                </div>
-            </div>
-            <div class="col col-6">
-                <div class="goods-info__deliveryItem goods-info__deliveryItem--pickup">
-                    Самовывоз сегодня <br><strong>бесплатно</strong>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-            </div>            
-        </div>
-    </div>
+
     <div class="goods-description">
-        <div class="inner inner--normal">
             <p class="goods-description__title">Описание</p>
             <div class="goods-description__info">
                 <div class="goods-description__text">
                     <p>Снег отражает до 90% солнечного света, а количество ультрафиолетового излучения увеличивается на 10% на каждые 1000 м, на которые вы поднимаетесь. В горах риск для глаз выше, чем где-либо еще. Патологии, которые могут проявляться в краткосрочной перспективе: снежная слепота, конъюнктивит, а в долгосрочной - катаракта, ретинопатия, возрастная макулярная дегенерация (AMD).</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas velit, totam facere repudiandae earum soluta sit sequi aspernatur exercitationem atque impedit minima vero laborum odio animi cumque eius rem. Autem.</p>
+                    <p><img src="./images/goods/goods-parameters.jpg" alt="Картиночка" class="goods-description__img"></p>
+                    <p>Снег отражает до 90% солнечного света, а количество ультрафиолетового излучения увеличивается на 10% на каждые 1000 м, на которые вы поднимаетесь. В горах риск для глаз выше, чем где-либо еще. Патологии, которые могут проявляться в краткосрочной перспективе: снежная слепота, конъюнктивит, а в долгосрочной - катаракта, ретинопатия, возрастная макулярная дегенерация (AMD).</p>
                 </div>
                 <div class="goods-description__more-info"></div>
-            </div>
-        </div>        
+            </div>      
     </div>
+    
+</div>
+            </div>            
+        </div>
+    </div>
+    
 </div>
 
 <section class="goods-recommendations">
     <div class="inner inner--normal inner--allmob">
         <h2 class="goods-recommendations__title">Вам также может понравиться</h2>
 
-        <div class="slider-products">
-    <div class="slider-products__item">
-        <div class="product">
-            <div class="product__stickers">
-                <span class="product__sticker product__sticker--new">NEW</span>
-                <span class="product__colors">12 цветов</span>
+        <div class="promo-products">
+    <div class="row promo-products__row">
+        <div class="col col-3 col-md-6 promo-products__col">
+            <div class="promo-products__product">
+                <div class="promo-products__photo-block">
+                    <a href="#123" class="promo-products__product-link"><img src="./images/promo-products/c-sun-sunset-pink-lunettes-soleil-3.png" alt="Квадратная картинка - 292x292px" class="promo-products__photo"></a>
+                </div>
+                <div class="promo-products__text">
+                    <p class="promo-products__appointment"><a href="#">СОЛНЦЕ И ДЛЯ ЧТЕНИЯ</a></p>
+                    <p class="promo-products__title"><a href="#">#C Sunset Pink</a></p>
+                </div>
             </div>
-            <div class="product__img">
-                <img src="./images/products/d-sun-tortoise-sunglasses.png" alt="Photo">
-            </div>
-            <div class="product__name-block">
-                <p class="product__series">SUN & SUN READING</p>
-                <p class="product__name">#D Tortoise</p>
-            </div>
-            <div class="product__price-block">
-                <p class="product__price">3 590 ₽</p>
-            </div>
-            <div class="product__btn-block">
-                <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-            </div>
-            <a href="goods.html" class="product__link"></a>
         </div>
-    </div>
-    <div class="slider-products__item">
-        <div class="product">
-            <div class="product__stickers">
-                <span class="product__sticker product__sticker--new">NEW</span>
+        <div class="col col-6 col-md-12 promo-products__col">
+            <div class="promo-products__banner">
+                <div class="promo-products__banner-photo">
+                    <img src="./images/promo-products/banner-summer.jpg" alt="Banner" class="promo-products__banner-bg">
+                </div>
+                <div class="promo-products__banner-text">
+                    <a href="#" class="promo-products__sticker">новинки</a>
+                    <p class="promo-products__banner-title">Лето 2020</p>
+                </div>
+                <div class="promo-products__banner-for-btn">
+                    <a href="#" class="btn-white-fill promo-products__banner-btn">Выбрать</a>
+                </div>
             </div>
-            <div class="product__img">
-                <img src="./images/products/izipizi-x-les-fermes-de-marie-sun-glacier-brown.png" alt="Photo">
-            </div>
-            <div class="product__name-block">
-                <p class="product__series">SUN GLACIER PLUS</p>
-                <p class="product__name">IZIPIZI x Les Fermes de Marie</p>
-            </div>
-            <div class="product__price-block">
-                <p class="product__price">4 199 ₽</p>
-            </div>
-            <div class="product__btn-block">
-                <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-            </div>
-            <a href="goods.html" class="product__link"></a>
         </div>
-    </div>
-    <div class="slider-products__item">
-        <div class="product">
-            <div class="product__stickers">
-                <span class="product__sticker product__sticker--new">NEW</span>
-                <span class="product__colors">24 цвета</span>
+        <div class="col col-3 col-md-6 promo-products__col">
+            <div class="promo-products__product">
+                <div class="promo-products__photo-block">
+                    <a href="#123" class="promo-products__product-link"><img src="./images/promo-products/d-screen-aery-blue-lunettes-repos-ecran-ordinateur.png" alt="Квадратная картинка - 292x292px" class="promo-products__photo"></a>
+                </div>
+                <div class="promo-products__text promo-products__text--big">
+                    <p class="promo-products__appointment"><a href="#">ЭКРАНЫ</a></p>
+                    <p class="promo-products__title"><a href="#">#D Aery Blue</a></p>
+                </div>
             </div>
-            <div class="product__img">
-                <img src="./images/products/d-sun-merci-10-years.png" alt="Photo">
-            </div>
-            <div class="product__name-block">
-                <p class="product__series">SUN & SUN READING</p>
-                <p class="product__name">IZIPIZI x MERCI</p>
-            </div>
-            <div class="product__price-block">
-                <p class="product__price">3 590 ₽</p>
-            </div>
-            <div class="product__btn-block">
-                <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-            </div>
-            <a href="goods.html" class="product__link"></a>
         </div>
-    </div>
-    <div class="slider-products__item">
-        <div class="product">
-            <div class="product__stickers">
-                <span class="product__sticker product__sticker--new">NEW</span>
-                <span class="product__colors">4 цвета</span>
+        <div class="col col-3 col-md-6 promo-products__col">
+            <div class="promo-products__product">
+                <div class="promo-products__product-sticker"><a href="#" class="promo-products__sticker">-40%</a></div>
+                <div class="promo-products__photo-block">
+                    <a href="#123" class="promo-products__product-link"><img src="./images/promo-products/d-sun-junior-aery-blue-lunettes-soleil-enfant-3.png" alt="Квадратная картинка - 292x292px" class="promo-products__photo"></a>
+                </div>
+                <div class="promo-products__text promo-products__text--bottom">
+                    <p class="promo-products__appointment"><a href="#">ДЕТСКИЕ 5-10 ЛЕТ</a></p>
+                    <p class="promo-products__title"><a href="#">#D Aery Blue</a></p>
+                </div>
             </div>
-            <div class="product__img">
-                <img src="./images/products/c-sun-tortoise-mirror-sunglasses.png" alt="Photo">
-            </div>
-            <div class="product__name-block">
-                <p class="product__series">SUN & SUN READING</p>
-                <p class="product__name">IZIPIZI x MERCI</p>
-            </div>
-            <div class="product__price-block">
-                <p class="product__price">3 590 ₽</p>
-            </div>
-            <div class="product__btn-block">
-                <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-            </div>
-            <a href="goods.html" class="product__link"></a>
         </div>
-    </div>
-    <div class="slider-products__item">
-        <a href="#" class="slider-products__banner">
-            <img src="./images/products/promo-banner01.jpg" alt="Promo Banner">
-        </a>
-    </div>
-    <div class="slider-products__item">
-        <div class="product">
-            <div class="product__stickers">
-                <span class="product__sticker product__sticker--new">NEW</span>
-                <span class="product__colors">12 цветов</span>
+        <div class="col col-3 col-md-6 promo-products__col">
+            <div class="promo-products__product">
+                <div class="promo-products__photo-block">
+                    <a href="#123" class="promo-products__product-link"><img src="./images/promo-products/sun-kids-plus-fresh-blue-lunettes-soleil-bebe.png" alt="Квадратная картинка - 292x292px" class="promo-products__photo"></a>
+                </div>
+                <div class="promo-products__text promo-products__text--bottom promo-products__text--small">
+                    <p class="promo-products__appointment"><a href="#">ДЕТСКИЕ 3-5 ЛЕТ</a></p>
+                    <p class="promo-products__title"><a href="#">Fresh Blue</a></p>
+                </div>
             </div>
-            <div class="product__img">
-                <img src="./images/products/d-sun-tortoise-sunglasses.png" alt="Photo">
-            </div>
-            <div class="product__name-block">
-                <p class="product__series">SUN & SUN READING</p>
-                <p class="product__name">#D Tortoise</p>
-            </div>
-            <div class="product__price-block">
-                <p class="product__price">3 590 ₽</p>
-            </div>
-            <div class="product__btn-block">
-                <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-            </div>
-            <a href="goods.html" class="product__link"></a>
         </div>
-    </div>
-    <div class="slider-products__item">
-        <div class="product">
-            <div class="product__stickers">
-                <span class="product__sticker product__sticker--new">NEW</span>
-                <span class="product__colors">12 цветов</span>
+        <div class="col col-3 col-md-6 promo-products__col">
+            <div class="promo-products__product">
+                <div class="promo-products__photo-block">
+                    <a href="#123" class="promo-products__product-link"><img src="./images/promo-products/d-sun-tortoise-lunettes-soleil-2.png" alt="Квадратная картинка - 292x292px" class="promo-products__photo"></a>
+                </div>
+                <div class="promo-products__text promo-products__text--bottom promo-products__text--small">
+                    <p class="promo-products__appointment"><a href="#">СОЛНЦЕ И ДЛЯ ЧТЕНИЯ</a></p>
+                    <p class="promo-products__title"><a href="#">#D Tortoise</a></p>
+                </div>
             </div>
-            <div class="product__img">
-                <img src="./images/products/d-sun-tortoise-sunglasses.png" alt="Photo">
-            </div>
-            <div class="product__name-block">
-                <p class="product__series">SUN & SUN READING</p>
-                <p class="product__name">#D Tortoise</p>
-            </div>
-            <div class="product__price-block">
-                <p class="product__price">3 590 ₽</p>
-            </div>
-            <div class="product__btn-block">
-                <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-            </div>
-            <a href="goods.html" class="product__link"></a>
+        </div>
+        <div class="col col-3 col-md-6 promo-products__col">
+            <a href="#" class="promo-products__banner">
+                <div class="promo-products__banner-photo">
+                    <img src="./images/promo-products/banner-children.jpg" alt="Banner" class="promo-products__banner-bg">
+                </div>
+                <div class="promo-products__banner-text-small">
+                    <p>ВЫБРАТЬ ОЧКИ <br><strong>для Детей</strong></p>
+                </div>
+            </a>
         </div>
     </div>
 </div>
@@ -532,7 +521,7 @@
                     </div>
                 </div>
             </div>
-            <form action="" method="post" class="form">
+            <form class="form">
                 <div class="form__for-input">
                     <label class="form__label">* Ваше Имя</label>
                     <input type="text" name="name" class="form__input" required>
@@ -607,6 +596,7 @@
 <script src="js/jquery.fancybox.js"></script>
 <script src="js/select2.js"></script>
 <script src="js/jquery.mask.min.js"></script>
+<script src="js/jquery.zoom.min.js"></script>
 <script src="js/script.js"></script>
 
 </body>

@@ -1,5 +1,5 @@
 .promo-promo-slider {
-    background: #ecedef;
+    background: #f1f0eb;
 }
 
 .promo-slider {
@@ -19,7 +19,7 @@
         opacity   : 0;
         transition: all 1s ease;
         background: #ffffff;
-        padding   : 65px 40px 20px 40px;
+        padding   : 20px 40px 20px 40px;
         position  : absolute;
         right      : 0;
         bottom: 0;
@@ -29,6 +29,11 @@
         opacity   : 0;
         transition: all 1s linear;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
 
         @media screen and (max-width: 960px) {
             padding: 25px 20px 20px;
@@ -42,7 +47,7 @@
         }
     }
     &__image {
-        width   : 69.2%;
+        width   : 66%;
         margin  : 0;
         position: relative;
 
@@ -52,7 +57,7 @@
 
         &:before {
             content    : "";
-            padding-top: 72.11%;
+            padding-top: 73.14%;
             display    : block;
         }
 
@@ -72,8 +77,9 @@
         font-size: 36px;
         line-height: 1.3;
         color: #343e48;
-        margin-bottom: 30px;   
+        margin-bottom: 38px;   
         text-transform: none;     
+        width: 100%;
 
         @media screen and (max-width: 960px) {
             font-size: 27px;
@@ -89,7 +95,8 @@
         font-weight: 600;
         font-size: 16px;
         line-height: 1.8;
-        padding-bottom: 40px;
+        padding-bottom: 70px;
+        width: 100%;
 
         @media screen and (max-width: 960px) {
             font-size: 14px;
@@ -101,9 +108,9 @@
     }
     &__btn {
         display: inline-block;
-        background: #343e48;
-        border: 2px solid #343e48;
-        border-radius: 30px;
+        background: #1b252f;
+        border: 2px solid #1b252f;
+        border-radius: 5px;
         font-weight: 500;
         font-size: 16px;
         color: #fefefe;
@@ -118,7 +125,8 @@
 
         &:hover {
             background: transparent;
-            color: #343e48;
+            color: #1b252f;
+            transform       : scale(1.1);
         }
     }
     
@@ -173,7 +181,7 @@
         justify-content: center;
         list-style: none;
         padding-top: 7px;
-        padding-bottom: 15px;
+        padding-bottom: 35px;
 
         button {
             margin-left: 5px;

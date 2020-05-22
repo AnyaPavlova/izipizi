@@ -1,0 +1,143 @@
+.brand-banner {
+
+    &__info {
+        position: relative;
+
+        @media screen and (max-width: 670px) {
+            overflow: hidden;
+        }
+    }
+
+    &__photo {
+        display: block;
+        width: 100%;       
+        
+        @media screen and (max-width: 670px) {
+            height: 350px;
+            width: auto;
+            object-fit: cover;
+            object-position: right top;
+        }
+    }
+
+    &__container {
+        max-width: 965px;
+        padding: 0 15px;
+        position: absolute;
+        left: 0; right: 0; 
+        top: 0; bottom: 0;
+        width: 100%;
+        height: 100%;        
+        margin: auto;
+    }
+    &__row {
+        align-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-content: center;
+    }
+    &__title {
+        // font-family: 'Thonburi', sans-serif;
+        font-weight: 700;
+        padding-bottom: 25px;
+        font-size: 48px;
+        color: #ffffff;
+        text-align: center;
+    }
+    &__logo {
+        padding-bottom: 25px;
+        align-self: center;
+
+        @media screen and (max-width: 960px) {
+            width: 200px;
+            padding-bottom: 15px;
+        }
+    }
+    &__p {
+        font-weight: 600;
+        color: #ffffff;
+        line-height: 1.8;
+        padding-bottom: 25px;
+        text-align: center;
+        width: 100%;
+
+        @media screen and (max-width: 960px) {
+            font-size: 14px;
+            line-height: 1.4;
+            padding-bottom: 15px;
+        }
+    }
+    &__for-btn {
+        @media screen and (max-width: 670px) {
+            text-align: center;
+        }
+    }
+    &__btn {
+        width: 100%;
+        padding: 13px;
+        text-align: center;
+
+        @media screen and (max-width: 670px) {
+            width: auto;
+            margin: 5px auto;
+        }
+
+        span {
+            padding-right  : 38px;
+            position       : relative;
+            display: inline-block;
+
+            @media screen and (max-width: 670px) {
+                font-size: 12px;
+                padding-right: 20px;
+            }
+
+            &:after {
+                content : '';
+                display : block;
+                position: absolute;
+            }
+        }
+
+        &--download {
+
+            span:after {
+                right     : 11px;
+                top       : 0;
+                background: url(../images/icons/download.png);
+                width     : 15px;
+                height    : 20px;
+
+                @media screen and (max-width: 670px) {
+                    right: 0;
+                    width: 11px;
+                    height: 14px;
+                    background-size: contain;
+                }
+            }
+        }
+        &--video {
+
+            span:after {
+                right     : 9px;
+                top       : 0;
+                background: url(../images/icons/music-and-multimedia.png);
+                width     : 20px;
+                height    : 20px;
+
+                @media screen and (max-width: 670px) {
+                    right: 0;
+                    width: 14px;
+                    height: 14px;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+}

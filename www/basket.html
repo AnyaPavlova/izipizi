@@ -72,7 +72,26 @@
     <div class="inner inner--normal top-menu__inner">
       <div class="row top-menu__row">
         <div class="top-menu__for-burger"><span id="burger" class="burger"></span></div>
-        <div class="col col-4 top-menu__menu" id="top-menu">
+
+        <div class="col col-4 top-menu__for-search-desc">
+          <div class="search">
+            <form class="search__form" id="search-form" role="search" method="get" action="">
+              <button class="search__search-btn" type="submit"></button>
+              <input class="search__input" type="search" placeholder="Поиск по сайту" value="" name="search">              
+            </form>
+          </div>
+        </div>
+        
+        <div class="col col-4 top-menu__logo">
+          <a href="index.html"><img src="images/SunnyStyle.png" alt="IZIPIZI logo"></a>
+        </div>
+        <div class="col col-4 top-menu__icons">    
+          <div class="basket">
+            <a href="#" class="basket__link"><span class="basket__num">0</span></a>
+          </div>
+        </div>
+
+        <div class="col col-12 top-menu__menu" id="top-menu">
 
           <div class="mob-search">
             <form class="mob-search__form" role="search" method="get" action="">
@@ -84,6 +103,7 @@
           <div class="menu">
             <nav class="menu__nav">
               <ul class="menu__list">
+                <li class="menu__item"><a href="#" class="menu__link">IZIPIZI</a></li>
                 <li class="menu__item">
                   <a href="categories.html" class="menu__link">КАталог</a>
                   <div class="submenu">
@@ -138,6 +158,7 @@
                     </div>
                   </div>
                 </li>
+                <li class="menu__item"><a href="#" class="menu__link">новинки</a></li>                
                 <li class="menu__item"><a href="#" class="menu__link">Где купить</a></li>
                 <li class="menu__item"><a href="#" class="menu__link">о бренде</a></li>
               </ul>
@@ -156,24 +177,7 @@
           </div>
 
         </div>
-        <div class="col col-4 top-menu__logo">
-          <a href="index.html"><img src="images/izipizi-logo.png" alt="IZIPIZI logo"></a>
-        </div>
-        <div class="col col-4 top-menu__icons">
 
-          <div class="search">
-            <span class="search__btn-for-search" id="btn-open-search"></span>
-            <form class="search__form" id="search-form" role="search" method="get" action="">
-              <input class="search__input" type="search" placeholder="Поиск по сайту" value="" name="search">
-              <button class="search__search-btn" type="submit"></button>
-            </form>
-          </div>
-
-          <div class="basket">
-            <a href="#" class="basket__link"><span class="basket__num">0</span></a>
-          </div>
-
-        </div>
       </div>
     </div>
   </div>
@@ -273,7 +277,7 @@
                 <div class="basket-block__promo">
                     <table class="basket-block__tab">
                         <tr>
-                            <td class="basket-block__tab-name">Товаров (2):</td>
+                            <td class="basket-block__tab-name">Товаров (<span class="sumCountProducts">0</span>):</td>
                             <td><span class="basket-block__price"><span class="orderPrice"></span></span></td>
                         </tr>                   
                         <tr>
@@ -573,7 +577,7 @@
                     </div>
                 </div>
             </div>
-            <form action="" method="post" class="form">
+            <form class="form">
                 <div class="form__for-input">
                     <label class="form__label">* Ваше Имя</label>
                     <input type="text" name="name" class="form__input" required>
@@ -648,6 +652,7 @@
 <script src="js/jquery.fancybox.js"></script>
 <script src="js/select2.js"></script>
 <script src="js/jquery.mask.min.js"></script>
+<script src="js/jquery.zoom.min.js"></script>
 <script src="js/script.js"></script>
 
 </body>

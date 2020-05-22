@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="css/style.css">
     <title>Ссылки</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap&subset=cyrillic" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/uncompressed.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="./favicons/favicon.ico">
+
+    <meta content="width=device-width, user-scalable=1, initial-scale=1" name="viewport" />
     
     <style>
         p {
@@ -13,6 +22,15 @@
         p.main {
             font-size: 18px;
             font-weight: 600;
+            padding-top: 21px;
+        }
+        p span {
+            background-color: lightblue;
+            color: #203D63;
+            display: inline-block;
+            padding: 0 3px;
+            font-weight: 500;
+            margin: 0 3px;
         }
     </style>
 </head>
@@ -20,14 +38,19 @@
     <div style="margin-top: 50px; margin-bottom: 50px;">
         <div class="inner inner--normal">
             <p class="main"><a href="index.html" target="_blank">Главная</a></p>
+            <p>Форма входа появляется при клике на кнопку "Войти" в шапке сайта.</p>
+            <p>Подменюшка Категории открывается при ховере на пункт меню "Каталог"</p>
             <p class="main"><a href="categories.html" target="_blank">Категории</a></p>
             <p class="main"><a href="products.html" target="_blank">Солнцезащитные очки (страница с товарами)</a></p>
-            <p>Полоса с выбранными в фильтре параметрами отображается если что-то там есть (к products-filters__choise-filters добавляется активный класс products-filters__choise-filters--active).</p>
+            <p>Полоса с выбранными в фильтре параметрами отображается если что-то там есть (к <span>products-filters__choise-filters</span> добавляется активный класс <span>products-filters__choise-filters--active</span>).</p>
             <p class="main"><a href="goods.html" target="_blank">Товар</a></p>
-            <p>При клике на кнопки "Купить в 1 клик"/"В корзину" открываются PopUp-ы (для кадой кнопки свой)</p>
+            <p>При наведении на картинку (большую) фото начинает увеличиваться (zoom).</p>
+            <p>При клике на кнопки "Купить в 1 клик"/"В корзину" открываются PopUp-ы (для кадой кнопки свой).</p>
             <p class="main"><a href="basket.html">Корзина</a></p>
             <p>***</p>
             <p><strong>Менюшка</strong><br>Верхняя менюшка в моб. - подкатегории работают по принципу - если первый раз нажали на название - открывается подменю, если повторно нажали - переход на страницу; если нажали на иконку (стрелочку) - то всегда открытие/закрытие подменю.</p>
+            <p class="main">Комментарии:</p>
+            <p>в Alt-ах многих картинок указала размеры картинок... Это, наверное, нужно будет в админку перенести, чтобы пользователи знали что грузить...</p>
         </div>
     </div>
 </body>
