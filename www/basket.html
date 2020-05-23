@@ -87,7 +87,7 @@
         </div>
         <div class="col col-4 top-menu__icons">    
           <div class="basket">
-            <a href="#" class="basket__link"><span class="basket__num">0</span></a>
+            <a href="basket.html" class="basket__link"><span class="basket__num">0</span></a>
           </div>
         </div>
 
@@ -186,6 +186,11 @@
 
 <main class="main">
 
+<div class="izipizi-line">
+    <div class="inner inner--normal">
+        <p class="izipizi-line__text">Sunny style  - представляет официально IZIPIZI</p>
+    </div>
+</div>
 <div class="breadcrumbs breadcrumbs--gray">
     <div class="inner inner--normal">
         <div class="breadcrumbs__block">
@@ -208,6 +213,7 @@
                             <div class="col col-6">
                                 <p class="basket-block__series">SUN & SUN READING</p>
                                 <p class="basket-block__name">#C Blue Tortoise</p>
+                                <p class="basket-block__text">Диоптрии: +0</p>
                                 <table class="basket-block__tab">
                                     <tr>
                                         <td class="basket-block__tab-name">Цена:</td>
@@ -241,6 +247,7 @@
                             <div class="col col-6">
                                 <p class="basket-block__series">SUN & SUN READING</p>
                                 <p class="basket-block__name">#C Blue Tortoise</p>
+                                <p class="basket-block__text">Диоптрии: +0</p>
                                 <table class="basket-block__tab">
                                     <tr>
                                         <td class="basket-block__tab-name">Цена:</td>
@@ -281,13 +288,13 @@
                             <td><span class="basket-block__price"><span class="orderPrice"></span></span></td>
                         </tr>                   
                         <tr>
-                            <td class="basket-block__tab-name">Промокод:</td>
+                            <td class="basket-block__tab-name basket-block__tab-name--promocode">Промокод:</td>
                             <td class="basket-block__tab-promo">
                                 <div class="basket-block__tab-promo-block">
                                     <input type="text" name="name" class="form__input basket-block__input" required>
                                 </div>
                                 <div class="basket-block__tab-btn">
-                                    <a href="#" class="btn--blue-fill btn--blue-fill-small">Применить</a>
+                                    <a href="#" class="btn--blue-fill btn--blue-fill-small basket-block__promocode-btn">Применить</a>
                                 </div>
                             </td>                            
                         </tr>
@@ -302,8 +309,8 @@
                     </table>
                 </div>
                 <div class="basket-block__btns">
-                    <a href="#" class="popupAddInBasket__btn btn--blue-fill">Заказать в 1 клик</a>
-                    <a href="#" class="popupAddInBasket__btn btn--fill">Оформить заказ</a>
+                    <a href="#BuyIn1ClickInBasket" class="basket-block__btn btn--blue-fill call-popup">Заказать в 1 клик</a>
+                    <a href="#" class="basket-block__btn btn--fill">Оформить заказ</a>
                 </div>
                 <div class="basket-block__return">
                     <a href="#" class="basket-block__return-btn">Продолжить покупки</a>
@@ -313,144 +320,121 @@
     </div>
 </section>
 
-<section class="goods-recommendations">
+<section class="goods-recommendations goods-recommendations--in-basket">
     <div class="inner inner--normal inner--allmob">
         <h2 class="goods-recommendations__title">Вам также может понравиться</h2>
 
         <div class="slider-products">
     <div class="slider-products__item">
         <div class="product">
-            <div class="product__stickers">
-                <span class="product__sticker product__sticker--new">NEW</span>
+            <div class="product__stickers slider-products__stickers">
+                <a href="#new" class="product__sticker slider-products__sticker product__sticker--new">NEW</a>
                 <span class="product__colors">12 цветов</span>
             </div>
             <div class="product__img">
                 <img src="./images/products/d-sun-tortoise-sunglasses.png" alt="Photo">
             </div>
-            <div class="product__name-block">
-                <p class="product__series">SUN & SUN READING</p>
-                <p class="product__name">#D Tortoise</p>
+            <div class="product__name-block slider-products__name-block">
+                <p class="product__series slider-products__series">SUN & SUN READING</p>
+                <p class="product__name slider-products__name-products">#D Tortoise</p>
             </div>
-            <div class="product__price-block">
-                <p class="product__price">3 590 ₽</p>
-            </div>
-            <div class="product__btn-block">
-                <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-            </div>
+            <div class="product__price-block slider-products__price-block">
+                <a href="#link" class="product__price slider-products__price">3 590 ₽</a>
+            </div>            
             <a href="goods.html" class="product__link"></a>
         </div>
     </div>
     <div class="slider-products__item">
         <div class="product">
-            <div class="product__stickers">
-                <span class="product__sticker product__sticker--new">NEW</span>
+            <div class="product__stickers slider-products__stickers">
+                <span class="product__sticker slider-products__sticker product__sticker--new">NEW</span>
             </div>
             <div class="product__img">
                 <img src="./images/products/izipizi-x-les-fermes-de-marie-sun-glacier-brown.png" alt="Photo">
             </div>
-            <div class="product__name-block">
-                <p class="product__series">SUN GLACIER PLUS</p>
-                <p class="product__name">IZIPIZI x Les Fermes de Marie</p>
+            <div class="product__name-block slider-products__name-block">
+                <p class="product__series slider-products__series">SUN GLACIER PLUS</p>
+                <p class="product__name slider-products__name-products">IZIPIZI x Les Fermes de Marie</p>
             </div>
-            <div class="product__price-block">
-                <p class="product__price">4 199 ₽</p>
-            </div>
-            <div class="product__btn-block">
-                <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-            </div>
+            <div class="product__price-block slider-products__price-block">
+                <a href="#link" class="product__price slider-products__price">4 199 ₽</a>
+            </div>            
             <a href="goods.html" class="product__link"></a>
         </div>
     </div>
     <div class="slider-products__item">
         <div class="product">
-            <div class="product__stickers">
-                <span class="product__sticker product__sticker--new">NEW</span>
+            <div class="product__stickers slider-products__stickers">
+                <span class="product__sticker slider-products__sticker product__sticker--new">NEW</span>
                 <span class="product__colors">24 цвета</span>
             </div>
             <div class="product__img">
                 <img src="./images/products/d-sun-merci-10-years.png" alt="Photo">
             </div>
-            <div class="product__name-block">
-                <p class="product__series">SUN & SUN READING</p>
-                <p class="product__name">IZIPIZI x MERCI</p>
+            <div class="product__name-block slider-products__name-block">
+                <p class="product__series slider-products__series">SUN & SUN READING</p>
+                <p class="product__name slider-products__name-products">IZIPIZI x MERCI</p>
             </div>
-            <div class="product__price-block">
-                <p class="product__price">3 590 ₽</p>
-            </div>
-            <div class="product__btn-block">
-                <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-            </div>
+            <div class="product__price-block slider-products__price-block">
+                <a href="#link" class="product__price slider-products__price">3 590 ₽</a>
+            </div>            
             <a href="goods.html" class="product__link"></a>
         </div>
     </div>
     <div class="slider-products__item">
         <div class="product">
-            <div class="product__stickers">
-                <span class="product__sticker product__sticker--new">NEW</span>
+            <div class="product__stickers slider-products__stickers">
+                <span class="product__sticker slider-products__sticker product__sticker--new">NEW</span>
                 <span class="product__colors">4 цвета</span>
             </div>
             <div class="product__img">
                 <img src="./images/products/c-sun-tortoise-mirror-sunglasses.png" alt="Photo">
             </div>
-            <div class="product__name-block">
-                <p class="product__series">SUN & SUN READING</p>
-                <p class="product__name">IZIPIZI x MERCI</p>
+            <div class="product__name-block slider-products__name-block">
+                <p class="product__series slider-products__series">SUN & SUN READING</p>
+                <p class="product__name slider-products__name-products">IZIPIZI x MERCI</p>
             </div>
-            <div class="product__price-block">
-                <p class="product__price">3 590 ₽</p>
-            </div>
-            <div class="product__btn-block">
-                <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-            </div>
+            <div class="product__price-block slider-products__price-block">
+                <a href="#link" class="product__price slider-products__price">3 590 ₽</a>
+            </div>            
             <a href="goods.html" class="product__link"></a>
         </div>
-    </div>
-    <div class="slider-products__item">
-        <a href="#" class="slider-products__banner">
-            <img src="./images/products/promo-banner01.jpg" alt="Promo Banner">
-        </a>
-    </div>
+    </div>    
     <div class="slider-products__item">
         <div class="product">
-            <div class="product__stickers">
-                <span class="product__sticker product__sticker--new">NEW</span>
+            <div class="product__stickers slider-products__stickers">
+                <span class="product__sticker slider-products__sticker product__sticker--new">NEW</span>
                 <span class="product__colors">12 цветов</span>
             </div>
             <div class="product__img">
                 <img src="./images/products/d-sun-tortoise-sunglasses.png" alt="Photo">
             </div>
-            <div class="product__name-block">
-                <p class="product__series">SUN & SUN READING</p>
-                <p class="product__name">#D Tortoise</p>
+            <div class="product__name-block slider-products__name-block">
+                <p class="product__series slider-products__series">SUN & SUN READING</p>
+                <p class="product__name slider-products__name-products">#D Tortoise</p>
             </div>
-            <div class="product__price-block">
-                <p class="product__price">3 590 ₽</p>
-            </div>
-            <div class="product__btn-block">
-                <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-            </div>
+            <div class="product__price-block slider-products__price-block">
+                <a href="#link" class="product__price slider-products__price">3 590 ₽</a>
+            </div>            
             <a href="goods.html" class="product__link"></a>
         </div>
     </div>
     <div class="slider-products__item">
         <div class="product">
-            <div class="product__stickers">
-                <span class="product__sticker product__sticker--new">NEW</span>
+            <div class="product__stickers slider-products__stickers">
+                <span class="product__sticker slider-products__sticker product__sticker--new">NEW</span>
                 <span class="product__colors">12 цветов</span>
             </div>
             <div class="product__img">
                 <img src="./images/products/d-sun-tortoise-sunglasses.png" alt="Photo">
             </div>
-            <div class="product__name-block">
-                <p class="product__series">SUN & SUN READING</p>
-                <p class="product__name">#D Tortoise</p>
+            <div class="product__name-block slider-products__name-block">
+                <p class="product__series slider-products__series">SUN & SUN READING</p>
+                <p class="product__name slider-products__name-products">#D Tortoise</p>
             </div>
-            <div class="product__price-block">
-                <p class="product__price">3 590 ₽</p>
-            </div>
-            <div class="product__btn-block">
-                <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-            </div>
+            <div class="product__price-block slider-products__price-block">
+                <a href="#link" class="product__price slider-products__price">3 590 ₽</a>
+            </div>            
             <a href="goods.html" class="product__link"></a>
         </div>
     </div>
@@ -645,6 +629,61 @@
             </div>
         </div>
 
+    </div>
+</div>
+
+<div id="BuyIn1ClickInBasket" class="popup popupOneClick" style="display: none;">
+    <div class="popup__container popup__container--bookin">
+        <span class="popup__close"></span>
+        <div class="popup__inner">
+            <p class="popup__title">Заказ в 1 клик</p>            
+            <form class="form">
+                <div class="form__for-input">
+                    <label class="form__label">* Ваше Имя</label>
+                    <input type="text" name="name" class="form__input" required>
+                </div>
+                <div class="form__for-input">
+                    <label class="form__label">Комментарий к заказу</label>
+                    <textarea class="form__textarea" name="info" rows="5"></textarea>
+                </div>
+                <div class="form__for-input">
+                    <label class="form__label">* Телефон</label>
+                    <input class="form__input phone-mask" type="tel" name="phone" required>
+                </div>
+                <div class="form__for-checkbox">
+                    <input class="form__checkbox" id="agree2" type="checkbox" name="agree" required>
+                    <label for="agree2"><span></span> <i class="form__text-checkbox">Я подтверждаю свое согласие на
+                            обработку персональных данных</i></label>
+                </div>
+                <div class="form__for-submit">
+                    <!-- <button class="form__submit submit-btn btn--fill" type="submit">Оформить заказ</button> -->
+                    <a href="#SuccessfullyPopup" class="form__submit btn--fill call-popup">Оформить заказ</a>
+                </div>
+                <p class="form__message form__message--ok">Ваш заказ был отправлено успешно. Мы свяжемся с вами в
+                    ближайшее время</p>
+                <p class="form__message form__message--error">Ошибки заполнения. Пожалуйста, проверьте все поля и
+                    отправьте снова.</p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="SuccessfullyPopup" class="popup popupOneClick" style="display: none;">
+    <div class="popup__container popup__container--bookin">
+        <span class="popup__close"></span>
+        <div class="popup__inner">
+            <p class="popup__title popup__title--successfully">Ваш заказ в обработке</p>      
+            <p class="popup__subtitle">Наш менеджер свяжется с Вами в ближайшее время</p>                  
+        </div>
+        <div class="popup-successfully">
+            <div class="popup-successfully__message">
+                <p class="popup-successfully__message-name">Заказ:</p>
+                <p class="popup-successfully__order">902033</p>
+            </div>
+        </div>
+        <div class="popup-successfully__btn-block">
+            <a href="categories.html" class="form__submit submit-btn btn--fill">Продолжить покупки</a>
+        </div>
     </div>
 </div>
 <script src="js/jquery-3.4.1.min.js"></script>

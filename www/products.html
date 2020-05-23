@@ -87,7 +87,7 @@
         </div>
         <div class="col col-4 top-menu__icons">    
           <div class="basket">
-            <a href="#" class="basket__link"><span class="basket__num">0</span></a>
+            <a href="basket.html" class="basket__link"><span class="basket__num">0</span></a>
           </div>
         </div>
 
@@ -263,72 +263,78 @@
                 <div class="products-block__title">
                     <p class="products-block__filter-title">Фильтр</p>
                 </div>
-                <div class="products-block__filter-item products-block__filter-item--check">
-                    <div class="products-check__col-title">
-                        <span class="products-check__title-toggle filter-title-toggle">Форма</span>
-                    </div>
-                    <div class="products-check__row products-check__block-options filter-info-toggle">
-                        <div class="products-check__col products-check__form-col">
-                            <div class="products-check__checkbox products-check__checkbox-form">
-                                <input type="checkbox" id="formRetro" name="form[]" value="Retro">
-                                <label for="formRetro">
-                                    <span>The Retro</span>
-                                    <img src="./images/filters/retro.png" alt="Retro">
-                                </label>
-                            </div>
+                <div class="products-block__filter-item">
+                    <div class="products-check">
+                        <div class="products-check__title-block">
+                            <span class="products-check__title filter-title-toggle">Форма</span>
                         </div>
-                        <div class="products-check__col products-check__form-col">
-                            <div class="products-check__checkbox products-check__checkbox-form">
-                                <input type="checkbox" id="formIconic" name="form[]" value="Iconic">
-                                <label for="formIconic">
-                                    <span>The Iconic</span>
-                                    <img src="./images/filters/Iconic.jpg" alt="Iconic">
-                                </label>
-                            </div>
-                        </div>
-                        <div class="products-check__col products-check__form-col">
-                            <div class="products-check__checkbox products-check__checkbox-form">
-                                <input type="checkbox" id="formTrapeze" name="form[]" value="Trapeze">
-                                <label for="formTrapeze">
-                                    <span>The Trapeze</span>
-                                    <img src="./images/filters/Trapeze.jpg" alt="Trapeze">
-                                </label>
-                            </div>
-                        </div>
-                        <div class="products-check__col products-check__form-col">
-                            <div class="products-check__checkbox products-check__checkbox-form">
-                                <input type="checkbox" id="formFoldable" name="form[]" value="Foldable">
-                                <label for="formFoldable">
-                                    <span>The Foldable</span>
-                                    <img src="./images/filters/Foldable.jpg" alt="Foldable">
-                                </label>
-                            </div>
-                        </div>
-                        <div class="products-check__col products-check__form-col">
-                            <div class="products-check__checkbox products-check__checkbox-form">
-                                <input type="checkbox" id="formRound" name="form[]" value="Round">
-                                <label for="formRound">
-                                    <span>The Round</span>
-                                    <img src="./images/filters/Round.jpg" alt="Round">
-                                </label>
-                            </div>
-                        </div>
-                        <div class="products-check__col products-check__form-col">
-                            <div class="products-check__checkbox products-check__checkbox-form">
-                                <input type="checkbox" id="formSmallFace" name="form[]" value="SmallFace">
-                                <label for="formSmallFace">
-                                    <span><nobr>The Small Face</nobr></span>
-                                    <img src="./images/filters/SmallFace.jpg" alt="Small Face">
-                                </label>
-                            </div>
-                        </div>
-                        <div class="products-check__col products-check__form-col">
-                            <div class="products-check__checkbox products-check__checkbox-form">
-                                <input type="checkbox" id="formAviator" name="form[]" value="Aviator">
-                                <label for="formAviator">
-                                    <span>The Aviator</span>
-                                    <img src="./images/filters/Aviator.jpg" alt="Aviator">
-                                </label>
+                        <div class="products-check__block">
+                            <div class="products-check__row products-check__block-options filter-info-toggle">
+                                <div class="products-check__col products-check__form-col">
+                                    <div class="products-check__checkbox products-check__checkbox-form">
+                                        <input type="checkbox" id="formRetro" name="form[]" value="Retro">
+                                        <label for="formRetro">
+                                            <span>The Retro</span>
+                                            <img src="./images/filters/retro.png" alt="Retro">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="products-check__col products-check__form-col">
+                                    <div class="products-check__checkbox products-check__checkbox-form">
+                                        <input type="checkbox" id="formIconic" name="form[]" value="Iconic">
+                                        <label for="formIconic">
+                                            <span>The Iconic</span>
+                                            <img src="./images/filters/Iconic.jpg" alt="Iconic">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="products-check__col products-check__form-col">
+                                    <div class="products-check__checkbox products-check__checkbox-form">
+                                        <input type="checkbox" id="formTrapeze" name="form[]" value="Trapeze">
+                                        <label for="formTrapeze">
+                                            <span>The Trapeze</span>
+                                            <img src="./images/filters/Trapeze.jpg" alt="Trapeze">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="products-check__col products-check__form-col">
+                                    <div class="products-check__checkbox products-check__checkbox-form">
+                                        <input type="checkbox" id="formFoldable" name="form[]" value="Foldable">
+                                        <label for="formFoldable">
+                                            <span>The Foldable</span>
+                                            <img src="./images/filters/Foldable.jpg" alt="Foldable">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="products-check__col products-check__form-col">
+                                    <div class="products-check__checkbox products-check__checkbox-form">
+                                        <input type="checkbox" id="formRound" name="form[]" value="Round">
+                                        <label for="formRound">
+                                            <span>The Round</span>
+                                            <img src="./images/filters/Round.jpg" alt="Round">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="products-check__col products-check__form-col">
+                                    <div class="products-check__checkbox products-check__checkbox-form">
+                                        <input type="checkbox" id="formSmallFace" name="form[]" value="SmallFace">
+                                        <label for="formSmallFace">
+                                            <span>
+                                                <nobr>The Small Face</nobr>
+                                            </span>
+                                            <img src="./images/filters/SmallFace.jpg" alt="Small Face">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="products-check__col products-check__form-col">
+                                    <div class="products-check__checkbox products-check__checkbox-form">
+                                        <input type="checkbox" id="formAviator" name="form[]" value="Aviator">
+                                        <label for="formAviator">
+                                            <span>The Aviator</span>
+                                            <img src="./images/filters/Aviator.jpg" alt="Aviator">
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -337,13 +343,13 @@
                     <div class="products-select products-select--color">
                         <select name="color" data-placeholder="Цвет">
                             <option value="Любой цвет">Цвет</option>
-                            <option value="Красный">Красный</option>
-                            <option value="Зеленый">Зеленый</option>
-                            <option value="Оранжевый">Оранжевый</option>
-                            <option value="Желтый">Желтый</option>
-                            <option value="Голубой">Голубой</option>
-                            <option value="Синий">Синий</option>
-                            <option value="Фиолетовый">Фиолетовый</option>
+                            <option value="Красный">Красный цвет</option>
+                            <option value="Зеленый">Зеленый цвет</option>
+                            <option value="Оранжевый">Оранжевый цвет</option>
+                            <option value="Желтый">Желтый цвет</option>
+                            <option value="Голубой">Голубой цвет</option>
+                            <option value="Синий">Синий цвет</option>
+                            <option value="Фиолетовый">Фиолетовый цвет</option>
                         </select>
                     </div>
                 </div>
@@ -351,13 +357,13 @@
                     <div class="products-select products-select--diopters">
                         <select name="diopters" data-placeholder="Диоптрии">
                             <option value="Диоптрии">Диоптрии</option>
-                            <option value="+1">+1</option>
-                            <option value="0">0</option>
-                            <option value="-1">-1</option>
-                            <option value="-2">-2</option>
-                            <option value="-3">-3</option>
-                            <option value="-4">-4</option>
-                            <option value="-5">-5</option>
+                            <option value="+1">Диоптрии +1</option>
+                            <option value="0">Диоптрии  0</option>
+                            <option value="-1">Диоптрии -1</option>
+                            <option value="-2">Диоптрии -2</option>
+                            <option value="-3">Диоптрии -3</option>
+                            <option value="-4">Диоптрии -4</option>
+                            <option value="-5">Диоптрии -5</option>
                         </select>
                     </div>
                 </div>
@@ -385,10 +391,10 @@
                     <div class="products-select products-select--article">
                         <select name="article" data-placeholder="Артикул">
                             <option value="Артикул">Артикул</option>
-                            <option value="000001">000001</option>
-                            <option value="000002">000002</option>
-                            <option value="552158">552158</option>
-                            <option value="336584">336584</option>
+                            <option value="000001">Артикул - 000001</option>
+                            <option value="000002">Артикул - 000002</option>
+                            <option value="552158">Артикул - 552158</option>
+                            <option value="336584">Артикул - 336584</option>
                         </select>
                     </div>
                 </div>
@@ -422,8 +428,8 @@
                             </div>
                             <div class="products-choise__item">
                                 <div class="products-choise__item-inner">
-                                    <span class="products-choise__text">CoolHead NEW</span>
-                                    <span class="product__sticker product__sticker--new">NEW</span>
+                                    <span class="products-choise__text">CoolHead </span>
+                                    <span class="product__sticker product__sticker--small product__sticker--new">NEW</span>
                                     <span class="products-choise__del">
                                         <img src="./images/icons/delete.png" alt="Удалить">
                                     </span>
@@ -439,11 +445,11 @@
 
             <div class="col products-block__col products-block__goods">
                 <div class="products-block__title">
-                    <div class="products-check__row products-check__row--sort">
-                        <div class="products-check__col products-check__form-col">
-                            <p class="products-check__title">Сортировать по </p>
+                    <div class="sorting">
+                        <div class="sorting__name-block">
+                            <p class="sorting__name">Сортировать по </p>
                         </div>
-                        <div class="products-check__col products-check__selects-col">
+                        <div class="sorting__direction">
                             <span class="products-sorting">
                                 Популярности
                             </span>
@@ -456,21 +462,18 @@
         <div class="col col-4 products__col">
             <div class="product">
                 <div class="product__stickers">
-                    <span class="product__sticker product__sticker--new">NEW</span>
                     <span class="product__colors">12 цветов</span>
                 </div>
                 <div class="product__img">
-                    <img src="./images/products/d-sun-tortoise-sunglasses.png" alt="Photo">
+                    <img src="./images/products/c-sun-red-sunglasses.png" alt="Photo">
                 </div>
                 <div class="product__name-block">
                     <p class="product__series">SUN & SUN READING</p>
-                    <p class="product__name">#D Tortoise</p>
+                    <p class="product__name">#C Red</p>
                 </div>
                 <div class="product__price-block">
                     <p class="product__price">3 590 ₽</p>
-                </div>
-                <div class="product__btn-block">
-                    <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
+                    <p class="product__btn-block"><a href="#in-basket" class="product__btn btn--blue-fill">В корзину</a></p>
                 </div>
                 <a href="#product" class="product__link"></a>
             </div>
@@ -478,20 +481,19 @@
         <div class="col col-4 products__col">
             <div class="product">
                 <div class="product__stickers">
-                    <span class="product__sticker product__sticker--new">NEW</span>
+                    <a href="#new" class="product__sticker product__sticker--new">NEW</a>
+                    <span class="product__colors">12 цветов</span>
                 </div>
                 <div class="product__img">
-                    <img src="./images/products/izipizi-x-les-fermes-de-marie-sun-glacier-brown.png" alt="Photo">
+                    <img src="./images/products/c-sun-tortoise-mirror-sunglasses_1.png" alt="Photo">
                 </div>
                 <div class="product__name-block">
-                    <p class="product__series">SUN GLACIER PLUS</p>
-                    <p class="product__name">IZIPIZI x Les Fermes de Marie</p>
+                    <p class="product__series">SUN & SUN READING</p>
+                    <p class="product__name">#C Tortoise Mirror</p>
                 </div>
                 <div class="product__price-block">
-                    <p class="product__price">4 199 ₽</p>
-                </div>
-                <div class="product__btn-block">
-                    <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
+                    <p class="product__price">3 590 ₽</p>
+                    <p class="product__btn-block"><a href="#in-basket" class="product__btn btn--blue-fill">В корзину</a></p>
                 </div>
                 <a href="#product" class="product__link"></a>
             </div>
@@ -502,204 +504,186 @@
                     <span class="product__colors">24 цвета</span>
                 </div>
                 <div class="product__img">
-                    <img src="./images/products/d-sun-merci-10-years.png" alt="Photo">
+                    <img src="./images/products/c-sun-neutral-beige-sunglasses.png" alt="Photo">
                 </div>
                 <div class="product__name-block">
                     <p class="product__series">SUN & SUN READING</p>
-                    <p class="product__name">IZIPIZI x MERCI</p>
+                    <p class="product__name">#C Neutral Beige</p>
                 </div>
                 <div class="product__price-block">
                     <p class="product__price">3 590 ₽</p>
-                </div>
-                <div class="product__btn-block">
-                    <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
+                    <p class="product__btn-block"><a href="#in-basket" class="product__btn btn--blue-fill">В корзину</a></p>
                 </div>
                 <a href="#product" class="product__link"></a>
             </div>
         </div>
-        <div class="col col-4 products__col">
-            <div class="product">
-                <div class="product__stickers">
-                    <span class="product__sticker product__sticker--new">NEW</span>
-                    <span class="product__colors">4 цвета</span>
-                </div>
-                <div class="product__img">
-                    <img src="./images/products/c-sun-tortoise-mirror-sunglasses.png" alt="Photo">
-                </div>
-                <div class="product__name-block">
-                    <p class="product__series">SUN & SUN READING</p>
-                    <p class="product__name">IZIPIZI x MERCI</p>
-                </div>
-                <div class="product__price-block">
-                    <p class="product__price">3 590 ₽</p>
-                </div>
-                <div class="product__btn-block">
-                    <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-                </div>
-                <a href="#product" class="product__link"></a>
-            </div>
-        </div>
-        <div class="col col-4 products__col">
-            <div class="product">
-                <div class="product__stickers">
-                    <span class="product__sticker product__sticker--new">NEW</span>
-                    <span class="product__colors">12 цветов</span>
-                </div>
-                <div class="product__img">
-                    <img src="./images/products/d-sun-tortoise-sunglasses.png" alt="Photo">
-                </div>
-                <div class="product__name-block">
-                    <p class="product__series">SUN & SUN READING</p>
-                    <p class="product__name">#D Tortoise</p>
-                </div>
-                <div class="product__price-block">
-                    <p class="product__price">3 590 ₽</p>
-                </div>
-                <div class="product__btn-block">
-                    <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-                </div>
-                <a href="#product" class="product__link"></a>
-            </div>
-        </div>
-        <div class="col col-4 products__col">
-            <div class="product">
-                <div class="product__stickers">
-                    <span class="product__sticker product__sticker--new">NEW</span>
-                    <span class="product__colors">12 цветов</span>
-                </div>
-                <div class="product__img">
-                    <img src="./images/products/d-sun-tortoise-sunglasses.png" alt="Photo">
-                </div>
-                <div class="product__name-block">
-                    <p class="product__series">SUN & SUN READING</p>
-                    <p class="product__name">#D Tortoise</p>
-                </div>
-                <div class="product__price-block">
-                    <p class="product__price">3 590 ₽</p>
-                </div>
-                <div class="product__btn-block">
-                    <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-                </div>
-                <a href="#product" class="product__link"></a>
-            </div>
-        </div>
-        <div class="col col-4 products__col">
-            <div class="product">
-                <div class="product__stickers">
-                    <span class="product__sticker product__sticker--smallface">Small Face</span>
-                </div>
-                <div class="product__img">
-                    <img src="./images/products/d-sun-tortoise-sunglasses.png" alt="Photo">
-                </div>
-                <div class="product__name-block">
-                    <p class="product__series">SUN & SUN READING</p>
-                    <p class="product__name">#D Tortoise</p>
-                </div>
-                <div class="product__price-block">
-                    <p class="product__price">3 590 ₽</p>
-                </div>
-                <div class="product__btn-block">
-                    <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-                </div>
-                <a href="#product" class="product__link"></a>
-            </div>
-        </div>
-
         <div class="col col-4 products__col">
             <a href="#" class="product__banner">
                 <figure class="product__image">
-                    <img src="./images/products/promo-banner02.jpg" alt="promo banner">
+                    <img src="./images/products/banner-bg.jpg" alt="promo banner background - 390x390px">
                 </figure>
+                <div class="product__banner-text">Коллекция <span>SUN</span></div>
+                <div class="product__banner-logo"><img src="./images/izipizi-logo.png" alt="Logo"></div>
             </a>
         </div>
+        <div class="col col-4 products__col">
+            <div class="product">
+                <div class="product__stickers">
+                    <span class="product__colors">12 цветов</span>
+                </div>
+                <div class="product__img">
+                    <img src="./images/products/d-sun-tortoise-sunglasses_1.png" alt="Photo">
+                </div>
+                <div class="product__name-block">
+                    <p class="product__series">SUN & SUN READING</p>
+                    <p class="product__name">#C Tortoise Mirror</p>
+                </div>
+                <div class="product__price-block">
+                    <p class="product__price">3 590 ₽</p>
+                    <p class="product__btn-block"><a href="#in-basket" class="product__btn btn--blue-fill">В корзину</a></p>
+                </div>
+                <a href="#product" class="product__link"></a>
+            </div>
+        </div>  
+        <div class="col col-4 products__col">
+            <div class="product">
+                <div class="product__stickers">
+                    <span class="product__colors">24 цвета</span>
+                </div>
+                <div class="product__img">
+                    <img src="./images/products/c-sun-neutral-beige-sunglasses.png" alt="Photo">
+                </div>
+                <div class="product__name-block">
+                    <p class="product__series">SUN & SUN READING</p>
+                    <p class="product__name">#C Neutral Beige</p>
+                </div>
+                <div class="product__price-block">
+                    <p class="product__price">3 590 ₽</p>
+                    <p class="product__btn-block"><a href="#in-basket" class="product__btn btn--blue-fill">В корзину</a></p>
+                </div>
+                <a href="#product" class="product__link"></a>
+            </div>
+        </div>
+        <div class="col col-4 products__col">
+            <div class="product">
+                <div class="product__stickers">
+                    <span class="product__colors">12 цветов</span>
+                </div>
+                <div class="product__img">
+                    <img src="./images/products/d-sun-tortoise-sunglasses_1.png" alt="Photo">
+                </div>
+                <div class="product__name-block">
+                    <p class="product__series">SUN & SUN READING</p>
+                    <p class="product__name">#C Tortoise Mirror</p>
+                </div>
+                <div class="product__price-block">
+                    <p class="product__price">3 590 ₽</p>
+                    <p class="product__btn-block"><a href="#in-basket" class="product__btn btn--blue-fill">В корзину</a></p>
+                </div>
+                <a href="#product" class="product__link"></a>
+            </div>
+        </div>
+        <div class="col col-4 products__col">
+            <div class="product">
+                <div class="product__stickers">
+                    <a href="#new" class="product__sticker product__sticker--new">NEW</a>
+                    <span class="product__colors">12 цветов</span>
+                </div>
+                <div class="product__img">
+                    <img src="./images/products/c-sun-tortoise-mirror-sunglasses_1.png" alt="Photo">
+                </div>
+                <div class="product__name-block">
+                    <p class="product__series">SUN & SUN READING</p>
+                    <p class="product__name">#C Tortoise Mirror</p>
+                </div>
+                <div class="product__price-block">
+                    <p class="product__price">3 590 ₽</p>
+                    <p class="product__btn-block"><a href="#in-basket" class="product__btn btn--blue-fill">В корзину</a></p>
+                </div>
+                <a href="#product" class="product__link"></a>
+            </div>
+        </div>
+        <div class="col col-4 products__col">
+            <div class="product">
+                <div class="product__stickers">
+                    <span class="product__colors">12 цветов</span>
+                </div>
+                <div class="product__img">
+                    <img src="./images/products/c-sun-red-sunglasses.png" alt="Photo">
+                </div>
+                <div class="product__name-block">
+                    <p class="product__series">SUN & SUN READING</p>
+                    <p class="product__name">#C Red</p>
+                </div>
+                <div class="product__price-block">
+                    <p class="product__price">3 590 ₽</p>
+                    <p class="product__btn-block"><a href="#in-basket" class="product__btn btn--blue-fill">В корзину</a></p>
+                </div>
+                <a href="#product" class="product__link"></a>
+            </div>
+        </div>        
+        <div class="col col-4 products__col">
+            <div class="product">
+                <div class="product__stickers">
+                    <span class="product__colors">12 цветов</span>
+                </div>
+                <div class="product__img">
+                    <img src="./images/products/d-sun-tortoise-sunglasses_1.png" alt="Photo">
+                </div>
+                <div class="product__name-block">
+                    <p class="product__series">SUN & SUN READING</p>
+                    <p class="product__name">#C Red</p>
+                </div>
+                <div class="product__price-block">
+                    <p class="product__price">3 590 ₽</p>
+                    <p class="product__btn-block"><a href="#in-basket" class="product__btn btn--blue-fill">В корзину</a></p>
+                </div>
+                <a href="#product" class="product__link"></a>
+            </div>
+        </div>
+        <div class="col col-4 products__col">
+            <div class="product">
+                <div class="product__stickers">
+                    <a href="#new" class="product__sticker product__sticker--new">NEW</a>
+                    <span class="product__colors">12 цветов</span>
+                </div>
+                <div class="product__img">
+                    <img src="./images/products/d-sun-tortoise-sunglasses_1.png" alt="Photo">
+                </div>
+                <div class="product__name-block">
+                    <p class="product__series">SUN & SUN READING</p>
+                    <p class="product__name">#C Tortoise Mirror</p>
+                </div>
+                <div class="product__price-block">
+                    <p class="product__price">3 590 ₽</p>
+                    <p class="product__btn-block"><a href="#in-basket" class="product__btn btn--blue-fill">В корзину</a></p>
+                </div>
+                <a href="#product" class="product__link"></a>
+            </div>
+        </div>
+        <div class="col col-4 products__col">
+            <div class="product">
+                <div class="product__stickers">
+                    <span class="product__colors">12 цветов</span>
+                </div>
+                <div class="product__img">
+                    <img src="./images/products/d-sun-tortoise-sunglasses_1.png" alt="Photo">
+                </div>
+                <div class="product__name-block">
+                    <p class="product__series">SUN & SUN READING</p>
+                    <p class="product__name">#C Neutral Beige</p>
+                </div>
+                <div class="product__price-block">
+                    <p class="product__price">3 590 ₽</p>
+                    <p class="product__btn-block"><a href="#in-basket" class="product__btn btn--blue-fill">В корзину</a></p>
+                </div>
+                <a href="#product" class="product__link"></a>
+            </div>
+        </div>
 
-        <div class="col col-4 products__col">
-            <div class="product">
-                <div class="product__stickers">
-                    <span class="product__sticker product__sticker--new">NEW</span>
-                    <span class="product__colors">12 цветов</span>
-                </div>
-                <div class="product__img">
-                    <img src="./images/products/d-sun-tortoise-sunglasses.png" alt="Photo">
-                </div>
-                <div class="product__name-block">
-                    <p class="product__series">SUN & SUN READING</p>
-                    <p class="product__name">#D Tortoise Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-                <div class="product__price-block">
-                    <p class="product__price">3 590 ₽</p>
-                </div>
-                <div class="product__btn-block">
-                    <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-                </div>
-                <a href="#product" class="product__link"></a>
-            </div>
-        </div>
-        <div class="col col-4 products__col">
-            <div class="product">
-                <div class="product__stickers">
-                    <span class="product__sticker product__sticker--new">NEW</span>
-                    <span class="product__colors">12 цветов</span>
-                </div>
-                <div class="product__img">
-                    <img src="./images/products/d-sun-tortoise-sunglasses.png" alt="Photo">
-                </div>
-                <div class="product__name-block">
-                    <p class="product__series">SUN & SUN READING</p>
-                    <p class="product__name">#D Tortoise</p>
-                </div>
-                <div class="product__price-block">
-                    <p class="product__price">3 590 ₽</p>
-                </div>
-                <div class="product__btn-block">
-                    <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-                </div>
-                <a href="#product" class="product__link"></a>
-            </div>
-        </div>
-        <div class="col col-4 products__col">
-            <div class="product">
-                <div class="product__stickers">
-                    <span class="product__sticker product__sticker--new">NEW</span>
-                    <span class="product__colors">12 цветов</span>
-                </div>
-                <div class="product__img">
-                    <img src="./images/products/d-sun-tortoise-sunglasses.png" alt="Photo">
-                </div>
-                <div class="product__name-block">
-                    <p class="product__series">SUN & SUN READING</p>
-                    <p class="product__name">#D Tortoise</p>
-                </div>
-                <div class="product__price-block">
-                    <p class="product__price">3 590 ₽</p>
-                </div>
-                <div class="product__btn-block">
-                    <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-                </div>
-                <a href="#product" class="product__link"></a>
-            </div>
-        </div>
-        <div class="col col-4 products__col">
-            <div class="product">
-                <div class="product__stickers">
-                    <span class="product__sticker product__sticker--new">NEW</span>
-                </div>
-                <div class="product__img">
-                    <img src="./images/products/izipizi-x-les-fermes-de-marie-sun-glacier-brown.png" alt="Photo">
-                </div>
-                <div class="product__name-block">
-                    <p class="product__series">SUN GLACIER PLUS</p>
-                    <p class="product__name">IZIPIZI x Les Fermes de Marie</p>
-                </div>
-                <div class="product__price-block">
-                    <p class="product__price">4 199 ₽</p>
-                </div>
-                <div class="product__btn-block">
-                    <a href="#in-basket" class="product__btn btn--fill">В корзину</a>
-                </div>
-                <a href="#product" class="product__link"></a>
-            </div>
-        </div>
+        
+        
+       
 
         <div class="col col-12 products__pagination">
             <div class="pagination">
@@ -910,6 +894,61 @@
             </div>
         </div>
 
+    </div>
+</div>
+
+<div id="BuyIn1ClickInBasket" class="popup popupOneClick" style="display: none;">
+    <div class="popup__container popup__container--bookin">
+        <span class="popup__close"></span>
+        <div class="popup__inner">
+            <p class="popup__title">Заказ в 1 клик</p>            
+            <form class="form">
+                <div class="form__for-input">
+                    <label class="form__label">* Ваше Имя</label>
+                    <input type="text" name="name" class="form__input" required>
+                </div>
+                <div class="form__for-input">
+                    <label class="form__label">Комментарий к заказу</label>
+                    <textarea class="form__textarea" name="info" rows="5"></textarea>
+                </div>
+                <div class="form__for-input">
+                    <label class="form__label">* Телефон</label>
+                    <input class="form__input phone-mask" type="tel" name="phone" required>
+                </div>
+                <div class="form__for-checkbox">
+                    <input class="form__checkbox" id="agree2" type="checkbox" name="agree" required>
+                    <label for="agree2"><span></span> <i class="form__text-checkbox">Я подтверждаю свое согласие на
+                            обработку персональных данных</i></label>
+                </div>
+                <div class="form__for-submit">
+                    <!-- <button class="form__submit submit-btn btn--fill" type="submit">Оформить заказ</button> -->
+                    <a href="#SuccessfullyPopup" class="form__submit btn--fill call-popup">Оформить заказ</a>
+                </div>
+                <p class="form__message form__message--ok">Ваш заказ был отправлено успешно. Мы свяжемся с вами в
+                    ближайшее время</p>
+                <p class="form__message form__message--error">Ошибки заполнения. Пожалуйста, проверьте все поля и
+                    отправьте снова.</p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="SuccessfullyPopup" class="popup popupOneClick" style="display: none;">
+    <div class="popup__container popup__container--bookin">
+        <span class="popup__close"></span>
+        <div class="popup__inner">
+            <p class="popup__title popup__title--successfully">Ваш заказ в обработке</p>      
+            <p class="popup__subtitle">Наш менеджер свяжется с Вами в ближайшее время</p>                  
+        </div>
+        <div class="popup-successfully">
+            <div class="popup-successfully__message">
+                <p class="popup-successfully__message-name">Заказ:</p>
+                <p class="popup-successfully__order">902033</p>
+            </div>
+        </div>
+        <div class="popup-successfully__btn-block">
+            <a href="categories.html" class="form__submit submit-btn btn--fill">Продолжить покупки</a>
+        </div>
     </div>
 </div>
 <script src="js/jquery-3.4.1.min.js"></script>

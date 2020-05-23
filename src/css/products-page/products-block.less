@@ -2,31 +2,33 @@
     background: #f1f0eb;
 
     &__col-filters {
-        width: 237px;
+        width: 256px;
 
         @media screen and (max-width: 960px) {
             width: 100%;
+            display: none;
         }
     }
     &__goods {
-        width: calc(100% - 237px - 14px);
+        width: calc(100% - 256px - 8px);
 
         @media screen and (max-width: 960px) {
-            width: 100%;
+            width: 100%;            
         }
     }
     &__title {
-        padding: 20px 0;
+        padding: 21px 0 20px 15px;
+        font-size: 14px;
+
+        @media screen and (max-width: 670px) {
+            padding-left: 0;
+        }
     }
     &__filter-title {
         text-transform: uppercase;
     }
-    &__filter-item {
-        background: #ffffff;        
+    &__filter-item { 
         margin-bottom: 8px;
-
-        &--check {
-            padding: 0 15px;
-        }        
+        
     }
 }

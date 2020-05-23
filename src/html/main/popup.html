@@ -101,3 +101,58 @@
 
     </div>
 </div>
+
+<div id="BuyIn1ClickInBasket" class="popup popupOneClick" style="display: none;">
+    <div class="popup__container popup__container--bookin">
+        <span class="popup__close"></span>
+        <div class="popup__inner">
+            <p class="popup__title">Заказ в 1 клик</p>            
+            <form class="form">
+                <div class="form__for-input">
+                    <label class="form__label">* Ваше Имя</label>
+                    <input type="text" name="name" class="form__input" required>
+                </div>
+                <div class="form__for-input">
+                    <label class="form__label">Комментарий к заказу</label>
+                    <textarea class="form__textarea" name="info" rows="5"></textarea>
+                </div>
+                <div class="form__for-input">
+                    <label class="form__label">* Телефон</label>
+                    <input class="form__input phone-mask" type="tel" name="phone" required>
+                </div>
+                <div class="form__for-checkbox">
+                    <input class="form__checkbox" id="agree2" type="checkbox" name="agree" required>
+                    <label for="agree2"><span></span> <i class="form__text-checkbox">Я подтверждаю свое согласие на
+                            обработку персональных данных</i></label>
+                </div>
+                <div class="form__for-submit">
+                    <!-- <button class="form__submit submit-btn btn--fill" type="submit">Оформить заказ</button> -->
+                    <a href="#SuccessfullyPopup" class="form__submit btn--fill call-popup">Оформить заказ</a>
+                </div>
+                <p class="form__message form__message--ok">Ваш заказ был отправлено успешно. Мы свяжемся с вами в
+                    ближайшее время</p>
+                <p class="form__message form__message--error">Ошибки заполнения. Пожалуйста, проверьте все поля и
+                    отправьте снова.</p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="SuccessfullyPopup" class="popup popupOneClick" style="display: none;">
+    <div class="popup__container popup__container--bookin">
+        <span class="popup__close"></span>
+        <div class="popup__inner">
+            <p class="popup__title popup__title--successfully">Ваш заказ в обработке</p>      
+            <p class="popup__subtitle">Наш менеджер свяжется с Вами в ближайшее время</p>                  
+        </div>
+        <div class="popup-successfully">
+            <div class="popup-successfully__message">
+                <p class="popup-successfully__message-name">Заказ:</p>
+                <p class="popup-successfully__order">902033</p>
+            </div>
+        </div>
+        <div class="popup-successfully__btn-block">
+            <a href="categories.html" class="form__submit submit-btn btn--fill">Продолжить покупки</a>
+        </div>
+    </div>
+</div>
