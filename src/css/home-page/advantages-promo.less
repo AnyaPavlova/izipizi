@@ -31,7 +31,7 @@
         padding-left: 45px;
         position: relative;
         font-weight: 500;
-        font-size: 14px;
+        font-size: 14px;        
 
         &:before {
             content: '';
@@ -59,6 +59,68 @@
             width: 26px;
             height: 24px;
             background-image: url(../images/icons/purse.png);
+        }        
+
+        &--promo {
+            font-size: 16px;
+
+            @media screen and (max-width: 960px) {
+                font-size: 14px;
+            }
         }
+        &--promo-design {
+            padding-left: 85px;
+
+            @media screen and (max-width: 960px) {
+                padding-left: 45px;
+            }
+        }
+        &--promo-design:before {
+            width: 58px;
+            height: 24px;
+            background-image: url(../images/icons/sunglasses-big.png);
+
+            @media screen and (max-width: 960px) {
+                width: 34px;
+                height: 14px;
+                background-size: contain;
+            }
+        }
+        &--paris {
+            padding-left: 50px;
+        }
+        &--paris:before {
+            width: 26px;
+            height: 52px;
+            background-image: url(../images/icons/tourist.png);
+
+            @media screen and (max-width: 960px) {
+                width: 18px;
+                height: 36px;
+                background-size: contain;
+            }
+        }
+        &--promo-available {
+            padding-left: 65px;
+
+            @media screen and (max-width: 960px) {
+                padding-left: 45px;
+            }
+        }
+        &--promo-available:before {
+            width: 42px;
+            height: 38px;
+            background-image: url(../images/icons/purse-big.png);
+
+            @media screen and (max-width: 960px) {
+                width: 26px;
+                height: 24px;
+                background-size: contain;
+            }
+        }
+        
     }
+}
+.advantages-promo__item--promo-available {
+    padding-right: 0;
 }

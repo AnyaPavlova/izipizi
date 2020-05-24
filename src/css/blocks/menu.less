@@ -52,6 +52,23 @@
                 bottom    : 0;
             }
         }
+
+        &--active {
+            &:before {
+                content   : '';
+                display   : block;
+                width     : 120%;
+                height    : 3px;
+                background: rgba(52, 62, 72, 1);
+                position  : absolute;
+                left      : -10%;
+                bottom    : 0;
+
+                @media screen and (max-width: 960px) {
+                    bottom: 10px;
+                }
+            }
+        }
     }
 }
 

@@ -1,0 +1,58 @@
+.izipizi-text {
+    padding-top: 70px;
+
+    @media screen and (max-width: 960px) {
+        padding-top: 50px;
+    }
+    @media screen and (max-width: 670px)  {
+        padding-top: 25px;
+    }
+
+    &__title {
+        text-align: center;
+        padding-bottom: 25px;
+
+        @media screen and (max-width: 670px)  {
+            padding-bottom: 15px;
+        }
+    }
+
+    &__promo-text {
+        display   : block;
+        max-width : 700px;
+        margin    : auto;
+        text-align: center;
+        padding-bottom: 55px;
+        line-height: 1.87;
+
+        @media screen and (max-width: 960px) {
+            padding-bottom: 30px;
+        }
+        @media screen and (max-width: 670px)  {
+            font-size: 14px;
+            padding-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            clear  : both;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .advantages-promo + .izipizi-text  {
+        padding-top: 20px;
+    }
+}
+@media screen and (max-width: 670px) {
+    .advantages-promo + .izipizi-text  {
+        padding-top: 10px;
+    }
+}
