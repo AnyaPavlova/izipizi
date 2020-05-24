@@ -1,176 +1,3 @@
-/*"Валидация" формы*/
-var formInPage = document.querySelectorAll('form');
-if (formInPage) {
-  for (var formItem = 0; formItem < formInPage.length; formItem++) {
-    formInPage[formItem].addEventListener('click', clickForm);
-    formInPage[formItem].addEventListener('input', changeForm);
-  }
-}
-function clickForm(event) {
-  var eventTarget = event.target;
-  if (eventTarget.classList.contains('submit-btn')) {
-    validateForm(event);
-  }
-}
-function changeForm(event) {
-  var eventTarget = event.target;
-  if (eventTarget.classList.contains('form__input--error')) {
-    if (eventTarget.validity.valid) {
-      eventTarget.classList.remove("form__input--error");
-    }
-  }
-}
-
-function validateForm(event) {
-  var eventTarget = event.target;
-  var form = eventTarget.closest('form');
-  var error = false;
-  var requredItems = form.querySelectorAll('input[required]');
-
-  for (var item = 0; item < requredItems.length; item++) {
-    if (!requredItems[item].validity.valid) {
-      requredItems[item].classList.add('form__input--error');
-      error = true;
-    }
-  }
-  if (error === true) { /*если есть ошибка*/
-    event.preventDefault();
-    if (form.querySelector('.form__message--error')) { form.querySelector('.form__message--error').classList.add('form__message--error--visible'); }
-    if (form.querySelector('.form__message--ok')) {
-      form.querySelector('.form__message--ok').classList.remove('form__message--ok--visible');
-    }
-  }
-  else { /*если нет ошибки - отправляем форму*/
-    event.preventDefault(); //УБРАТЬ!!! Сделано чтобы было видно сообщение об отправки!!!
-    if (form.querySelector('.form__message--ok')) { form.querySelector('.form__message--ok').classList.add('form__message--ok--visible'); }
-    if (form.querySelector('.form__message--error')) {
-      form.querySelector('.form__message--error').classList.remove('form__message--error--visible');
-    }
-
-  }
-}
-
-//Изменение кол-ва единиц в input по клику на +/-
-var fieldsNum = document.querySelectorAll('.form-num__block');
-if (fieldsNum) {
-  for (var item = 0; item < fieldsNum.length; item++) {
-    fieldsNum[item].addEventListener('click', changeValueInputByButton);
-    fieldsNum[item].addEventListener('change', changeValueInput);
-  }
-}
-function changeValueInputByButton(event) {
-  let eventTarget = event.target;
-  let parent = eventTarget.closest('.form-num__block');
-  let fieldNum = parent.querySelector('.form-num__input');
-  let change = 0; //изменение
-  let step = +fieldNum.step || 1; //шаг
-  if (eventTarget.classList.contains('form-num__btn-minus')) {
-    change = -step;
-  } else if (eventTarget.classList.contains('form-num__btn-plus')) {
-    change = +step;
-  }
-  let newCount = +fieldNum.value + change;
-  fieldNum.value = newCount;
-
-  //создаем событие изменения значения form-num__input - чтобы не дублировать условия изменения input
-  var numInputChange = new Event('change', { bubbles: true, cancelable: true });
-  fieldNum.dispatchEvent(numInputChange); //вызываем событие
-}
-//Изменение кол-ва единиц в input по заполнению
-function changeValueInput(event) {
-  let eventTarget = event.target
-  let minNum = +eventTarget.min || 1; //минимальное значение
-  let maxNum = +eventTarget.max || Infinity; //максимальное значение
-  let valueInput = +(eventTarget.value);
-  if (valueInput < minNum) {
-    eventTarget.value = minNum;
-    alert(`Количество не может быть меньше ${minNum}`);
-  }
-  else if (valueInput > maxNum) {
-    eventTarget.value = maxNum;
-    alert(`Количество не может быть больше ${maxNum}`);
-  }
-
-  var inputNumberChangeEvent = new Event('input-number-change', { bubbles: true, cancelable: true }); //создаем событие 'input-number-change'
-  eventTarget.dispatchEvent(inputNumberChangeEvent); //вызываем срабатывание события
-}
-
-//Скрипты для страницы Корзины
-if (document.querySelector('.basket-block')) {
-
-  //Сумма заказа
-
-  //price - цена
-  //amount - количество
-  //cost - стоимость товара
-  //card - карточка товара
-  //orderPrice - сумма заказа 
-  //sumCountProducts - кол-во товаров
-
-  function costItem(card) {
-    var price = card.querySelector('.price').innerText;
-    price = parseFloat(price.replace(",", ".").replace(/[^0-9.]/gim, ""));
-    var amout = +card.querySelector('.amount').value;
-    var cost = (price * amout).toLocaleString();
-    card.querySelector('.cost').innerHTML = cost + ' ₽';
-  }
-  function costAllItems() {
-    var cardItem = document.querySelectorAll('.card');
-    for (var i = 0; i < cardItem.length; i++) {
-      costItem(cardItem[i]);
-    }
-  }
-  costAllItems();
-
-  function orderPrice() {
-    var cardItem = document.querySelectorAll('.card');
-    var summ = 0;
-    for (var i = 0; i < cardItem.length; i++) {
-      var cost = cardItem[i].querySelector('.cost').innerText;
-      cost = parseFloat(cost.replace(",", ".").replace(/[^0-9.]/gim, ""));
-      summ = summ + cost;
-    }
-    var orderPriceArr = document.querySelectorAll('.orderPrice');
-    for (var j = 0; j < orderPriceArr.length; j++) {
-      orderPriceArr[j].innerHTML = summ.toLocaleString() + ' ₽';
-    }
-  }
-  orderPrice();
-
-  document.addEventListener('input-number-change', changeCost);
-  function changeCost(event) {
-    var eventTarget = event.target;
-    var card = eventTarget.closest('.card');
-    costItem(card);
-    orderPrice();
-  }
-
-  //Подсчитываем кол-во товаров 
-  var sumProducts = document.querySelector('.sumCountProducts');
-  function countSumProducts() {
-    sumProducts.innerText = document.querySelectorAll('.card').length;
-  }
-  if (sumProducts) {
-    countSumProducts();
-  }
-
-  //удаление карточки из корзины
-  var cardCloseBtns = document.querySelectorAll('.basket-block__del');
-  for (var itemCloseBtn = 0; itemCloseBtn < cardCloseBtns.length; itemCloseBtn++) {
-    cardCloseBtns[itemCloseBtn].addEventListener('click', clickDeleteItem);
-  }
-  function clickDeleteItem(event) {
-    var eventTarget = event.target;
-    var itemProduct = eventTarget.closest('.card');
-    itemProduct.remove();
-    orderPrice();
-    if (sumProducts) {
-      countSumProducts();
-    }
-  }
-
-}
-
 $(document).ready(function () {
 
   // Авторизация
@@ -431,6 +258,12 @@ $(document).ready(function () {
       theme: 'theme-products-select'
     });
   };
+  var haveSelect = $(".city-select");
+  if (haveSelect.length != 0) {
+    $('.city-select select').select2({
+      theme: 'theme-city-select'
+    });
+  };
   //sorting
   $(".products-sorting").on("click", sortingOpen);
   function sortingOpen(event) {
@@ -544,6 +377,204 @@ $(document).ready(function () {
     $(".phone-mask").mask("+7 (999) 999-99-99");
   });
 
+});
+
+$(document).ready(function () {
+  /*"Валидация" формы*/
+  var formInPage = document.querySelectorAll('form');
+  if (formInPage) {
+    for (var formItem = 0; formItem < formInPage.length; formItem++) {
+      formInPage[formItem].addEventListener('click', clickForm);
+      formInPage[formItem].addEventListener('input', changeForm);
+    }
+  }
+  function clickForm(event) {
+    var eventTarget = event.target;
+    if (eventTarget.classList.contains('submit-btn')) {
+      validateForm(event);
+    }
+  }
+  function changeForm(event) {
+    var eventTarget = event.target;
+    if (eventTarget.classList.contains('form__input--error')) {
+      if (eventTarget.validity.valid) {
+        eventTarget.classList.remove("form__input--error");
+      }
+    }
+  }
+
+  function validateForm(event) {
+    var eventTarget = event.target;
+    var form = eventTarget.closest('form');
+    var error = false;
+    var requredItems = form.querySelectorAll('input[required]');
+
+    for (var item = 0; item < requredItems.length; item++) {
+      if (!requredItems[item].validity.valid) {
+        requredItems[item].classList.add('form__input--error');
+        error = true;
+      }
+    }
+    if (error === true) { /*если есть ошибка*/
+      event.preventDefault(); //отключаем сообщения (можно вернуть, если нужно)
+      if (form.querySelector('.form__message--error')) { form.querySelector('.form__message--error').classList.add('form__message--error--visible'); }
+      if (form.querySelector('.form__message--ok')) {
+        form.querySelector('.form__message--ok').classList.remove('form__message--ok--visible');
+      }
+    }
+    else { /*если нет ошибки - отправляем форму*/
+      event.preventDefault(); //УБРАТЬ!!! Сделано чтобы было видно сообщение об отправки!!!
+      if (form.querySelector('.form__message--ok')) { form.querySelector('.form__message--ok').classList.add('form__message--ok--visible'); }
+      if (form.querySelector('.form__message--error')) {
+        form.querySelector('.form__message--error').classList.remove('form__message--error--visible');
+      }
+
+    }
+  }
+
+  //Страница оформления заказа - делаем кнопку не активной, если обязательные поля не заполнены
+  var checkoutForm = document.querySelector('.checkout-page__form');
+  if (checkoutForm) {
+    var btnSubmin = checkoutForm.querySelector('button[type=submit]')
+    var checkoutFormItems = checkoutForm.querySelectorAll('input[required]');
+
+    function checkFormCheckout() {
+      var errorCheckout = false;
+      for (var item = 0; item < checkoutFormItems.length; item++) {
+        if (!checkoutFormItems[item].checkValidity()) {
+          errorCheckout = true;
+          checkoutFormItems[item].addEventListener('input', checkFormCheckout);
+        }
+      }
+      if (errorCheckout === true) {
+        btnSubmin.setAttribute('disabled', '');
+      } else {
+        btnSubmin.removeAttribute('disabled');
+      }
+    }
+    checkFormCheckout();
+  }
+
+  //Изменение кол-ва единиц в input по клику на +/-
+  var fieldsNum = document.querySelectorAll('.form-num__block');
+  if (fieldsNum) {
+    for (var item = 0; item < fieldsNum.length; item++) {
+      fieldsNum[item].addEventListener('click', changeValueInputByButton);
+      fieldsNum[item].addEventListener('change', changeValueInput);
+    }
+  }
+  function changeValueInputByButton(event) {
+    let eventTarget = event.target;
+    let parent = eventTarget.closest('.form-num__block');
+    let fieldNum = parent.querySelector('.form-num__input');
+    let change = 0; //изменение
+    let step = +fieldNum.step || 1; //шаг
+    if (eventTarget.classList.contains('form-num__btn-minus')) {
+      change = -step;
+    } else if (eventTarget.classList.contains('form-num__btn-plus')) {
+      change = +step;
+    }
+    let newCount = +fieldNum.value + change;
+    fieldNum.value = newCount;
+
+    //создаем событие изменения значения form-num__input - чтобы не дублировать условия изменения input
+    var numInputChange = new Event('change', { bubbles: true, cancelable: true });
+    fieldNum.dispatchEvent(numInputChange); //вызываем событие
+  }
+  //Изменение кол-ва единиц в input по заполнению
+  function changeValueInput(event) {
+    let eventTarget = event.target
+    let minNum = +eventTarget.min || 1; //минимальное значение
+    let maxNum = +eventTarget.max || Infinity; //максимальное значение
+    let valueInput = +(eventTarget.value);
+    if (valueInput < minNum) {
+      eventTarget.value = minNum;
+      alert(`Количество не может быть меньше ${minNum}`);
+    }
+    else if (valueInput > maxNum) {
+      eventTarget.value = maxNum;
+      alert(`Количество не может быть больше ${maxNum}`);
+    }
+
+    var inputNumberChangeEvent = new Event('input-number-change', { bubbles: true, cancelable: true }); //создаем событие 'input-number-change'
+    eventTarget.dispatchEvent(inputNumberChangeEvent); //вызываем срабатывание события
+  }
+
+  //Скрипты для страницы Корзины
+  if (document.querySelector('.basket-block') || document.querySelector('.checkout-page')) {
+
+    //Сумма заказа
+
+    //price - цена
+    //amount - количество
+    //cost - стоимость товара
+    //card - карточка товара
+    //orderPrice - сумма заказа 
+    //sumCountProducts - кол-во товаров
+
+    function costItem(card) {
+      var price = card.querySelector('.price').innerText;
+      price = parseFloat(price.replace(",", ".").replace(/[^0-9.]/gim, ""));
+      var amout = +card.querySelector('.amount').value;
+      var cost = (price * amout).toLocaleString();
+      card.querySelector('.cost').innerHTML = cost + ' ₽';
+    }
+    function costAllItems() {
+      var cardItem = document.querySelectorAll('.card');
+      for (var i = 0; i < cardItem.length; i++) {
+        costItem(cardItem[i]);
+      }
+    }
+    costAllItems();
+
+    function orderPrice() {
+      var cardItem = document.querySelectorAll('.card');
+      var summ = 0;
+      for (var i = 0; i < cardItem.length; i++) {
+        var cost = cardItem[i].querySelector('.cost').innerText;
+        cost = parseFloat(cost.replace(",", ".").replace(/[^0-9.]/gim, ""));
+        summ = summ + cost;
+      }
+      var orderPriceArr = document.querySelectorAll('.orderPrice');
+      for (var j = 0; j < orderPriceArr.length; j++) {
+        orderPriceArr[j].innerHTML = summ.toLocaleString() + ' ₽';
+      }
+    }
+    orderPrice();
+
+    document.addEventListener('input-number-change', changeCost);
+    function changeCost(event) {
+      var eventTarget = event.target;
+      var card = eventTarget.closest('.card');
+      costItem(card);
+      orderPrice();
+    }
+
+    //Подсчитываем кол-во товаров 
+    var sumProducts = document.querySelector('.sumCountProducts');
+    function countSumProducts() {
+      sumProducts.innerText = document.querySelectorAll('.card').length;
+    }
+    if (sumProducts) {
+      countSumProducts();
+    }
+
+    //удаление карточки из корзины
+    var cardCloseBtns = document.querySelectorAll('.basket-block__del');
+    for (var itemCloseBtn = 0; itemCloseBtn < cardCloseBtns.length; itemCloseBtn++) {
+      cardCloseBtns[itemCloseBtn].addEventListener('click', clickDeleteItem);
+    }
+    function clickDeleteItem(event) {
+      var eventTarget = event.target;
+      var itemProduct = eventTarget.closest('.card');
+      itemProduct.remove();
+      orderPrice();
+      if (sumProducts) {
+        countSumProducts();
+      }
+    }
+
+  }
 });
 
 /*Полифилы для ie*/

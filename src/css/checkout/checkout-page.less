@@ -1,0 +1,68 @@
+.checkout-page {
+    background: #f1f0eb;    
+
+    &__title {
+        padding-bottom: 38px;
+
+        @media screen and (max-width: 670px) {
+            padding-bottom: 13px;
+        }
+    }
+
+    &__for-form {
+        padding-bottom: 20px;   
+        
+        @media screen and (max-width: 670px) {
+            padding-bottom: 35px;
+        }
+    }
+    &__fields {
+        background: #ffffff;    
+        
+        @media screen and (max-width: 670px) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+    &__basket {
+        @media screen and (max-width: 960px) {
+            padding-top: 25px;
+        }
+    }
+    &__btn-block {
+        text-align: right;
+        padding-top: 35px;
+
+        @media screen and (max-width: 670px) {
+            text-align: center;
+            padding-top: 17px;
+        }
+    }
+
+    &__return {
+        padding-bottom: 25px;
+
+        @media screen and (max-width: 670px) {
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background: #ffffff;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+}
+
+.checkout-page__finale-tab td {
+    padding-bottom: 10px;
+}
+.checkout-page__btn:disabled {
+    background-color: #929799;
+    border-color: #929799;
+    cursor: not-allowed;
+
+    &:hover {
+        background-color: #929799;
+        color: #ffffff;
+    }
+}

@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Корзина</title>
+    <title>Оформление заказа</title>
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/slick.css">
@@ -185,12 +185,12 @@
 </header>
 
 <main class="main">
-
 <div class="izipizi-line">
     <div class="inner inner--normal">
         <p class="izipizi-line__text">Sunny style  - представляет официально IZIPIZI</p>
     </div>
 </div>
+
 <div class="breadcrumbs breadcrumbs--gray">
     <div class="inner inner--normal">
         <div class="breadcrumbs__block">
@@ -199,246 +199,289 @@
         </div>
     </div>
 </div>
-<section class="basket-block">
+
+<section class="checkout-page">
     <div class="inner inner--normal">
-        <h1 class="basket-block__title">Корзина</h1>
-        <div class="row row--big">
-            <div class="col col-7 col-md-12">
-                <div class="basket-block__items-list">
-                    <div class="basket-block__item card">
-                        <div class="row">
-                            <div class="col col-6">
-                                <img src="./images/goods/d-sun-merci-10-years_2.png" alt="Photo" class="basket-block__img">
-                            </div>
-                            <div class="col col-6">
-                                <p class="basket-block__series">SUN & SUN READING</p>
-                                <p class="basket-block__name">#C Blue Tortoise</p>
-                                <p class="basket-block__text">Диоптрии: +0</p>
-                                <table class="basket-block__tab">
-                                    <tr>
-                                        <td class="basket-block__tab-name">Цена:</td>
-                                        <td><span class="basket-block__price price">3 590 ₽</span></td>
-                                    </tr>
-                                    <tr class="basket-block__amount">
-                                        <td class="basket-block__tab-name">Количество:</td>
-                                        <td>
-                                            <span class="form-num__block">
-                                                <button class="form-num__btn form-num__btn-minus" type="button">-</button>
-                                                <input class="form-num__input amount" type="number" value="1" step="1" min="1"
-                                                    max="10" />
-                                                <button class="form-num__btn form-num__btn-plus" type="button">+</button>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr class="basket-block__sum">
-                                        <td class="basket-block__tab-name">Стоимость:</td>
-                                        <td><span class="basket-block__price cost">3 590 ₽</span></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                        <span class="basket-block__del"></span>
-                    </div>
-                    <div class="basket-block__item card">
-                        <div class="row">
-                            <div class="col col-6">
-                                <img src="./images/goods/d-sun-tortoise-sunglasses.png" alt="Photo" class="basket-block__img">
-                            </div>
-                            <div class="col col-6">
-                                <p class="basket-block__series">SUN & SUN READING</p>
-                                <p class="basket-block__name">#C Blue Tortoise</p>
-                                <p class="basket-block__text">Диоптрии: +0</p>
-                                <table class="basket-block__tab">
-                                    <tr>
-                                        <td class="basket-block__tab-name">Цена:</td>
-                                        <td><span class="basket-block__price price">2 001 ₽</span></td>
-                                    </tr>
-                                    <tr class="basket-block__amount">
-                                        <td class="basket-block__tab-name">Количество:</td>
-                                        <td>
-                                            <span class="form-num__block">
-                                                <button class="form-num__btn form-num__btn-minus" type="button">-</button>
-                                                <input class="form-num__input amount" type="number" value="2" step="1" min="1"
-                                                    max="10" />
-                                                <button class="form-num__btn form-num__btn-plus" type="button">+</button>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr class="basket-block__sum">
-                                        <td class="basket-block__tab-name">Стоимость:</td>
-                                        <td><span class="basket-block__price cost">3 590 ₽</span></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                        <span class="basket-block__del"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-5 col-md-12">
-                <ul class="basket-block__list">
-                    <li>Футляр и ткань для линз входит в набор</li>
-                    <li>Доставка по всей територии РФ</li>
-                    <li>Гарантия качества и подлинности бренда IZIPIZI</li>
-                </ul>
-                <div class="basket-block__promo">
-                    <table class="basket-block__tab">
-                        <tr>
-                            <td class="basket-block__tab-name">Товаров (<span class="sumCountProducts">0</span>):</td>
-                            <td><span class="basket-block__price"><span class="orderPrice"></span></span></td>
-                        </tr>                   
-                        <tr>
-                            <td class="basket-block__tab-name basket-block__tab-name--promocode">Промокод:</td>
-                            <td class="basket-block__tab-promo">
-                                <div class="basket-block__tab-promo-block">
-                                    <input type="text" name="name" class="form__input basket-block__input" required>
-                                </div>
-                                <div class="basket-block__tab-btn">
-                                    <a href="#" class="btn--blue-fill btn--blue-fill-small basket-block__promocode-btn">Применить</a>
-                                </div>
-                            </td>                            
-                        </tr>
-                    </table>
-                </div>
-                <div class="basket-block__promo">
-                    <table class="basket-block__tab">
-                        <tr>
-                            <td class="basket-block__tab-name">Сумма заказа без учета стоимости доставки:</td>
-                            <td><span class="basket-block__price basket-block__price--result"><span class="orderPrice"></span></span></td>
-                        </tr>                                           
-                    </table>
-                </div>
-                <div class="basket-block__btns">
-                    <a href="#BuyIn1ClickInBasket" class="basket-block__btn btn--blue-fill call-popup">Заказать в 1 клик</a>
-                    <a href="checkout.html" class="basket-block__btn btn--fill">Оформить заказ</a>
-                </div>
-                <div class="basket-block__return">
-                    <a href="categories" class="basket-block__return-btn">Продолжить покупки</a>
-                </div>               
-            </div>
-        </div>
-    </div>
-</section>
+        <h1 class="checkout-page__title">Оформление заказа</h1>
+        <div class="checkout-page__for-form">
+            <form class="form checkout-page__form">
+                <div class="row row--big checkout-page__row">
 
-<section class="goods-recommendations goods-recommendations--in-basket">
-    <div class="inner inner--normal inner--allmob">
-        <h2 class="goods-recommendations__title">Вам также может понравиться</h2>
+                    <div class="col col-7 col-md-12 checkout-page__col">
+                        <div class="checkout-page__fields checkout-form">
+                            <fieldset class="checkout-form__fieldset">
+                                <div class="checkout-form__title">Выберите ваш город доставки</div>
+                                <div class="checkout-form__select-item">
+                                    <div class="city-select">
+                                        <select name="city" data-placeholder="Цвет">
+                                            <option value="Москва">Москва</option>
+                                            <option value="Санкт-Петербург">Санкт-Петербург</option>
+                                            <option value="Екатеринбург">Екатеринбург</option>
+                                            <option value="Тверь">Тверь</option>
+                                            <option value="Воронеж">Воронеж</option>
+                                            <option value="Мурманск">Мурманск</option>
+                                            <option value="Псков">Псков</option>
+                                            <option value="Нижний Новгород">Нижний Новгород</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="checkout-form__fieldset">
+                                <div class="checkout-form__title checkout-form__title--mb">Способ получения</div>
+                                <div class="checkout-form__radio-block">
+                                    <div class="form__for-radio">
+                                        <input class="form__radio" id="delivery-courier" type="radio" name="delivery" value="Курьерская доставка" checked="checked" required>
+                                        <label for="delivery-courier" class="form__radio-label">
+                                            <span class="form__radio-check"></span>
+                                            <p class="form__radio-text">
+                                                <span class="form__radio-label-title">Курьерская доставка</span>
+                                                <span class="form__radio-label-subtitle">Бесплатная курьерская доставка регионы</span>
+                                                <span class="form__radio-label-text">
+                                                    <span class="form__radio-label-date">16-24 Февраля</span> - <span class="form__radio-label-price">Бесплатно</span>
+                                                </span>
+                                            </p>
+                                        </label>
+                                    </div>
+                                    <div class="form__for-radio">
+                                        <input class="form__radio" id="delivery-pickup" type="radio" name="delivery" value="Самовывоз">
+                                        <label for="delivery-pickup" class="form__radio-label">
+                                            <span class="form__radio-check"></span>
+                                            <p class="form__radio-text">
+                                                <span class="form__radio-label-title">Самовывоз</span>
+                                                <span class="form__radio-label-subtitle">Бесплатный самовывоз регионы</span>
+                                                <span class="form__radio-label-text">
+                                                    <span class="form__radio-label-date">16-28 Февраля</span> - <span class="form__radio-label-price">Бесплатно</span>
+                                                </span>
+                                            </p>
+                                        </label>
+                                    </div>
+                                    <div class="form__for-radio">
+                                        <input class="form__radio" id="delivery-post" type="radio" name="delivery" value="Почта России">
+                                        <label for="delivery-post" class="form__radio-label">
+                                            <span class="form__radio-check"></span>
+                                            <p class="form__radio-text">
+                                                <span class="form__radio-label-title">Почта России</span>
+                                                <span class="form__radio-label-subtitle">Доставка почтой России от 5000 руб - бесплатно</span>
+                                                <span class="form__radio-label-text">
+                                                    <span class="form__radio-label-date">21 Февраля - 06 Марта</span> - <span class="form__radio-label-price">Бесплатно</span>
+                                                </span>
+                                            </p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="checkout-form__fieldset">
+                                <div class="checkout-form__title">Данные покупателя</div>
+                                <p class="checkout-form__text-info">Пожалуйста, указывайте реальные данные - у вас могут попросить паспорт, прежде чем вручить оплаченный товар.</p>
+                                <div class="row">
+                                    <div class="col col-8">
+                                        <div class="form__for-input">
+                                            <label class="form__label">* Адрес</label>
+                                            <input type="text" name="adress" class="form__input" required>
+                                        </div>
+                                    </div>
+                                    <div class="col col-4">
+                                        <div class="form__for-input">
+                                            <label class="form__label">* Квартира или офис</label>
+                                            <input type="text" name="home" class="form__input" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__for-input">
+                                    <label class="form__label">* Фамилия, имя, отчество</label>
+                                    <input type="text" name="name" class="form__input" required>
+                                </div>
+                                <div class="form__for-input">
+                                    <label class="form__label">* Адрес электронной почты</label>
+                                    <input type="email" name="email" class="form__input" required>
+                                </div>
+                                <div class="form__for-input">
+                                    <label class="form__label">* Телефон</label>
+                                    <input class="form__input phone-mask" type="tel" name="phone" required>
+                                </div>
+                                <div class="checkout-form__radio-block checkout-form__radio-block--additionally">
+                                    <div class="form__for-radio">
+                                        <input class="form__radio" id="confirmation-yes" type="radio" name="confirmation" value="Курьерская доставка">
+                                        <label for="confirmation-yes" class="form__radio-label">
+                                            <span class="form__radio-check"></span>
+                                            <p class="form__radio-text form__radio-text--additionally">
+                                                <span class="form__radio-label-text">Позвоните мне для уточнения деталей и оформления заказа</span>
+                                                <span class="form__radio-label-small">Номер телефона используется для оповещений об изменениях статуса заказа</span>
+                                            </p>
+                                        </label>
+                                    </div>
+                                    <div class="form__for-radio">
+                                        <input class="form__radio" id="confirmation-no" type="radio" name="confirmation" value="Самовывоз">
+                                        <label for="confirmation-no" class="form__radio-label form__radio-label--middle">
+                                            <span class="form__radio-check"></span>
+                                            <p class="form__radio-text form__radio-text--additionally">
+                                                <span class="form__radio-label-text">Согласование не требуется</span>
+                                            </p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="checkout-form__fieldset">
+                                <div class="checkout-form__title">Способ оплаты</div>
+                                <div class="checkout-form__radio-block">
+                                    <div class="form__for-radio">
+                                        <input class="form__radio" id="payment-online" type="radio" name="payment" value="Курьерская доставка" checked="checked" required>
+                                        <label for="payment-online" class="form__radio-label">
+                                            <span class="form__radio-check"></span>
+                                            <p class="form__radio-text">
+                                                <span class="form__radio-label-title">Онлайн оплата</span>
+                                                <span class="form__radio-label-subtitle">Онлайн оплата банковской картой</span>
+                                            </p>
+                                        </label>
+                                    </div>
+                                    <div class="form__for-radio">
+                                        <input class="form__radio" id="payment-cash" type="radio" name="payment" value="Самовывоз">
+                                        <label for="payment-cash" class="form__radio-label">
+                                            <span class="form__radio-check"></span>
+                                            <p class="form__radio-text">
+                                                <span class="form__radio-label-title">Наличными</span>
+                                                <span class="form__radio-label-subtitle">Наличными или банковской картой при получении</span>
+                                            </p>
+                                        </label>
+                                    </div>
+                                    <div class="form__for-radio">
+                                        <input class="form__radio" id="payment-invoice" type="radio" name="payment" value="Почта России">
+                                        <label for="payment-invoice" class="form__radio-label">
+                                            <span class="form__radio-check"></span>
+                                            <p class="form__radio-text">
+                                                <span class="form__radio-label-title">Оплата в банке по квитанции </span>
+                                                <span class="form__radio-label-subtitle">Оплата в банке по квитанции</span>
+                                            </p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="checkout-form__fieldset">
+                                <div class="checkout-form__title">Дополнительно</div>
+                                <p class="checkout-form__text-info">Раскажите как быстрее добраться к вам, укажите код домофона или другую информацию, которая может пригодиться курьеру.</p>
+                                <div class="form__for-input">
+                                    <textarea class="form__textarea" name="info" rows="5"></textarea>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
 
-        <div class="slider-products">
-    <div class="slider-products__item">
-        <div class="product">
-            <div class="product__stickers slider-products__stickers">
-                <a href="#new" class="product__sticker slider-products__sticker product__sticker--new">NEW</a>
-                <span class="product__colors">12 цветов</span>
-            </div>
-            <div class="product__img">
-                <img src="./images/products/d-sun-tortoise-sunglasses.png" alt="Photo">
-            </div>
-            <div class="product__name-block slider-products__name-block">
-                <p class="product__series slider-products__series">SUN & SUN READING</p>
-                <p class="product__name slider-products__name-products">#D Tortoise</p>
-            </div>
-            <div class="product__price-block slider-products__price-block">
-                <a href="#link" class="product__price slider-products__price">3 590 ₽</a>
-            </div>            
-            <a href="goods.html" class="product__link"></a>
+                    <div class="col col-5 col-md-12 checkout-page__col">
+                        <div class="checkout-page__basket">
+
+                            <div class="checkout-goods">
+                                <div class="checkout-goods__item card">
+                                    <div class="row">
+                                        <div class="col col-3 col-sm-4">
+                                            <img src="./images/products/d-sun-merci-10-years-small.png" alt="Photo" class="basket-block__img">
+                                        </div>
+                                        <div class="col col-9 col-sm-8">
+                                            <div class="checkout-goods__info">
+                                                <p class="basket-block__series checkout-goods__series">SUN & SUN READING</p>
+                                                <p class="basket-block__name checkout-goods__name">#C Blue Tortoise</p>
+                                                <p class="basket-block__text checkout-goods__text">Диоптрии: +0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col col-3"></div>
+                                        <div class="col col-9">
+                                            <div class="checkout-goods__info">
+                                                <table class="checkout-goods__tab">
+                                                    <tr>
+                                                        <td><span class="basket-block__price price">3 590 ₽</span></td>
+                                                        <td>
+                                                            <span class="form-num__block">
+                                                                <button class="form-num__btn form-num__btn-minus" type="button">-</button>
+                                                                <input class="form-num__input amount" type="number" value="2" step="1" min="1" max="10" />
+                                                                <button class="form-num__btn form-num__btn-plus" type="button">+</button>
+                                                            </span>
+                                                        </td>
+                                                        <td><span class="basket-block__price cost">3 590 ₽</span></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="basket-block__del"></span>
+                                </div>
+                                <div class="checkout-goods__item card">
+                                    <div class="row">
+                                        <div class="col col-3 col-sm-4">
+                                            <img src="./images/products/d-sun-tortoise-sunglasses-small.png" alt="Photo" class="basket-block__img">
+                                        </div>
+                                        <div class="col col-9 col-sm-8">
+                                            <div class="checkout-goods__info">
+                                                <p class="basket-block__series checkout-goods__series">SUN & SUN READING</p>
+                                                <p class="basket-block__name checkout-goods__name">#C Blue Tortoise</p>
+                                                <p class="basket-block__text checkout-goods__text">Диоптрии: +0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col col-3"></div>
+                                        <div class="col col-9">
+                                            <div class="checkout-goods__info">
+                                                <table class="checkout-goods__tab">
+                                                    <tr>
+                                                        <td><span class="basket-block__price price">2 001 ₽</span></td>
+                                                        <td>
+                                                            <span class="form-num__block">
+                                                                <button class="form-num__btn form-num__btn-minus" type="button">-</button>
+                                                                <input class="form-num__input amount" type="number" value="2" step="1" min="1" max="10" />
+                                                                <button class="form-num__btn form-num__btn-plus" type="button">+</button>
+                                                            </span>
+                                                        </td>
+                                                        <td><span class="basket-block__price cost">3 590 ₽</span></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="basket-block__del"></span>
+                                </div>
+                            </div>
+
+                            <div class="checkout-page__finale">
+                                <div class="basket-block__promo">
+                                    <table class="basket-block__tab checkout-page__finale-tab">
+                                        <tr>
+                                            <td class="basket-block__tab-name">Сумма заказа без учета стоимости доставки:</td>
+                                            <td><span class="basket-block__price"><span class="orderPrice"></span></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="basket-block__tab-name">Доставка:</td>
+                                            <td><span class="basket-block__price">0 ₽</span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="basket-block__promo">
+                                    <table class="basket-block__tab">
+                                        <tr>
+                                            <td class="basket-block__tab-name">ИТОГО:</td>
+                                            <td><span class="basket-block__price basket-block__price--result"><span class="orderPrice"></span></span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="checkout-page__btn-block">
+                                    <button class="form__submit submit-btn btn--fill checkout-page__btn" type="submit">Оформить заказ</button>
+                                </div>
+                            </div>
+                            <p class="form__message form__message--ok">Ваш заказ был отправлено успешно. Мы свяжемся с вами в
+                                ближайшее время</p>
+                            <p class="form__message form__message--error">Ошибки заполнения. Пожалуйста, проверьте все поля и
+                                отправьте снова.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </form>
         </div>
-    </div>
-    <div class="slider-products__item">
-        <div class="product">
-            <div class="product__stickers slider-products__stickers">
-                <span class="product__sticker slider-products__sticker product__sticker--new">NEW</span>
-            </div>
-            <div class="product__img">
-                <img src="./images/products/izipizi-x-les-fermes-de-marie-sun-glacier-brown.png" alt="Photo">
-            </div>
-            <div class="product__name-block slider-products__name-block">
-                <p class="product__series slider-products__series">SUN GLACIER PLUS</p>
-                <p class="product__name slider-products__name-products">IZIPIZI x Les Fermes de Marie</p>
-            </div>
-            <div class="product__price-block slider-products__price-block">
-                <a href="#link" class="product__price slider-products__price">4 199 ₽</a>
-            </div>            
-            <a href="goods.html" class="product__link"></a>
+
+        <div class="checkout-page__return">
+            <a href="categories" class="basket-block__return-btn">Вернуться в каталог</a>
         </div>
-    </div>
-    <div class="slider-products__item">
-        <div class="product">
-            <div class="product__stickers slider-products__stickers">
-                <span class="product__sticker slider-products__sticker product__sticker--new">NEW</span>
-                <span class="product__colors">24 цвета</span>
-            </div>
-            <div class="product__img">
-                <img src="./images/products/d-sun-merci-10-years.png" alt="Photo">
-            </div>
-            <div class="product__name-block slider-products__name-block">
-                <p class="product__series slider-products__series">SUN & SUN READING</p>
-                <p class="product__name slider-products__name-products">IZIPIZI x MERCI</p>
-            </div>
-            <div class="product__price-block slider-products__price-block">
-                <a href="#link" class="product__price slider-products__price">3 590 ₽</a>
-            </div>            
-            <a href="goods.html" class="product__link"></a>
-        </div>
-    </div>
-    <div class="slider-products__item">
-        <div class="product">
-            <div class="product__stickers slider-products__stickers">
-                <span class="product__sticker slider-products__sticker product__sticker--new">NEW</span>
-                <span class="product__colors">4 цвета</span>
-            </div>
-            <div class="product__img">
-                <img src="./images/products/c-sun-tortoise-mirror-sunglasses.png" alt="Photo">
-            </div>
-            <div class="product__name-block slider-products__name-block">
-                <p class="product__series slider-products__series">SUN & SUN READING</p>
-                <p class="product__name slider-products__name-products">IZIPIZI x MERCI</p>
-            </div>
-            <div class="product__price-block slider-products__price-block">
-                <a href="#link" class="product__price slider-products__price">3 590 ₽</a>
-            </div>            
-            <a href="goods.html" class="product__link"></a>
-        </div>
-    </div>    
-    <div class="slider-products__item">
-        <div class="product">
-            <div class="product__stickers slider-products__stickers">
-                <span class="product__sticker slider-products__sticker product__sticker--new">NEW</span>
-                <span class="product__colors">12 цветов</span>
-            </div>
-            <div class="product__img">
-                <img src="./images/products/d-sun-tortoise-sunglasses.png" alt="Photo">
-            </div>
-            <div class="product__name-block slider-products__name-block">
-                <p class="product__series slider-products__series">SUN & SUN READING</p>
-                <p class="product__name slider-products__name-products">#D Tortoise</p>
-            </div>
-            <div class="product__price-block slider-products__price-block">
-                <a href="#link" class="product__price slider-products__price">3 590 ₽</a>
-            </div>            
-            <a href="goods.html" class="product__link"></a>
-        </div>
-    </div>
-    <div class="slider-products__item">
-        <div class="product">
-            <div class="product__stickers slider-products__stickers">
-                <span class="product__sticker slider-products__sticker product__sticker--new">NEW</span>
-                <span class="product__colors">12 цветов</span>
-            </div>
-            <div class="product__img">
-                <img src="./images/products/d-sun-tortoise-sunglasses.png" alt="Photo">
-            </div>
-            <div class="product__name-block slider-products__name-block">
-                <p class="product__series slider-products__series">SUN & SUN READING</p>
-                <p class="product__name slider-products__name-products">#D Tortoise</p>
-            </div>
-            <div class="product__price-block slider-products__price-block">
-                <a href="#link" class="product__price slider-products__price">3 590 ₽</a>
-            </div>            
-            <a href="goods.html" class="product__link"></a>
-        </div>
-    </div>
-</div>
     </div>
 </section>
 

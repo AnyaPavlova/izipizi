@@ -11,7 +11,7 @@
         padding-bottom: 38px;
 
         @media screen and (max-width: 670px) {
-            padding-bottom: 7px;
+            padding-bottom: 13px;
         }
     }
 
@@ -61,6 +61,11 @@
         padding-top: 15px;
         padding-bottom: 15px;
         border-bottom: 1px solid #8f959b;
+
+        @media screen and (max-width: 670px) {
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
     }
 
     &__series {
@@ -98,6 +103,10 @@
             vertical-align: middle;
             padding: 5px 0;
 
+            @media screen and (max-width: 670px) {
+                width: 50%;
+            }
+
             &:last-child {
                 text-align: right;
             }
@@ -122,6 +131,10 @@
 
         &--result {
             font-size: 24px;
+
+            @media screen and (max-width: 670px) {
+                font-size: 21px;
+            }
         }
     }
     &__input {
@@ -140,6 +153,10 @@
         @media screen and (max-width: 960px) {
             flex-wrap: wrap;
         }
+        @media screen and (max-width: 670px) {
+            display: table-cell;
+            text-align: right;
+        }
         
 
     }
@@ -153,13 +170,18 @@
             width: 206px;
         }
         @media screen and (max-width: 670px) {
-            width: 154px;
+            width: 100%;
             margin-bottom: 15px;
         }
     }
     &__tab-btn {
         width: 135px;
         padding-left: 15px !important;
+
+        @media screen and (max-width: 670px) {
+            padding-left: 0 !important;
+            float: right;
+        }
     }
     &__btns {
         display: flex;
@@ -167,6 +189,11 @@
         justify-content: space-between;
         padding-top: 25px;
         padding-bottom: 25px;
+
+        @media screen and (max-width: 670px) {
+            flex-direction: column;
+            align-content: center;
+        }
     }
     &__btn {
         margin-bottom: 10px;
