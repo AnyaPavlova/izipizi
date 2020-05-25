@@ -478,8 +478,18 @@ $(document).ready(function () {
     fieldNum.value = newCount;
 
     //создаем событие изменения значения form-num__input - чтобы не дублировать условия изменения input
-    var numInputChange = new Event('change', { bubbles: true, cancelable: true });
-    fieldNum.dispatchEvent(numInputChange); //вызываем событие
+    // var numInputChange = new Event('change', { bubbles: true, cancelable: true });
+    // fieldNum.dispatchEvent(numInputChange); //вызываем событие
+
+    var numInputChange;
+    if (typeof (Event) === 'function') {
+      numInputChange = new Event('change', { bubbles: true, cancelable: true });
+    } else {
+      numInputChange = document.createEvent('Event');
+      numInputChange.initEvent('change', true, true);
+    }
+    fieldNum.dispatchEvent(numInputChange);
+
   }
   //Изменение кол-ва единиц в input по заполнению
   function changeValueInput(event) {
@@ -496,8 +506,18 @@ $(document).ready(function () {
       alert(`Количество не может быть больше ${maxNum}`);
     }
 
-    var inputNumberChangeEvent = new Event('input-number-change', { bubbles: true, cancelable: true }); //создаем событие 'input-number-change'
-    eventTarget.dispatchEvent(inputNumberChangeEvent); //вызываем срабатывание события
+    // var inputNumberChangeEvent = new Event('input-number-change', { bubbles: true, cancelable: true }); //создаем событие 'input-number-change'
+    // eventTarget.dispatchEvent(inputNumberChangeEvent); //вызываем срабатывание события
+
+    var inputNumberChangeEvent;
+    if (typeof (Event) === 'function') {
+      inputNumberChangeEvent = new Event('input-number-change', { bubbles: true, cancelable: true });
+    } else {
+      inputNumberChangeEvent = document.createEvent('Event');
+      inputNumberChangeEvent.initEvent('input-number-change', true, true);
+    }
+    eventTarget.dispatchEvent(inputNumberChangeEvent);
+
   }
 
   //Скрипты для страницы Корзины
@@ -567,7 +587,8 @@ $(document).ready(function () {
     function clickDeleteItem(event) {
       var eventTarget = event.target;
       var itemProduct = eventTarget.closest('.card');
-      itemProduct.remove();
+      // itemProduct.remove();
+      itemProduct.parentNode.removeChild(itemProduct);
       orderPrice();
       if (sumProducts) {
         countSumProducts();

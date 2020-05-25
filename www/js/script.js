@@ -496,12 +496,22 @@ $(document).ready(function () {
 
     var newCount = +fieldNum.value + change;
     fieldNum.value = newCount; //создаем событие изменения значения form-num__input - чтобы не дублировать условия изменения input
+    // var numInputChange = new Event('change', { bubbles: true, cancelable: true });
+    // fieldNum.dispatchEvent(numInputChange); //вызываем событие
 
-    var numInputChange = new Event('change', {
-      bubbles: true,
-      cancelable: true
-    });
-    fieldNum.dispatchEvent(numInputChange); //вызываем событие
+    var numInputChange;
+
+    if (typeof Event === 'function') {
+      numInputChange = new Event('change', {
+        bubbles: true,
+        cancelable: true
+      });
+    } else {
+      numInputChange = document.createEvent('Event');
+      numInputChange.initEvent('change', true, true);
+    }
+
+    fieldNum.dispatchEvent(numInputChange);
   } //Изменение кол-ва единиц в input по заполнению
 
 
@@ -519,14 +529,23 @@ $(document).ready(function () {
     } else if (valueInput > maxNum) {
       eventTarget.value = maxNum;
       alert("\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u043D\u0435 \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C \u0431\u043E\u043B\u044C\u0448\u0435 ".concat(maxNum));
+    } // var inputNumberChangeEvent = new Event('input-number-change', { bubbles: true, cancelable: true }); //создаем событие 'input-number-change'
+    // eventTarget.dispatchEvent(inputNumberChangeEvent); //вызываем срабатывание события
+
+
+    var inputNumberChangeEvent;
+
+    if (typeof Event === 'function') {
+      inputNumberChangeEvent = new Event('input-number-change', {
+        bubbles: true,
+        cancelable: true
+      });
+    } else {
+      inputNumberChangeEvent = document.createEvent('Event');
+      inputNumberChangeEvent.initEvent('input-number-change', true, true);
     }
 
-    var inputNumberChangeEvent = new Event('input-number-change', {
-      bubbles: true,
-      cancelable: true
-    }); //создаем событие 'input-number-change'
-
-    eventTarget.dispatchEvent(inputNumberChangeEvent); //вызываем срабатывание события
+    eventTarget.dispatchEvent(inputNumberChangeEvent);
   } //Скрипты для страницы Корзины
 
 
@@ -585,8 +604,9 @@ $(document).ready(function () {
 
     var clickDeleteItem = function clickDeleteItem(event) {
       var eventTarget = event.target;
-      var itemProduct = eventTarget.closest('.card');
-      itemProduct.remove();
+      var itemProduct = eventTarget.closest('.card'); // itemProduct.remove();
+
+      itemProduct.parentNode.removeChild(itemProduct);
       orderPrice();
 
       if (sumProducts) {
