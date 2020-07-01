@@ -40,6 +40,14 @@
         overflow      : hidden;
         cursor        : crosshair;
 
+        @media screen and (min-width: 961px) {
+            &:hover {
+                .goods-photo__main-photo-img {
+                    opacity: 0;
+                }
+            }
+        }
+
         @media screen and (max-width: 670px)  {
             padding-bottom: 75%;
         }
@@ -54,7 +62,7 @@
             margin    : auto;
             width        : 100%;
             max-width    : none;
-            max-height   : none;
+            max-height   : none;          
         }
 
         &:before {

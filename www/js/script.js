@@ -266,7 +266,7 @@ $(document).ready(function () {
 
   function toggleFiltersCategories(event) {
     $(this).parent().parent().find('.filter-info-toggle').slideToggle(300);
-    $(this).toggleClass('products-check__title-toggle--open');
+    $(this).toggleClass('products-check__title--open');
   }
 
   if ($('.filter-info-toggle').length !== 0) {

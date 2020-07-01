@@ -274,7 +274,7 @@ $(document).ready(function () {
   $('.filter-title-toggle').on('click', toggleFiltersCategories);
   function toggleFiltersCategories(event) {
     $(this).parent().parent().find('.filter-info-toggle').slideToggle(300);
-    $(this).toggleClass('products-check__title-toggle--open');
+    $(this).toggleClass('products-check__title--open');
   }
   if ($('.filter-info-toggle').length !== 0) {
     $('.filter-info-toggle').slideToggle(300);
