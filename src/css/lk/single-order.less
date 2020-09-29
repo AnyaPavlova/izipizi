@@ -1,0 +1,94 @@
+.single-order {
+
+  &__container {
+    padding: 20px 0 50px;
+  }
+  &__title {
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 5px;
+    font-weight: 700;
+
+    @media screen and (max-width: 670px) {
+      font-size: 27px;
+    }
+  }
+  &__return {
+    text-align: center;
+    padding-top: 5px;
+  }
+  &__return-link {
+    font-size: 16px;
+    color: #929799;
+    font-weight: 700;    
+    position: relative;
+    padding-left: 24px;
+    display: inline-block;
+    text-decoration: none;
+    
+
+    span {
+      display: inline-block;
+      border-bottom: 1px solid #929799;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0; bottom: 0;
+      margin: auto;
+      width: 16px;
+      height: 12px;
+      display: block;
+      background: url(../images/lk/arrow-left.svg) no-repeat center;
+    }
+  }
+
+  &__info {
+    padding-top: 30px;
+  }
+
+  &__tab-title {
+    background: #F1F0EB;
+    text-align: center;
+    color: #929799;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px;
+  }
+  &__tab-block {
+    padding: 20px 20px 20px;
+    position: relative;
+    width: 100%;
+  }
+  &__item {
+    font-size: 16px;
+    padding-bottom: 10px;
+
+    &--small {
+      font-size: 13px;
+    }
+    &--center {
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+  &__name {
+    font-weight: 700;
+    padding-right: 5px;
+  }
+  &__value {
+    padding-right: 5px;
+  }
+
+  .choise-payment {
+        background: #f1efeb;
+  }
+  .order-item {
+    background: #ffffff;
+  }
+  strong {
+    font-weight: 700;
+  }
+}

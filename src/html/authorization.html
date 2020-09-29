@@ -1,0 +1,73 @@
+@@include('./main/head-lk.html', {
+"title": "IZIPIZI"
+})
+@@include('./main/header.html')
+
+<div class="message-line">
+    <div class="alert alert-danger"><span>Для просмотра списка заказов необходимо авторизоваться.</span></div>
+</div>
+
+<section class="authorization-page">
+    <div class="inner inner--normal">
+        
+        <div class="row">
+            
+            <div class="col col-12">
+
+                <div class="bx-authform authorization-page__block">
+
+                    <h3 class="bx-title authorization-page__title">Пожалуйста, авторизуйтесь</h3>                    
+
+                    <form name="form_auth" class="authorization-page__form" method="post" target="_top" action="/personal/orders/">
+
+                        <input type="hidden" name="AUTH_FORM" value="Y">
+                        <input type="hidden" name="TYPE" value="AUTH">
+                        <input type="hidden" name="backurl" value="/personal/orders/">
+
+                        <div class="bx-authform-formgroup-container authorization-page__for-input">
+                            <div class="bx-authform-label-container authorization-page__label">Логин</div>
+                            <div class="bx-authform-input-container">
+                                <input type="text" name="USER_LOGIN" maxlength="255">
+                            </div>
+                        </div>
+                        <div class="bx-authform-formgroup-container authorization-page__for-input">
+                            <div class="bx-authform-label-container authorization-page__label">Пароль</div>
+                            <div class="bx-authform-input-container">
+                                <input type="password" name="USER_PASSWORD" maxlength="255" autocomplete="off">
+                            </div>
+                        </div>
+
+
+                        <div class="bx-authform-formgroup-container">
+                            <div class="checkbox">
+                                <label class="bx-filter-param-label">
+                                    <input type="checkbox" id="USER_REMEMBER" name="USER_REMEMBER" value="Y">
+                                    <span class="bx-filter-param-text authorization-page__param-text">Запомнить меня на этом компьютере</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="bx-authform-formgroup-container authorization-page__for-btns">
+                            <input type="submit" class="btn btn-primary authorization-page__btn" name="Login" value="Войти">
+                            <div class="bx-authform-link-container ">
+                                <a href="/personal/orders/?forgot_password=yes" rel="nofollow" class="authorization-page__link"><b>Забыли свой пароль?</b></a>
+                            </div>
+                        </div>
+                    </form>
+
+
+                    <noindex>
+                        <div class="bx-authform-link-container authorization-page__registration-block">
+                            Если вы впервые на сайте, заполните, пожалуйста, регистрационную форму.<br>
+                            <a href="/personal/orders/?register=yes" rel="nofollow" class="authorization-page__link"><b>Зарегистрироваться</b></a>
+                        </div>
+                    </noindex>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+@@include('./main/footer.html')

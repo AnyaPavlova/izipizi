@@ -1,0 +1,26 @@
+.message-line {
+  text-align: center;
+
+  .alert {
+    margin-bottom: 0;
+  }
+
+  .alert-danger span {
+    display: inline-block;
+    padding-left: 22px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url(../images/lk/warning.svg) no-repeat center;
+      background-size: contain;
+      position: absolute;
+      left: 0;
+      top: 0; bottom: 0;
+      margin: auto;
+    }
+  }
+}

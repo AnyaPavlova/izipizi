@@ -1,0 +1,578 @@
+@@include('./main/head-lk.html', {
+"title": "IZIPIZI"
+})
+@@include('./main/header.html')
+
+<section class="order-page">
+    <div class="inner inner--small">
+
+        <h2 class="order-page__title">Заказы в статусе «Принят, ожидается оплата»</h2>
+        <div class="order-page__history-block">
+            <a class="order-page__history-btn" href="/personal/orders/?filter_history=Y">Посмотреть историю заказов</a>
+        </div>
+
+        <!--Заказ №1-->
+
+        <div class="order-item">
+            <div class="order-item__title">                
+                Заказ №19 от 30.07.2020, 4 товара на сумму 19&nbsp;500 руб.                
+            </div>
+            <div class="order-item__info-block">
+                <div class="row">
+                    <div class="col col-6">
+                        <div class="order-item__item">                            
+                            <div class="order-item__name order-item__name-pay">Оплата</div>
+                            <div class="order-item__text-block">
+                                <div class="order-item__text">
+                                    <div class="order-item__text-item sale-order-list-payment-title">
+                                        Счет №19/1 от 30.07.2020, <span class="sale-order-list-payment-title-element">Наличными</span>   
+                                    </div>
+                                    <div class="order-item__text-item mb-1 sale-order-list-payment-price">
+                                        <span class="sale-order-list-payment-element">Сумма к оплате по счету:</span>
+                                        <span class="sale-order-list-payment-number"><strong>19&nbsp;500 руб.</strong></span>
+                                    </div>
+                                </div>
+                                <div class="order-item__status">
+                                    <span class="sale-order-list-status-alert">Не оплачено</span>
+                                </div>
+                            </div>                            
+                            
+                            <div class="order-item__links-block">
+                                <a href="#" class="order-item__link order-item__link-change sale-order-list-change-payment">сменить способ оплаты</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-6">
+                        <div class="order-item__item">
+                            <div class="order-item__name order-item__name-delivery">Доставка</div>
+                            <div class="order-item__text-block">
+                                <div class="order-item__text">
+                                    <div class="order-item__text-item"><span class="sale-order-list-shipment-element"><strong>Отгрузка №19/2, стоимость доставки 0 руб.</strong></span></div>
+                                    <div class="order-item__text-item">
+                                        <span class="sale-order-list-shipment-status-item">Статус отгрузки:</span>
+                                        <span class="sale-order-list-shipment-status-block">Ожидает обработки</span>
+                                    </div>
+                                    <div class="order-item__text-item mb-1 sale-order-list-shipment-item">Служба доставки: <strong>Самовывоз</strong></div>
+                                </div>
+                                <div class="order-item__status">
+                                    <span class="sale-order-list-status-alert">Не отгружено</span>
+                                </div>
+                            </div>
+                            <div class="order-item__links-block">
+                                <a class="order-item__link g-font-size-15 sale-order-list-about-link" href="/personal/orders/19">Подробнее о заказе</a>
+                                <a class="order-item__link g-font-size-15 sale-order-list-repeat-link" href="/personal/orders/?COPY_ORDER=Y&amp;ID=19">Повторить заказ</a>
+                                <a class="order-item__link g-font-size-15 sale-order-list-cancel-link" href="/personal/cancel/19?CANCEL=Y">Отменить заказ</a>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="order-item__choise-payment choise-payment">
+                    <div class="choise-payment__inner">
+                        <p class="choise-payment__title">Способ оплаты</p>
+                        <div class="choise-payment__row row">
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-1" type="radio" name="choise-payment" value="Терминал" checked>
+                                    <label for="choise-payment-1" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-01.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Терминал</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-2" type="radio" name="choise-payment" value="Сбербанк">
+                                    <label for="choise-payment-2" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-02.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Сбербанк</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-3" type="radio" name="choise-payment" value="Наложенный  платеж">
+                                    <label for="choise-payment-3" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-03.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Наложенный платеж</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-4" type="radio" name="choise-payment" value="Банковской  картой">
+                                    <label for="choise-payment-4" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-04.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Банковской картой</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-5" type="radio" name="choise-payment" value="Яндекс  деньги">
+                                    <label for="choise-payment-5" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-05.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Яндекс деньги</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-6" type="radio" name="choise-payment" value="Наличными  курьеру">
+                                    <label for="choise-payment-6" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-06.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Наличными курьеру</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>        
+        
+        <!--Заказ №2-->
+        <div class="order-item">
+            <div class="order-item__title">                
+                Заказ №19 от 30.07.2020, 4 товара на сумму 19&nbsp;500 руб.                
+            </div>
+            <div class="order-item__info-block">
+                <div class="row">
+                    <div class="col col-6">
+                        <div class="order-item__item">                            
+                            <div class="order-item__name order-item__name-pay">Оплата</div>
+                            <div class="order-item__text-block">
+                                <div class="order-item__text">
+                                    <div class="order-item__text-item sale-order-list-payment-title">
+                                        Счет №19/1 от 30.07.2020, <span class="sale-order-list-payment-title-element">Наличными</span>   
+                                    </div>
+                                    <div class="order-item__text-item mb-1 sale-order-list-payment-price">
+                                        <span class="sale-order-list-payment-element">Сумма к оплате по счету:</span>
+                                        <span class="sale-order-list-payment-number"><strong>19&nbsp;500 руб.</strong></span>
+                                    </div>
+                                </div>
+                                <div class="order-item__status">
+                                    <span class="sale-order-list-status-alert">Не оплачено</span>
+                                </div>
+                            </div>                            
+                            
+                            <div class="order-item__links-block">
+                                <a href="#" class="order-item__link order-item__link-change sale-order-list-change-payment">сменить способ оплаты</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-6">
+                        <div class="order-item__item">
+                            <div class="order-item__name order-item__name-delivery">Доставка</div>
+                            <div class="order-item__text-block">
+                                <div class="order-item__text">
+                                    <div class="order-item__text-item"><span class="sale-order-list-shipment-element"><strong>Отгрузка №19/2, стоимость доставки 0 руб.</strong></span></div>
+                                    <div class="order-item__text-item">
+                                        <span class="sale-order-list-shipment-status-item">Статус отгрузки:</span>
+                                        <span class="sale-order-list-shipment-status-block">Ожидает обработки</span>
+                                    </div>
+                                    <div class="order-item__text-item mb-1 sale-order-list-shipment-item">Служба доставки: <strong>Самовывоз</strong></div>
+                                </div>
+                                <div class="order-item__status">
+                                    <span class="sale-order-list-status-alert">Не отгружено</span>
+                                </div>
+                            </div>
+                            <div class="order-item__links-block">
+                                <a class="order-item__link g-font-size-15 sale-order-list-about-link" href="/personal/orders/19">Подробнее о заказе</a>
+                                <a class="order-item__link g-font-size-15 sale-order-list-repeat-link" href="/personal/orders/?COPY_ORDER=Y&amp;ID=19">Повторить заказ</a>
+                                <a class="order-item__link g-font-size-15 sale-order-list-cancel-link" href="/personal/cancel/19?CANCEL=Y">Отменить заказ</a>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="order-item__choise-payment choise-payment">
+                    <div class="choise-payment__inner">
+                        <p class="choise-payment__title">Способ оплаты</p>
+                        <div class="choise-payment__row row">
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-v2-1" type="radio" name="choise-payment-2" value="Терминал" checked>
+                                    <label for="choise-payment-v2-1" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-01.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Терминал2</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-v2-2" type="radio" name="choise-payment-2" value="Сбербанк">
+                                    <label for="choise-payment-v2-2" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-02.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Сбербанк</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-v2-3" type="radio" name="choise-payment-2" value="Наложенный  платеж">
+                                    <label for="choise-payment-v2-3" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-03.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Наложенный платеж</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-v2-4" type="radio" name="choise-payment-2" value="Банковской  картой">
+                                    <label for="choise-payment-v2-4" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-04.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Банковской картой</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-v2-5" type="radio" name="choise-payment-2" value="Яндекс  деньги">
+                                    <label for="choise-payment-v2-5" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-05.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Яндекс деньги</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-v2-6" type="radio" name="choise-payment-2" value="Наличными  курьеру">
+                                    <label for="choise-payment-v2-6" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-06.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Наличными курьеру</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        
+
+        <!-- Заказ №3 -->
+        <div class="order-item">
+            <div class="order-item__title">                
+                Заказ №19 от 30.07.2020, 4 товара на сумму 19&nbsp;500 руб.                
+            </div>
+            <div class="order-item__info-block">
+                <div class="row">
+                    <div class="col col-6">
+                        <div class="order-item__item">                            
+                            <div class="order-item__name order-item__name-pay">Оплата</div>
+                            <div class="order-item__text-block">
+                                <div class="order-item__text">
+                                    <div class="order-item__text-item sale-order-list-payment-title">
+                                        Счет №19/1 от 30.07.2020, <span class="sale-order-list-payment-title-element">Наличными</span>   
+                                    </div>
+                                    <div class="order-item__text-item mb-1 sale-order-list-payment-price">
+                                        <span class="sale-order-list-payment-element">Сумма к оплате по счету:</span>
+                                        <span class="sale-order-list-payment-number"><strong>19&nbsp;500 руб.</strong></span>
+                                    </div>
+                                </div>
+                                <div class="order-item__status">
+                                    <span class="sale-order-list-status-alert">Не оплачено</span>
+                                </div>
+                            </div>                            
+                            
+                            <div class="order-item__links-block">
+                                <a href="#" class="order-item__link order-item__link-change sale-order-list-change-payment">сменить способ оплаты</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-6">
+                        <div class="order-item__item">
+                            <div class="order-item__name order-item__name-delivery">Доставка</div>
+                            <div class="order-item__text-block">
+                                <div class="order-item__text">
+                                    <div class="order-item__text-item"><span class="sale-order-list-shipment-element"><strong>Отгрузка №19/2, стоимость доставки 0 руб.</strong></span></div>
+                                    <div class="order-item__text-item">
+                                        <span class="sale-order-list-shipment-status-item">Статус отгрузки:</span>
+                                        <span class="sale-order-list-shipment-status-block">Ожидает обработки</span>
+                                    </div>
+                                    <div class="order-item__text-item mb-1 sale-order-list-shipment-item">Служба доставки: <strong>Самовывоз</strong></div>
+                                </div>
+                                <div class="order-item__status">
+                                    <span class="sale-order-list-status-alert">Не отгружено</span>
+                                </div>
+                            </div>
+                            <div class="order-item__links-block">
+                                <a class="order-item__link g-font-size-15 sale-order-list-about-link" href="/personal/orders/19">Подробнее о заказе</a>
+                                <a class="order-item__link g-font-size-15 sale-order-list-repeat-link" href="/personal/orders/?COPY_ORDER=Y&amp;ID=19">Повторить заказ</a>
+                                <a class="order-item__link g-font-size-15 sale-order-list-cancel-link" href="/personal/cancel/19?CANCEL=Y">Отменить заказ</a>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="order-item__choise-payment choise-payment">
+                    <div class="choise-payment__inner">
+                        <p class="choise-payment__title">Способ оплаты</p>
+                        <div class="choise-payment__row row">
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-v3-1" type="radio" name="choise-payment-3" value="Терминал" checked>
+                                    <label for="choise-payment-v3-1" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-01.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Терминал3</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-v3-2" type="radio" name="choise-payment-3" value="Сбербанк">
+                                    <label for="choise-payment-v3-2" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-02.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Сбербанк</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-v3-3" type="radio" name="choise-payment-3" value="Наложенный  платеж">
+                                    <label for="choise-payment-v3-3" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-03.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Наложенный платеж</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-v3-4" type="radio" name="choise-payment-3" value="Банковской  картой">
+                                    <label for="choise-payment-v3-4" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-04.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Банковской картой</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-v3-5" type="radio" name="choise-payment-3" value="Яндекс  деньги">
+                                    <label for="choise-payment-v3-5" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-05.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Яндекс деньги</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-v3-6" type="radio" name="choise-payment-3" value="Наличными  курьеру">
+                                    <label for="choise-payment-v3-6" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-06.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Наличными курьеру</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        
+
+        <!-- Заказ №4 -->
+        <div class="order-item">
+            <div class="order-item__title">                
+                Заказ №19 от 30.07.2020, 4 товара на сумму 19&nbsp;500 руб.                
+            </div>
+            <div class="order-item__info-block">
+                <div class="row">
+                    <div class="col col-6">
+                        <div class="order-item__item">                            
+                            <div class="order-item__name order-item__name-pay">Оплата</div>
+                            <div class="order-item__text-block">
+                                <div class="order-item__text">
+                                    <div class="order-item__text-item sale-order-list-payment-title">
+                                        Счет №19/1 от 30.07.2020, <span class="sale-order-list-payment-title-element">Наличными</span>   
+                                    </div>
+                                    <div class="order-item__text-item mb-1 sale-order-list-payment-price">
+                                        <span class="sale-order-list-payment-element">Сумма к оплате по счету:</span>
+                                        <span class="sale-order-list-payment-number"><strong>19&nbsp;500 руб.</strong></span>
+                                    </div>
+                                </div>
+                                <div class="order-item__status">
+                                    <span class="sale-order-list-status-alert">Не оплачено</span>
+                                </div>
+                            </div>                            
+                            
+                            <div class="order-item__links-block">
+                                <a href="#" class="order-item__link order-item__link-change sale-order-list-change-payment">сменить способ оплаты</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-6">
+                        <div class="order-item__item">
+                            <div class="order-item__name order-item__name-delivery">Доставка</div>
+                            <div class="order-item__text-block">
+                                <div class="order-item__text">
+                                    <div class="order-item__text-item"><span class="sale-order-list-shipment-element"><strong>Отгрузка №19/2, стоимость доставки 0 руб.</strong></span></div>
+                                    <div class="order-item__text-item">
+                                        <span class="sale-order-list-shipment-status-item">Статус отгрузки:</span>
+                                        <span class="sale-order-list-shipment-status-block">Ожидает обработки</span>
+                                    </div>
+                                    <div class="order-item__text-item mb-1 sale-order-list-shipment-item">Служба доставки: <strong>Самовывоз</strong></div>
+                                </div>
+                                <div class="order-item__status">
+                                    <span class="sale-order-list-status-alert">Не отгружено</span>
+                                </div>
+                            </div>
+                            <div class="order-item__links-block">
+                                <a class="order-item__link g-font-size-15 sale-order-list-about-link" href="/personal/orders/19">Подробнее о заказе</a>
+                                <a class="order-item__link g-font-size-15 sale-order-list-repeat-link" href="/personal/orders/?COPY_ORDER=Y&amp;ID=19">Повторить заказ</a>
+                                <a class="order-item__link g-font-size-15 sale-order-list-cancel-link" href="/personal/cancel/19?CANCEL=Y">Отменить заказ</a>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="order-item__choise-payment choise-payment">
+                    <div class="choise-payment__inner">
+                        <p class="choise-payment__title">Способ оплаты</p>
+                        <div class="choise-payment__row row">
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-v4-1" type="radio" name="choise-payment-4" value="Терминал" checked>
+                                    <label for="choise-payment-v4-1" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-01.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Терминал4</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-v4-2" type="radio" name="choise-payment-4" value="Сбербанк">
+                                    <label for="choise-payment-v4-2" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-02.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Сбербанк</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-v4-3" type="radio" name="choise-payment-4" value="Наложенный  платеж">
+                                    <label for="choise-payment-v4-3" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-03.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Наложенный платеж</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-v4-4" type="radio" name="choise-payment-4" value="Банковской  картой">
+                                    <label for="choise-payment-v4-4" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-04.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Банковской картой</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-v4-5" type="radio" name="choise-payment-4" value="Яндекс  деньги">
+                                    <label for="choise-payment-v4-5" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-05.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Яндекс деньги</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                            <div class="col col-2 col-sm-6 choise-payment__col">
+                                <div class="choise-payment__item">
+                                    <input class="choise-payment__radio" id="choise-payment-v4-6" type="radio" name="choise-payment-4" value="Наличными  курьеру">
+                                    <label for="choise-payment-v4-6" class="choise-payment__radio-label">
+                                        <div class="choise-payment__img-block">
+                                            <img src="./images/lk/payment-06.png" alt="" class="choise-payment__img">
+                                        </div>
+                                        <span class="choise-payment__name">Наличными курьеру</span>
+                                    </label>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        
+
+    </div>
+</section>
+
+<script>
+function readylk() {
+    var arrChangePay = document.querySelectorAll('.order-item__link-change')
+    if(arrChangePay.length!==0) {
+        for (var i=0; i<arrChangePay.length; i++) {
+            arrChangePay[i].addEventListener('click', changePay);
+        }
+        function changePay(event) {
+            event.preventDefault();
+            this.closest('.order-item').querySelector('.choise-payment').classList.add('choise-payment--active');
+        }
+        function closePay() {
+            for (var i=0; i<arrChangePay.length; i++) {
+                arrChangePay[i].closest('.order-item').querySelector('.choise-payment').classList.remove('choise-payment--active');
+            }
+        }
+
+        var containerPay = $('.choise-payment');
+        $(document).mouseup(function (element) {
+          if (!containerPay.is(element.target) // если клик был не по нашему блоку
+            && (containerPay.has(element.target).length === 0)) { // и не по его дочерним элементам
+            closePay(); // скрываем его
+          };
+        });
+
+    }
+}
+document.addEventListener("DOMContentLoaded", readylk);
+</script>
+
+@@include('./main/footer.html')
