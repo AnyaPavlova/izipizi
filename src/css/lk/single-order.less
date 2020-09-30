@@ -10,7 +10,7 @@
     font-weight: 700;
 
     @media screen and (max-width: 670px) {
-      font-size: 27px;
+      font-size: 24px;
     }
   }
   &__return {
@@ -25,6 +25,10 @@
     padding-left: 24px;
     display: inline-block;
     text-decoration: none;
+
+    @media screen and (max-width: 670px) {
+      font-size: 14px;
+    }
     
 
     span {
@@ -61,6 +65,18 @@
     padding: 20px 20px 20px;
     position: relative;
     width: 100%;
+
+    @media screen and (max-width: 670px) {
+      padding: 10px 0;
+    }
+
+    &--price {
+      padding-bottom: 0;
+
+      @media screen and (max-width: 670px) {
+        padding-top: 20px;
+      }
+    }
   }
   &__item {
     font-size: 16px;
@@ -72,6 +88,11 @@
     &--center {
       text-align: center;
       font-size: 18px;
+
+      @media screen and (max-width: 670px) {
+        font-size: 16px;
+        padding-bottom: 5px;
+      }
     }
   }
   &__name {
@@ -90,5 +111,88 @@
   }
   strong {
     font-weight: 700;
+  }
+  &__table {
+    width: 100%;
+    max-width: 825px;
+    margin: auto;
+
+    @media screen and (max-width: 670px) {
+      display: block;
+    }
+
+    tbody {
+      @media screen and (max-width: 670px) {
+        display: block;
+      }
+    }
+    tr {
+       @media screen and (max-width: 670px) {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        border-bottom: 1px solid #F1F0EB;
+        padding: 5px 0;
+      }
+    }
+
+    th {
+      text-align: left;
+      font-size: 14px;
+
+       @media screen and (max-width: 670px) {
+        display: none;
+      }
+    }
+    th, td {
+      padding: 5px 15px;
+
+      @media screen and (max-width: 960px) {
+        padding: 5px;
+      }
+    }
+    td {
+       @media screen and (max-width: 670px) {
+        display: block;
+      }
+    }
+    thead {
+      @media screen and (max-width: 670px) {
+        display: none;
+      }
+    }
+
+    .sale-order-detail-order-item-img-block {
+      width: 100px;
+      max-width: none;
+      min-width: 100px;
+
+      @media screen and (max-width: 960px) {
+        min-width: 70px;
+        width: 70px;
+      }
+    }
+    .sale-order-detail-order-item-properties {
+      font-size: 18px;
+
+      @media screen and (max-width: 960px) {
+        font-size: 14px;
+      }
+       @media screen and (max-width: 670px) {
+        width: 33.3333%;
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+    .single-order__td-name {
+      min-width: 250px;
+
+      @media screen and (max-width: 670px)  {
+        min-width: auto;
+        width: calc( 100% - 70px );
+      }
+    }
   }
 }
