@@ -1,6 +1,14 @@
 .authorization-page {
   padding-top: 35px;
 
+  &--password-recovery {
+    padding-bottom: 35px;
+
+    @media screen and (max-width: 670px) {
+      padding-bottom: 15px;
+    }
+  }
+
   &__block {
     margin: auto;
     max-width: 525px;
@@ -58,6 +66,7 @@
     padding-top: 10px;
     margin: 0;
     display: block;
+    font-size: 13px;
   }
 
   &__registration-block {
@@ -65,5 +74,24 @@
     padding-bottom: 50px;
     text-align: center;
     margin: 0;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 13px;
+    color: #000;
+    font-weight: 400;
+  }
+}
+
+.authorization-page--password-recovery {
+  .authorization-page__form {
+    box-shadow: none;
+  }
+  .authorization-page__label {
+    padding-bottom: 17px;
+  }
+  .authorization-page__for-btns {
+    padding-top: 10px;
   }
 }
