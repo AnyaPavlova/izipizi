@@ -1,0 +1,56 @@
+.profile-page {
+
+  @media screen and (min-width: 961px) {
+    min-height: calc( 100vh - 156px - 49px - 385px )
+  }
+
+  &__info {
+    padding: 40px 0 60px;
+    max-width: 900px;
+    margin: auto;
+
+    @media screen and (max-width: 670px) {
+      padding: 20px 0 30px;
+    }
+  }
+  &__title {
+    padding-bottom: 30px;
+
+    @media screen and (max-width: 670px) {
+      padding-bottom: 15px;
+    }
+  }
+  &__item {
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+  &__name {
+    font-weight: 700;
+    padding-right: 5px;
+  }
+  &__value {
+    padding-right: 5px;
+  }
+  &__btns-block {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 670px) {
+      margin-top: 10px;
+    }
+  }
+  &__btn {
+    margin-bottom: 10px;
+
+    &--return {
+      background: transparent;
+      border-color: #929799;
+      color: #929799;
+
+      &:hover {
+        color: #ffffff;
+        background-color: #929799;
+      }
+    }
+  }
+}

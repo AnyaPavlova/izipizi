@@ -1,0 +1,41 @@
+@@include('./main/head-lk.html', {
+"title": "IZIPIZI"
+})
+@@include('./main/header.html')
+
+<div class="message-line">
+    <div class="alert alert-success"><span>Вы зарегистрированы и успешно авторизовались</span></div>
+</div>
+
+<section class="profile-page">
+    <div class="inner inner--normal">
+
+        <div class="profile-page__info">
+
+            <h1 class="profile-page__title">Мой профиль</h1>
+            <div class="row">            
+                <div class="col col-4">                
+                    <div class="profile-page__item"><span class="profile-page__name">Логин:</span> <span class="profile-page__value">likamoon@list.ru</span></div>
+                    <div class="profile-page__item"><span class="profile-page__name">E-mail:</span> <span class="profile-page__value">likamoon@list.ru</span></div>
+                    <div class="profile-page__item"><span class="profile-page__name">Ф.И.О.</span> <span class="profile-page__value">Казак Елена Георгиевна</span></div>
+                    <div class="profile-page__item"><span class="profile-page__name">Телефон: </span> <span class="profile-page__value">+7 (222) 222-22-22</span></div>   
+                </div>
+                <div class="col col-4">
+                    <div class="profile-page__item"><span class="profile-page__name">Индекс:</span> <span class="profile-page__value">198328</span></div>
+                    <div class="profile-page__item"><span class="profile-page__name">Город: </span> <span class="profile-page__value">Москва</span></div>
+                    <div class="profile-page__item"><span class="profile-page__name">Адрес доставки: </span><br> <span class="profile-page__value">Шлиссельбургское ш. 18</span></div>
+                </div>
+                <div class="col col-4">
+                    <div class="profile-page__btns-block">
+                        <a href="orders.html" class="btn--fill profile-page__btn profile-page__btn--orders">Мои заказы</a>
+                        <a href="index.html" class="btn--fill profile-page__btn profile-page__btn--return">Вернуться на главную</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+@@include('./main/footer.html')
